@@ -1,0 +1,32 @@
+name: Publish Reel — 8AM AST
+
+on:
+  schedule:
+    # 8AM AST = 12:00 UTC
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+    # Manual trigger from GitHub UI if needed
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Publish Reel
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          FREEIMAGE_KEY: ${{ secrets.FREEIMAGE_KEY }}
+        run: python cloud_publish.py reel
