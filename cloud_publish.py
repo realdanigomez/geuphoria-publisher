@@ -6,17 +6,18 @@ Posts reels at 8AM AST (12:00 UTC) and carousels at 12PM AST (16:00 UTC).
 Dedup: published_log.json is committed back to the repo after each post.
 Caption: always sent in request body (data=), never in URL params — prevents truncation.
 
+Carousel images: served via GitHub raw content URLs (repo is public, permanent + free).
+Reel videos: served via GitHub Releases (permanent + free, accessible worldwide).
+
 Environment variables (GitHub Secrets):
   IG_USER_ID        Instagram account ID
   IG_ACCESS_TOKEN   Instagram page access token (long-lived)
-  FREEIMAGE_KEY     freeimage.host API key
 """
 
 import sys
 import os
 import json
 import time
-import base64
 import logging
 import requests
 from datetime import date, datetime, timezone, timedelta
@@ -34,11 +35,11 @@ AST = timezone(timedelta(hours=-4))
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 LOG_PATH = os.path.join(ROOT, 'published_log.json')
+GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main'
 
 # ── Credentials from env ───────────────────────────────────────────
-IG_USER_ID    = os.environ['IG_USER_ID']
-IG_TOKEN      = os.environ['IG_ACCESS_TOKEN']
-FREEIMAGE_KEY = os.environ.get('FREEIMAGE_KEY', '6d207e02198a847aa98d0a2a901485a5')
+IG_USER_ID = os.environ['IG_USER_ID']
+IG_TOKEN   = os.environ['IG_ACCESS_TOKEN']
 
 
 # ── Schedule ───────────────────────────────────────────────────────
@@ -71,20 +72,15 @@ def mark_published(today, content_type, media_id):
 
 
 # ── Upload helpers ─────────────────────────────────────────────────
-def upload_image(image_path):
-    """Upload local PNG to freeimage.host. Returns public URL."""
-    log.info(f'  Uploading: {os.path.basename(image_path)}')
-    with open(image_path, 'rb') as f:
-        img_b64 = base64.b64encode(f.read()).decode()
-    # NOTE: data= sends as request body — not URL params
-    r = requests.post('https://freeimage.host/api/1/upload', data={
-        'key': FREEIMAGE_KEY,
-        'source': img_b64,
-        'format': 'json',
-    }, timeout=30)
-    r.raise_for_status()
-    url = r.json()['image']['url']
-    log.info(f'    -> {url}')
+def image_url_for_slide(folder_name, slide_name):
+    """Return a permanent public URL for a carousel slide.
+
+    Images are committed to the repo so GitHub raw content URLs are permanent,
+    free, and don't require any upload step. freeimage.host was unreliable
+    (returned 400 errors) so we no longer use it.
+    """
+    url = f'{GITHUB_RAW_BASE}/carousels/{folder_name}/{slide_name}'
+    log.info(f'  Slide URL: {url}')
     return url
 
 
@@ -101,10 +97,10 @@ def publish_carousel(folder_name, caption):
     log.info(f'Publishing carousel: {folder_name} ({len(slides)} slides)')
     log.info(f'Caption ({len(caption)} chars): {caption[:100]}...')
 
-    # Upload each slide and create child containers
+    # Create child containers using GitHub raw content URLs (no upload needed)
     children_ids = []
     for i, slide in enumerate(slides):
-        url = upload_image(os.path.join(slides_dir, slide))
+        url = image_url_for_slide(folder_name, slide)
         # NOTE: caption NOT on child containers — only on parent CAROUSEL container
         # NOTE: data= (body), NOT params= (URL) — prevents truncation
         r = requests.post(f'{API_BASE}/{IG_USER_ID}/media', data={
@@ -162,41 +158,55 @@ def publish_carousel(folder_name, caption):
 
 # ── Publish reel ───────────────────────────────────────────────────
 def publish_reel(cdn_url, caption):
-    log.info(f'Publishing reel from: {cdn_url}')
-    log.info(f'Caption ({len(caption)} chars): {caption[:100]}...')
-
     if not cdn_url:
         raise Exception('cdn_url is required for reel publishing in cloud mode')
 
-    # Create reel container
-    # NOTE: data= (body), NOT params= (URL) — critical for full caption
-    r = requests.post(f'{API_BASE}/{IG_USER_ID}/media', data={
-        'media_type': 'REELS',
-        'video_url': cdn_url,
-        'caption': caption,
-        'access_token': IG_TOKEN,
-    }, timeout=30)
-    data = r.json()
-    if 'id' not in data:
-        raise Exception(f'Reel container failed: {data}')
-    container_id = data['id']
-    log.info(f'  Reel container: {container_id}')
+    log.info(f'Publishing reel from: {cdn_url}')
+    log.info(f'Caption ({len(caption)} chars): {caption[:100]}...')
 
-    # Poll for Instagram video processing (up to 5 minutes)
-    for i in range(30):
-        time.sleep(10)
-        r = requests.get(f'{API_BASE}/{container_id}', params={
-            'fields': 'status_code',
+    # Retry up to 2 times — handles transient CDN or Instagram processing errors
+    for attempt in range(3):
+        if attempt > 0:
+            log.info(f'Retry attempt {attempt + 1}/3 (waiting 30s)...')
+            time.sleep(30)
+
+        # Create reel container
+        # NOTE: data= (body), NOT params= (URL) — critical for full caption
+        r = requests.post(f'{API_BASE}/{IG_USER_ID}/media', data={
+            'media_type': 'REELS',
+            'video_url': cdn_url,
+            'caption': caption,
             'access_token': IG_TOKEN,
-        }, timeout=15)
-        code = r.json().get('status_code', 'UNKNOWN')
-        log.info(f'  Processing: {code} ({i+1}/30)')
-        if code == 'FINISHED':
+        }, timeout=30)
+        data = r.json()
+        if 'id' not in data:
+            raise Exception(f'Reel container failed: {data}')
+        container_id = data['id']
+        log.info(f'  Reel container: {container_id}')
+
+        # Poll for Instagram video processing (up to 5 minutes)
+        processing_ok = False
+        for i in range(30):
+            time.sleep(10)
+            r = requests.get(f'{API_BASE}/{container_id}', params={
+                'fields': 'status_code',
+                'access_token': IG_TOKEN,
+            }, timeout=15)
+            code = r.json().get('status_code', 'UNKNOWN')
+            log.info(f'  Processing: {code} ({i+1}/30)')
+            if code == 'FINISHED':
+                processing_ok = True
+                break
+            if code == 'ERROR':
+                log.warning(f'  Instagram returned ERROR on attempt {attempt + 1}')
+                break
+        else:
+            raise Exception('Video processing timeout after 5 minutes')
+
+        if processing_ok:
             break
-        if code == 'ERROR':
-            raise Exception('Video processing failed at Instagram end')
-    else:
-        raise Exception('Video processing timeout after 5 minutes')
+        if attempt == 2:
+            raise Exception('Video processing failed at Instagram end after 3 attempts')
 
     # Publish
     r = requests.post(f'{API_BASE}/{IG_USER_ID}/media_publish', data={
