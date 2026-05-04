@@ -92,12 +92,196 @@
     "reel": {
       "name": "its-the-waiting",
       "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/its-the-waiting-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/its-the-waiting-youtube.mp4",
+      "yt_caption_path": "captions/its-the-waiting/caption-youtube.txt",
       "caption": "A Real lesson most coaches don't talk about.\n\nFollow for more.\n\n(Disclaimer: This is based on what I've observed; results are not guaranteed!)\n\n#onlinefitnesscoach #onlinefitnesscoaches"
     },
     "carousel": {
       "name": "sharecroppers",
-      "folder": "carousels/sharecroppers",
+      "folder": "sharecroppers",
       "caption": "You're a sharecropper on Instagram.\n\nSharecroppers worked the land but never owned the harvest. If you don't own your audience, you don't own your business. \n\nEvery post should move 1 person off the platform and onto your list. That's the whole game.\n\nIf you found this helpful, follow for more.\n\n(Disclaimer: This is based on what I've observed; results are not guaranteed!)\n\n#onlinefitnesscoach #onlinefitnesscoaches"
+    },
+    "doc_clip": {
+      "name": "figure-it-out-thick-skin",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/figure-it-out-thick-skin-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/figure-it-out-thick-skin-youtube.mp4",
+      "caption_path": "captions/figure-it-out-thick-skin/caption.txt",
+      "yt_caption_path": "captions/figure-it-out-thick-skin/caption-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "hook-200-174",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/hook-200-174-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/hook-200-174-youtube.mp4",
+      "caption_path": "captions/hook-200-174/caption.txt",
+      "yt_caption_path": "captions/hook-200-174/caption-youtube.txt"
+    }
+  },
+  "2026-05-05": {
+    "reel": {
+      "name": "letting-clients-go",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/letting-clients-go-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/letting-clients-go-youtube.mp4",
+      "caption_path": "captions/letting-clients-go/caption.txt",
+      "yt_caption_path": "captions/letting-clients-go/caption-youtube.txt"
+    },
+    "carousel": {
+      "name": "first-10-clients-map",
+      "folder": "first-10-clients-map",
+      "caption_path": "captions/first-10-clients-map/caption.txt"
+    },
+    "doc_clip": {
+      "name": "priority-whiteboard",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/priority-whiteboard-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/priority-whiteboard-youtube.mp4",
+      "caption_path": "captions/priority-whiteboard/caption.txt",
+      "yt_caption_path": "captions/priority-whiteboard/caption-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "filter-1-pain-urgency",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/filter-1-pain-urgency-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/filter-1-pain-urgency-youtube.mp4",
+      "caption_path": "captions/filter-1-pain-urgency/caption.txt",
+      "yt_caption_path": "captions/filter-1-pain-urgency/caption-youtube.txt"
+    }
+  },
+  "2026-05-06": {
+    "reel": {
+      "name": "hardest-hire-second",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/hardest-hire-second-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/hardest-hire-second-youtube.mp4",
+      "caption_path": "captions/hardest-hire-second/caption.txt",
+      "yt_caption_path": "captions/hardest-hire-second/caption-youtube.txt"
+    },
+    "carousel": {
+      "name": "more-clients-more-chaos",
+      "folder": "more-clients-more-chaos",
+      "caption_path": "captions/more-clients-more-chaos/caption.txt"
+    },
+    "doc_clip": {
+      "name": "iteration-loop",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/iteration-loop-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/iteration-loop-youtube.mp4",
+      "caption_path": "captions/iteration-loop/caption.txt",
+      "yt_caption_path": "captions/iteration-loop/caption-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "filter-2-payability",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/filter-2-payability-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/filter-2-payability-youtube.mp4",
+      "caption_path": "captions/filter-2-payability/caption.txt",
+      "yt_caption_path": "captions/filter-2-payability/caption-youtube.txt"
+    }
+  },
+  "2026-05-07": {
+    "reel": {
+      "name": "repackaged-certs",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/repackaged-certs-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/repackaged-certs-youtube.mp4",
+      "caption_path": "captions/repackaged-certs/caption.txt",
+      "yt_caption_path": "captions/repackaged-certs/caption-youtube.txt"
+    },
+    "carousel": {
+      "name": "check-in-form",
+      "folder": "check-in-form",
+      "caption_path": "captions/check-in-form/caption.txt"
+    },
+    "doc_clip": {
+      "name": "trade-off-skip-gym",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/trade-off-skip-gym-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/trade-off-skip-gym-youtube.mp4",
+      "caption_path": "captions/trade-off-skip-gym/caption.txt",
+      "yt_caption_path": "captions/trade-off-skip-gym/caption-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "filter-3-coachability",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/filter-3-coachability-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/filter-3-coachability-youtube.mp4",
+      "caption_path": "captions/filter-3-coachability/caption.txt",
+      "yt_caption_path": "captions/filter-3-coachability/caption-youtube.txt"
+    }
+  },
+  "2026-05-08": {
+    "reel": {
+      "name": "romanticize-showing-up",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/romanticize-showing-up-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/romanticize-showing-up-youtube.mp4",
+      "caption_path": "captions/romanticize-showing-up/caption.txt",
+      "yt_caption_path": "captions/romanticize-showing-up/caption-youtube.txt"
+    },
+    "carousel": {
+      "name": "romanticize-showing-up",
+      "folder": "romanticize-showing-up",
+      "caption_path": "captions/romanticize-showing-up/caption.txt"
+    },
+    "doc_clip": {
+      "name": "late-nights-grind",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/late-nights-grind-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/late-nights-grind-youtube.mp4",
+      "caption_path": "captions/late-nights-grind/caption.txt",
+      "yt_caption_path": "captions/late-nights-grind/caption-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "burnout-reframe",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/burnout-reframe-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/burnout-reframe-youtube.mp4",
+      "caption_path": "captions/burnout-reframe/caption.txt",
+      "yt_caption_path": "captions/burnout-reframe/caption-youtube.txt"
+    }
+  },
+  "2026-05-09": {
+    "reel": {
+      "name": "lonely-business",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/lonely-business-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/lonely-business-youtube.mp4",
+      "caption_path": "captions/lonely-business/caption.txt",
+      "yt_caption_path": "captions/lonely-business/caption-youtube.txt"
+    },
+    "carousel": {
+      "name": "delegation-wall",
+      "folder": "delegation-wall",
+      "caption_path": "captions/delegation-wall/caption.txt"
+    },
+    "doc_clip": {
+      "name": "delegate-to-ai",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/delegate-to-ai-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/delegate-to-ai-youtube.mp4",
+      "caption_path": "captions/delegate-to-ai/caption.txt",
+      "yt_caption_path": "captions/delegate-to-ai/caption-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "fewer-clients-more-revenue",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/fewer-clients-more-revenue-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/fewer-clients-more-revenue-youtube.mp4",
+      "caption_path": "captions/fewer-clients-more-revenue/caption.txt",
+      "yt_caption_path": "captions/fewer-clients-more-revenue/caption-youtube.txt"
+    }
+  },
+  "2026-05-10": {
+    "reel": {
+      "name": "120k-50-hours",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/120k-50-hours-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/120k-50-hours-youtube.mp4",
+      "caption_path": "captions/120k-50-hours/caption.txt",
+      "yt_caption_path": "captions/120k-50-hours/caption-youtube.txt"
+    },
+    "carousel": {
+      "name": "5-things-120k-coaches-do",
+      "folder": "5-things-120k-coaches-do",
+      "caption_path": "captions/5-things-120k-coaches-do/caption.txt"
+    },
+    "doc_clip": {
+      "name": "thesis-or-die",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/thesis-or-die-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/thesis-or-die-youtube.mp4",
+      "caption_path": "captions/thesis-or-die/caption.txt",
+      "yt_caption_path": "captions/thesis-or-die/caption-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "version-of-tired",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/version-of-tired-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/version-of-tired-youtube.mp4",
+      "caption_path": "captions/version-of-tired/caption.txt",
+      "yt_caption_path": "captions/version-of-tired/caption-youtube.txt"
     }
   }
 }

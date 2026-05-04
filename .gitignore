@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.google_token.json
+_tmp_*.mp4
+burnout-longform.mp4
+burnout-longform-thumb.jpg
+burnout-longform-title.txt
+burnout-longform-description.txt
+burnout-longform-chapters.md
+doc-ep3.mp4
+doc-ep3-thumb.jpg
+doc-ep3-title.txt
+doc-ep3-description.txt
+doc-ep3-chapters.md

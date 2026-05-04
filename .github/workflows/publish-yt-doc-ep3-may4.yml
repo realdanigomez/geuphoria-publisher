@@ -1,0 +1,103 @@
+name: Publish YT Doc Ep 3 — May 4 6PM AST
+
+# One-shot YT publish: Documentary Ep 3 "the pipeline. | week 3 either this or i die."
+# Cron is restricted to May 4 only (`0 22 4 5 *` = 22:00 UTC = 6PM AST May 4).
+# Manual workflow_dispatch is also enabled (with optional dry_run input).
+
+on:
+  schedule:
+    - cron: '0 22 4 5 *'   # 22:00 UTC = 6PM AST, May 4 only
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run without publishing (dry-run)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install google-api-python-client google-auth google-auth-oauthlib requests Pillow
+
+      - name: Decode Google OAuth token
+        env:
+          GOOGLE_TOKEN_JSON: ${{ secrets.GOOGLE_TOKEN_JSON }}
+        run: |
+          set -euo pipefail
+          if [ -z "${GOOGLE_TOKEN_JSON:-}" ]; then
+            echo "::error::Missing GOOGLE_TOKEN_JSON secret"
+            exit 1
+          fi
+          echo "$GOOGLE_TOKEN_JSON" | base64 -d > .google_token.json
+
+      - name: Download doc-ep3 assets from GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          gh release download assets-2026-05-04 \
+            -p 'doc-ep3.mp4' \
+            -p 'doc-ep3-thumb.jpg' \
+            -p 'doc-ep3-title.txt' \
+            -p 'doc-ep3-description.txt' \
+            -p 'doc-ep3-chapters.md'
+          ls -la doc-ep3*
+
+      - name: Publish to YouTube
+        env:
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+        run: |
+          set -euo pipefail
+          if [ "$DRY_RUN" = "true" ]; then
+            python publish_yt_longform.py doc-ep3 --dry-run
+          else
+            python publish_yt_longform.py doc-ep3
+          fi
+
+      - name: Save published log + push (retry on conflict)
+        if: always() && github.event.inputs.dry_run != 'true'
+        env:
+          WORKFLOW_NAME: yt-doc-ep3
+        run: |
+          set -euo pipefail
+          git config user.email "bot@geuphoria.com"
+          git config user.name "Geuphoria Publisher"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main || true
+            git add published_log.json
+            git diff --staged --quiet && { echo "Nothing to commit."; break; }
+            git commit -m "log: $WORKFLOW_NAME $(date -u +%Y-%m-%dT%H:%MZ)" || true
+            if git push origin main; then
+              echo "Pushed."
+              break
+            fi
+            echo "Push failed, retrying in 5s..."
+            sleep 5
+          done
+
+      - name: Cleanup downloaded assets + token
+        if: always()
+        run: |
+          rm -f .google_token.json
+          rm -f doc-ep3.mp4 doc-ep3-thumb.jpg doc-ep3-title.txt doc-ep3-description.txt doc-ep3-chapters.md

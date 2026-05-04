@@ -1,0 +1,110 @@
+name: Publish YT Short (Reel) — 8AM AST daily
+
+# Daily YT Short publish for the 8AM reel slot.
+# Cron 0 12 * * * = 12:00 UTC = 8AM AST.
+# Reads publish_schedule.json[<today AST>].reel and publishes the YT-side reel as a YT Short.
+# Runs in PARALLEL to publish-reel.yml (which posts the IG side).
+# If no reel slot or no yt_cdn_url for today, exits 0 with a notice.
+
+on:
+  schedule:
+    - cron: '0 12 * * *'   # 12:00 UTC = 8AM AST
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run without publishing (dry-run)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout (with latest log)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Sync latest published_log.json
+        run: git pull --ff-only origin main || true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install google-api-python-client google-auth google-auth-oauthlib requests
+
+      - name: Decode Google OAuth token
+        env:
+          GOOGLE_TOKEN_JSON: ${{ secrets.GOOGLE_TOKEN_JSON }}
+        run: |
+          set -euo pipefail
+          if [ -z "${GOOGLE_TOKEN_JSON:-}" ]; then
+            echo "::error::Missing GOOGLE_TOKEN_JSON secret"
+            exit 1
+          fi
+          echo "$GOOGLE_TOKEN_JSON" | base64 -d > .google_token.json
+
+      - name: Check today has a reel slot with yt_cdn_url
+        id: gate
+        run: |
+          set -euo pipefail
+          today=$(TZ=America/Curacao date +%F)
+          echo "today=$today" >> "$GITHUB_OUTPUT"
+          present=$(python -c "
+          import json
+          d = json.load(open('publish_schedule.json'))
+          today = '$today'
+          slot = d.get(today, {}).get('reel', {})
+          print('yes' if slot.get('yt_cdn_url') and slot.get('yt_caption_path') else 'no')
+          ")
+          echo "slot_present=$present" >> "$GITHUB_OUTPUT"
+          echo "Today AST = $today / reel YT slot = $present"
+
+      - name: Publish reel YT Short
+        if: steps.gate.outputs.slot_present == 'yes'
+        env:
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+        run: |
+          set -euo pipefail
+          if [ "$DRY_RUN" = "true" ]; then
+            python publish_clip.py --slot reel --platform yt --dry-run
+          else
+            python publish_clip.py --slot reel --platform yt
+          fi
+
+      - name: Save published log + push (retry on conflict)
+        if: always() && steps.gate.outputs.slot_present == 'yes' && github.event.inputs.dry_run != 'true'
+        env:
+          WORKFLOW_NAME: yt-reel-daily
+        run: |
+          set -euo pipefail
+          git config user.email "bot@geuphoria.com"
+          git config user.name "Geuphoria Publisher"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main || true
+            git add published_log.json
+            git diff --staged --quiet && { echo "Nothing to commit."; break; }
+            git commit -m "log: $WORKFLOW_NAME $(date -u +%Y-%m-%dT%H:%MZ)" || true
+            if git push origin main; then
+              echo "Pushed."
+              break
+            fi
+            echo "Push failed, retrying in 5s..."
+            sleep 5
+          done
+
+      - name: Cleanup token
+        if: always()
+        run: rm -f .google_token.json

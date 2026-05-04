@@ -32,11 +32,23 @@ jobs:
           FREEIMAGE_KEY: ${{ secrets.FREEIMAGE_KEY }}
         run: python cloud_publish.py reel
 
-      - name: Save published log
+      - name: Save published log + push (retry on conflict)
         if: always()
+        env:
+          WORKFLOW_NAME: publish-reel
         run: |
+          set -euo pipefail
           git config user.email "bot@geuphoria.com"
           git config user.name "Geuphoria Publisher"
-          git add published_log.json
-          git diff --staged --quiet || git commit -m "log: reel published $(date -u +%Y-%m-%d)"
-          git push
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main || true
+            git add published_log.json
+            git diff --staged --quiet && { echo "Nothing to commit."; break; }
+            git commit -m "log: $WORKFLOW_NAME $(date -u +%Y-%m-%dT%H:%MZ)" || true
+            if git push origin main; then
+              echo "Pushed."
+              break
+            fi
+            echo "Push failed, retrying in 5s..."
+            sleep 5
+          done

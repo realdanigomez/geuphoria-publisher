@@ -1,0 +1,111 @@
+name: Publish YT Burnout Longform — May 4 3PM AST
+
+# One-shot YT publish: Burnout/Client-Filter longform.
+# Cron is restricted to May 4 only (`0 19 4 5 *` = 19:00 UTC = 3PM AST May 4).
+# Manual workflow_dispatch is also enabled (with optional dry_run input).
+
+on:
+  schedule:
+    - cron: '0 19 4 5 *'   # 19:00 UTC = 3PM AST, May 4 only
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run without publishing (dry-run)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write   # commit published_log.json back
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install google-api-python-client google-auth google-auth-oauthlib requests Pillow
+
+      - name: Decode Google OAuth token
+        env:
+          GOOGLE_TOKEN_JSON: ${{ secrets.GOOGLE_TOKEN_JSON }}
+        run: |
+          set -euo pipefail
+          if [ -z "${GOOGLE_TOKEN_JSON:-}" ]; then
+            echo "::error::Missing GOOGLE_TOKEN_JSON secret"
+            exit 1
+          fi
+          echo "$GOOGLE_TOKEN_JSON" | base64 -d > .google_token.json
+          echo "Decoded .google_token.json ($(wc -c < .google_token.json) bytes)"
+
+      - name: Authenticate gh CLI
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh auth status
+
+      - name: Download burnout assets from GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          gh release download assets-2026-05-04 \
+            -p 'burnout-longform.mp4' \
+            -p 'burnout-longform-thumb.jpg' \
+            -p 'burnout-longform-title.txt' \
+            -p 'burnout-longform-description.txt' \
+            -p 'burnout-longform-chapters.md'
+          ls -la burnout-longform*
+
+      - name: Publish to YouTube
+        env:
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+        run: |
+          set -euo pipefail
+          if [ "$DRY_RUN" = "true" ]; then
+            python publish_yt_longform.py burnout --dry-run
+          else
+            python publish_yt_longform.py burnout
+          fi
+
+      - name: Save published log + push (retry on conflict)
+        if: always() && github.event.inputs.dry_run != 'true'
+        env:
+          WORKFLOW_NAME: yt-burnout-longform
+        run: |
+          set -euo pipefail
+          git config user.email "bot@geuphoria.com"
+          git config user.name "Geuphoria Publisher"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main || true
+            git add published_log.json .google_token.json || true
+            # Don't commit token; reset it from staging if added by mistake
+            git restore --staged .google_token.json || true
+            git diff --staged --quiet && { echo "Nothing to commit."; break; }
+            git commit -m "log: $WORKFLOW_NAME $(date -u +%Y-%m-%dT%H:%MZ)" || true
+            if git push origin main; then
+              echo "Pushed."
+              break
+            fi
+            echo "Push failed, retrying in 5s..."
+            sleep 5
+          done
+
+      - name: Cleanup downloaded assets + token
+        if: always()
+        run: |
+          rm -f .google_token.json
+          rm -f burnout-longform.mp4 burnout-longform-thumb.jpg burnout-longform-title.txt burnout-longform-description.txt burnout-longform-chapters.md

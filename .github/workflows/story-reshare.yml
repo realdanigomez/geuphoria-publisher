@@ -9,6 +9,10 @@ on:
     workflows:
       - "Publish Reel — 8AM AST"
       - "Publish Carousel — 12PM AST"
+      - "Publish Doc Clip — May 4 6:30PM AST"
+      - "Publish Longform Clip — May 4 7:30PM AST"
+      - "Publish Doc Clip — 2PM AST daily"
+      - "Publish Longform Clip — 3PM AST daily"
     types:
       - completed
   workflow_dispatch:
@@ -47,12 +51,14 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "slot=${{ inputs.slot }}" >> $GITHUB_OUTPUT
           else
-            # Map workflow_run name to slot
+            # Map workflow_run name to slot — order matters (longest match first)
             wf="${{ github.event.workflow_run.name }}"
             case "$wf" in
-              *Reel*)     echo "slot=reel" >> $GITHUB_OUTPUT ;;
-              *Carousel*) echo "slot=carousel" >> $GITHUB_OUTPUT ;;
-              *)          echo "slot=reel" >> $GITHUB_OUTPUT ;;
+              *"Longform Clip"*) echo "slot=longform_clip" >> $GITHUB_OUTPUT ;;
+              *"Doc Clip"*)      echo "slot=doc_clip"      >> $GITHUB_OUTPUT ;;
+              *Reel*)            echo "slot=reel"          >> $GITHUB_OUTPUT ;;
+              *Carousel*)        echo "slot=carousel"      >> $GITHUB_OUTPUT ;;
+              *)                 echo "slot=reel"          >> $GITHUB_OUTPUT ;;
             esac
           fi
 
@@ -71,11 +77,23 @@ jobs:
             python story_reshare.py "${{ steps.slot.outputs.slot }}"
           fi
 
-      - name: Save story log back to repo
+      - name: Save story log + push (retry on conflict)
+        env:
+          WORKFLOW_NAME: story-reshare
+          SLOT: ${{ steps.slot.outputs.slot }}
         run: |
+          set -euo pipefail
           git config user.email "bot@geuphoria.com"
           git config user.name "Geuphoria Publisher"
-          git add published_log.json
-          git diff --staged --quiet || git commit -m "log: story reshared $(date -u +%Y-%m-%d) ${{ steps.slot.outputs.slot }}"
-          git pull --rebase origin main
-          git push
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main || true
+            git add published_log.json
+            git diff --staged --quiet && { echo "Nothing to commit."; break; }
+            git commit -m "log: $WORKFLOW_NAME $SLOT $(date -u +%Y-%m-%dT%H:%MZ)" || true
+            if git push origin main; then
+              echo "Pushed."
+              break
+            fi
+            echo "Push failed, retrying in 5s..."
+            sleep 5
+          done

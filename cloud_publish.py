@@ -252,7 +252,20 @@ def main():
         return
 
     name = slot['name']
-    caption = slot['caption']
+    # Caption can be specified inline as `caption` (legacy) or via `caption_path`
+    # pointing at a file on disk. Caption files take priority when both are set.
+    caption_path = slot.get('caption_path')
+    if caption_path:
+        cap_full = os.path.join(ROOT, caption_path)
+        if not os.path.exists(cap_full):
+            raise FileNotFoundError(f'Caption file not found: {cap_full}')
+        with open(cap_full, 'r', encoding='utf-8') as f:
+            caption = f.read().strip()
+        log.info(f'Read caption from file: {caption_path} ({len(caption)} chars)')
+    else:
+        caption = slot.get('caption')
+        if not caption:
+            raise Exception(f'No caption or caption_path in slot for {name}')
     log.info(f'Target: {name} | Caption: {len(caption)} chars')
 
     try:
