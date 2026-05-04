@@ -1,0 +1,81 @@
+name: Story Reshare
+
+# Reshares the just-published feed post (reel/carousel) as an IG Story.
+# Auto-fires after every successful publish-reel or publish-carousel run.
+# Can also be fired manually via workflow_dispatch with a slot input.
+
+on:
+  workflow_run:
+    workflows:
+      - "Publish Reel — 8AM AST"
+      - "Publish Carousel — 12PM AST"
+    types:
+      - completed
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "Which slot to reshare (reel | carousel | doc_clip | longform_clip)"
+        required: true
+        default: "reel"
+      media_id:
+        description: "Override: explicit media_id (optional — defaults to today's logged ID)"
+        required: false
+
+jobs:
+  reshare:
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Determine slot
+        id: slot
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "slot=${{ inputs.slot }}" >> $GITHUB_OUTPUT
+          else
+            # Map workflow_run name to slot
+            wf="${{ github.event.workflow_run.name }}"
+            case "$wf" in
+              *Reel*)     echo "slot=reel" >> $GITHUB_OUTPUT ;;
+              *Carousel*) echo "slot=carousel" >> $GITHUB_OUTPUT ;;
+              *)          echo "slot=reel" >> $GITHUB_OUTPUT ;;
+            esac
+          fi
+
+      - name: Sync latest published_log.json
+        run: git pull --ff-only origin main || true
+
+      - name: Reshare to Story
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -n "${{ inputs.media_id }}" ]; then
+            python story_reshare.py "${{ steps.slot.outputs.slot }}" --media-id "${{ inputs.media_id }}"
+          else
+            python story_reshare.py "${{ steps.slot.outputs.slot }}"
+          fi
+
+      - name: Save story log back to repo
+        run: |
+          git config user.email "bot@geuphoria.com"
+          git config user.name "Geuphoria Publisher"
+          git add published_log.json
+          git diff --staged --quiet || git commit -m "log: story reshared $(date -u +%Y-%m-%d) ${{ steps.slot.outputs.slot }}"
+          git pull --rebase origin main
+          git push
