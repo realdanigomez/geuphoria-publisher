@@ -52,3 +52,26 @@ jobs:
             echo "Push failed, retrying in 5s..."
             sleep 5
           done
+
+      - name: Notify dashboard (carousel-music reminder)
+        if: success()
+        env:
+          DASHBOARD_NOTIFY_URL: ${{ secrets.DASHBOARD_NOTIFY_URL }}
+          DASHBOARD_NOTIFY_TOKEN: ${{ secrets.DASHBOARD_NOTIFY_TOKEN }}
+        run: |
+          set -e
+          if [ -z "${DASHBOARD_NOTIFY_URL:-}" ] || [ -z "${DASHBOARD_NOTIFY_TOKEN:-}" ]; then
+            echo "DASHBOARD_NOTIFY_* secrets not set; skipping notification (Railway deploy pending)"
+            exit 0
+          fi
+          # Resolve today's carousel slug (AST = UTC-4)
+          SLUG=$(python -c "import json; from datetime import datetime,timezone,timedelta; t=(datetime.now(timezone.utc)+timedelta(hours=-4)).strftime('%Y-%m-%d'); d=json.load(open('publish_schedule.json')); c=d.get(t,{}).get('carousel',{}); print(c.get('name') or '')")
+          if [ -z "$SLUG" ]; then
+            echo "No carousel scheduled for today — skipping notification."
+            exit 0
+          fi
+          curl -fsS -X POST "${DASHBOARD_NOTIFY_URL%/}/api/notifications/enqueue" \
+            -H "Authorization: Bearer $DASHBOARD_NOTIFY_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data "$(python -c "import json,sys; print(json.dumps({'kind':'carousel_music','title':'Add music to ' + sys.argv[1] + ' carousel','body':'Open IG → tap edit on the post → attach trending music. 24h window.','priority':'normal'}))" "$SLUG")" \
+            || echo "Dashboard notify failed (non-fatal)"

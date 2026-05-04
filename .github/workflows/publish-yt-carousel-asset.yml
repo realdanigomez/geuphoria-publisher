@@ -1,0 +1,37 @@
+name: Notify YT Carousel Manual Upload — 12:01PM AST
+
+on:
+  schedule:
+    # 12:01 PM AST = 16:01 UTC (1 min after the IG carousel publish)
+    - cron: '1 16 * * *'
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Send notification
+        env:
+          DASHBOARD_NOTIFY_URL: ${{ secrets.DASHBOARD_NOTIFY_URL }}
+          DASHBOARD_NOTIFY_TOKEN: ${{ secrets.DASHBOARD_NOTIFY_TOKEN }}
+        run: |
+          set -e
+          if [ -z "${DASHBOARD_NOTIFY_URL:-}" ] || [ -z "${DASHBOARD_NOTIFY_TOKEN:-}" ]; then
+            echo "DASHBOARD_NOTIFY_* secrets not set; skipping (Railway deploy pending)"
+            exit 0
+          fi
+          SLUG=$(python -c "import json; from datetime import datetime,timezone,timedelta; t=(datetime.now(timezone.utc)+timedelta(hours=-4)).strftime('%Y-%m-%d'); d=json.load(open('publish_schedule.json')); c=d.get(t,{}).get('carousel',{}); print(c.get('name') or '')")
+          if [ -z "$SLUG" ]; then
+            echo "No carousel scheduled for today — skipping."
+            exit 0
+          fi
+          BODY=$(python -c "import json,sys; print(json.dumps({'kind':'yt_carousel_manual','title':'YT carousel ready: ' + sys.argv[1],'body':'Tap to view + manually upload to YouTube via mobile app.','link':'/yt-carousel-pending/' + sys.argv[1] + '/','priority':'normal'}))" "$SLUG")
+          curl -fsS -X POST "${DASHBOARD_NOTIFY_URL%/}/api/notifications/enqueue" \
+            -H "Authorization: Bearer $DASHBOARD_NOTIFY_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data "$BODY" \
+            || echo "Dashboard notify failed (non-fatal)"
