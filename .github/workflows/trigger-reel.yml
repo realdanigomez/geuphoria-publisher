@@ -1,0 +1,29 @@
+name: Trigger Reel — 8AM AST
+
+# Fires the daily weekly-reel slot. POSTs to the Railway worker, which
+# reads today's row from PostgreSQL `schedule` and publishes via IG Graph API.
+# Story reshare is auto-fired by the worker +30s after success (no separate cron needed).
+
+on:
+  schedule:
+    # 8AM AST = 12:00 UTC
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Hit Railway /trigger/reel
+        env:
+          RAILWAY_PUBLISHER_URL: ${{ secrets.RAILWAY_PUBLISHER_URL }}
+          RAILWAY_PUBLISHER_TOKEN: ${{ secrets.RAILWAY_PUBLISHER_TOKEN }}
+        run: |
+          set -euo pipefail
+          echo "POST $RAILWAY_PUBLISHER_URL/trigger/reel?slot=reel"
+          response=$(curl --fail-with-body -sS -X POST \
+            -H "Authorization: Bearer $RAILWAY_PUBLISHER_TOKEN" \
+            "$RAILWAY_PUBLISHER_URL/trigger/reel?slot=reel")
+          echo "Response:"
+          echo "$response" | jq . || echo "$response"

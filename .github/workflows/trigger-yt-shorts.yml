@@ -1,0 +1,68 @@
+name: Trigger YT Shorts — 8AM/2PM/3PM AST
+
+# Fires YT Shorts in parallel with the corresponding IG reel slot using a
+# matrix. Cron lines: 0 12 * * * (8AM AST reel), 0 18 * * * (2PM doc-clip),
+# 0 19 * * * (3PM longform-clip). The job uses a matrix entry per slot but
+# only the slot whose cron-trigger time matches will have a schedule row;
+# the worker returns status:noop on missing rows.
+
+on:
+  schedule:
+    - cron: '0 12 * * *'   # 8AM AST — weekly reel
+    - cron: '0 18 * * *'   # 2PM AST — doc clip
+    - cron: '0 19 * * *'   # 3PM AST — longform clip
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: 'Slot to fire (manual override)'
+        required: false
+        default: 'reel'
+        type: choice
+        options:
+          - reel
+          - doc-clip
+          - longform-clip
+
+jobs:
+  resolve-slot:
+    runs-on: ubuntu-latest
+    outputs:
+      slot: ${{ steps.pick.outputs.slot }}
+    steps:
+      - id: pick
+        run: |
+          set -euo pipefail
+          # Map the cron schedule that triggered this run to a slot
+          # github.event.schedule is the raw cron string.
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            slot="${{ github.event.inputs.slot }}"
+          else
+            sched="${{ github.event.schedule }}"
+            case "$sched" in
+              "0 12 * * *") slot="reel" ;;
+              "0 18 * * *") slot="doc-clip" ;;
+              "0 19 * * *") slot="longform-clip" ;;
+              *) slot="reel" ;;
+            esac
+          fi
+          echo "slot=$slot" >> "$GITHUB_OUTPUT"
+          echo "Resolved slot: $slot"
+
+  trigger:
+    runs-on: ubuntu-latest
+    needs: resolve-slot
+    timeout-minutes: 30  # YT uploads can take a few minutes
+    steps:
+      - name: Hit Railway /trigger/yt-shorts
+        env:
+          RAILWAY_PUBLISHER_URL: ${{ secrets.RAILWAY_PUBLISHER_URL }}
+          RAILWAY_PUBLISHER_TOKEN: ${{ secrets.RAILWAY_PUBLISHER_TOKEN }}
+          SLOT: ${{ needs.resolve-slot.outputs.slot }}
+        run: |
+          set -euo pipefail
+          echo "POST /trigger/yt-shorts?slot=$SLOT"
+          response=$(curl --fail-with-body -sS -X POST \
+            -H "Authorization: Bearer $RAILWAY_PUBLISHER_TOKEN" \
+            "$RAILWAY_PUBLISHER_URL/trigger/yt-shorts?slot=$SLOT")
+          echo "Response:"
+          echo "$response" | jq . || echo "$response"

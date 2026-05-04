@@ -1,0 +1,59 @@
+name: Trigger Story Reshare — workflow_run hook
+
+# Workflow_run-triggered fallback for Story reshares.
+# Worker.py auto-fires reshares +30s after each successful feed publish, so
+# this workflow is mainly a belt-and-braces re-run path. The /trigger/story-reshare
+# endpoint is idempotent — it skips if a reshare row already exists in
+# published_log for today's slot.
+#
+# Triggered after each of the 4 IG feed-publish workflows succeeds. We derive
+# the slot from the source workflow's name.
+
+on:
+  workflow_run:
+    workflows:
+      - "Trigger Reel — 8AM AST"
+      - "Trigger Carousel — 12PM AST"
+      - "Trigger Doc Clip — 2PM AST"
+      - "Trigger Longform Clip — 3PM AST"
+    types:
+      - completed
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Map source workflow to slot
+        id: pick
+        env:
+          SOURCE_NAME: ${{ github.event.workflow_run.name }}
+        run: |
+          set -euo pipefail
+          case "$SOURCE_NAME" in
+            *"Reel — 8AM"*)               slot="reel" ;;
+            *"Carousel — 12PM"*)          slot="carousel" ;;
+            *"Doc Clip — 2PM"*)           slot="doc-clip" ;;
+            *"Longform Clip — 3PM"*)      slot="longform-clip" ;;
+            *) echo "Unknown source: $SOURCE_NAME"; exit 0 ;;
+          esac
+          echo "slot=$slot" >> "$GITHUB_OUTPUT"
+          echo "Resolved slot: $slot"
+
+      - name: Hit Railway /trigger/story-reshare
+        if: ${{ steps.pick.outputs.slot != '' }}
+        env:
+          RAILWAY_PUBLISHER_URL: ${{ secrets.RAILWAY_PUBLISHER_URL }}
+          RAILWAY_PUBLISHER_TOKEN: ${{ secrets.RAILWAY_PUBLISHER_TOKEN }}
+          SLOT: ${{ steps.pick.outputs.slot }}
+        run: |
+          set -euo pipefail
+          # Worker auto-fires +30s; give it time to settle before our backup hit
+          sleep 90
+          echo "POST /trigger/story-reshare?slot=$SLOT (idempotent)"
+          response=$(curl --fail-with-body -sS -X POST \
+            -H "Authorization: Bearer $RAILWAY_PUBLISHER_TOKEN" \
+            "$RAILWAY_PUBLISHER_URL/trigger/story-reshare?slot=$SLOT")
+          echo "Response:"
+          echo "$response" | jq . || echo "$response"

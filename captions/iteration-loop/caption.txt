@@ -1,0 +1,13 @@
+Building real systems with AI?
+
+This is the loop. Try → wrong. Try → wrong. Try → wrong. Try → right. Next.
+
+Iteration after iteration. That's the work.
+
+—
+
+Disclaimer: This is my real experience building with AI agents — not financial or business advice. Your loop will look different.
+
+Follow @real.danigomez for the full doc series on building in public.
+
+#onlinefitnesscoach #onlinefitnesscoaches #buildinginpublic

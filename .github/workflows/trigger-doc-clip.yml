@@ -1,0 +1,27 @@
+name: Trigger Doc Clip — 2PM AST
+
+# Fires the daily documentary clip on IG. Worker auto-fires Story reshare +30s.
+# YT Short version fires from trigger-yt-shorts.yml at the same UTC minute.
+
+on:
+  schedule:
+    # 2PM AST = 18:00 UTC
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Hit Railway /trigger/reel?slot=doc-clip
+        env:
+          RAILWAY_PUBLISHER_URL: ${{ secrets.RAILWAY_PUBLISHER_URL }}
+          RAILWAY_PUBLISHER_TOKEN: ${{ secrets.RAILWAY_PUBLISHER_TOKEN }}
+        run: |
+          set -euo pipefail
+          response=$(curl --fail-with-body -sS -X POST \
+            -H "Authorization: Bearer $RAILWAY_PUBLISHER_TOKEN" \
+            "$RAILWAY_PUBLISHER_URL/trigger/reel?slot=doc-clip")
+          echo "Response:"
+          echo "$response" | jq . || echo "$response"

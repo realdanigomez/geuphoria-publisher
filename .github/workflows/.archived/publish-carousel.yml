@@ -1,0 +1,42 @@
+name: Publish Carousel — 12PM AST
+
+on:
+  schedule:
+    # 12PM AST = 16:00 UTC
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write   # needed to commit published_log.json back
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Publish Carousel
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          FREEIMAGE_KEY: ${{ secrets.FREEIMAGE_KEY }}
+        run: python cloud_publish.py carousel
+
+      - name: Save published log
+        if: always()
+        run: |
+          git config user.email "bot@geuphoria.com"
+          git config user.name "Geuphoria Publisher"
+          git add published_log.json
+          git diff --staged --quiet || git commit -m "log: carousel published $(date -u +%Y-%m-%d)"
+          git push
