@@ -58,18 +58,36 @@ def get_media_info(media_id: str, token: str) -> dict:
     return r.json()
 
 
-def create_story_container(ig_user_id: str, token: str, media_info: dict) -> str:
+def load_schedule_cdn_url(slot: str, today: str) -> str | None:
+    """Read the original CDN URL from publish_schedule.json for the given slot.
+
+    For reels: returns the cdn_url string (e.g. raw.githubusercontent.com link).
+    For carousels: returns None (carousels don't have a single video_url).
+    """
+    sched_path = REPO_ROOT / "publish_schedule.json"
+    if not sched_path.exists():
+        return None
+    sched = json.loads(sched_path.read_text(encoding="utf-8"))
+    today_entry = sched.get(today, {})
+    slot_data = today_entry.get(slot, {})
+    return slot_data.get("cdn_url")
+
+
+def create_story_container(ig_user_id: str, token: str, media_info: dict, override_video_url: str | None = None) -> str:
     """Create a Story media container.
 
-    For VIDEO/REELS: uses video_url.
+    For VIDEO/REELS: uses video_url. Prefer `override_video_url` (the original
+    CDN URL we used to publish the reel) over Graph API's `media_url`, which
+    is often a DASH/HLS stream URL that IG's Story upload rejects.
     For IMAGE/CAROUSEL_ALBUM: uses image_url. For carousels, picks first child's media_url.
     """
     media_type = media_info.get("media_type", "")
     if media_type in ("VIDEO", "REELS"):
-        video_url = media_info.get("media_url")
+        video_url = override_video_url or media_info.get("media_url")
         if not video_url:
-            raise RuntimeError(f"No media_url for video media: {media_info}")
-        log.info(f"Creating Story container (video) from {video_url[:80]}...")
+            raise RuntimeError(f"No video_url for video media: {media_info}")
+        source = "original CDN" if override_video_url else "Graph API media_url"
+        log.info(f"Creating Story container (video, source={source}) from {video_url[:80]}...")
         params = {
             "media_type": "STORIES",
             "video_url": video_url,
@@ -181,8 +199,19 @@ def main() -> int:
     log.info("Waiting 10s for IG to fully process the feed media...")
     time.sleep(10)
 
+    # For reels: prefer the original CDN URL we used to publish, since IG's
+    # Graph API media_url for video is often a streaming URL that rejects
+    # as a Story video source.
+    override_video_url = None
+    if media_info.get("media_type") in ("VIDEO", "REELS"):
+        override_video_url = load_schedule_cdn_url(args.slot, today)
+        if override_video_url:
+            log.info(f"Using original CDN URL from publish_schedule.json: {override_video_url[:80]}...")
+        else:
+            log.warning("No original CDN URL found in publish_schedule.json; falling back to Graph API media_url")
+
     # Create + publish story
-    creation_id = create_story_container(ig_user_id, token, media_info)
+    creation_id = create_story_container(ig_user_id, token, media_info, override_video_url=override_video_url)
     wait_for_container_ready(creation_id, token, max_wait=60)
     story_id = publish_story(ig_user_id, creation_id, token)
 
