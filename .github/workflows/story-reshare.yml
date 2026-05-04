@@ -25,6 +25,12 @@ on:
         description: "Override: explicit media_id (optional — defaults to today's logged ID)"
         required: false
 
+# CRITICAL: workflow_run triggers default to read-only GITHUB_TOKEN.
+# Without this block the log-push step fails with 403 even though the
+# Story is already live on IG. Must be at workflow level.
+permissions:
+  contents: write
+
 jobs:
   reshare:
     if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
