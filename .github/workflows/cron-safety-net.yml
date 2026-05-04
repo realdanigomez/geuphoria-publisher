@@ -1,0 +1,42 @@
+name: Cron Safety Net
+
+# Runs every 10 minutes to catch any GH Actions cron that didn't fire on
+# schedule. The scheduler.py script computes current AST time, reads
+# published_log.json, and fires any workflow whose scheduled slot has
+# passed (+5 min grace) without a log entry. Idempotent — publish scripts
+# self-check the log and skip duplicates.
+#
+# This is the safety net for the well-known "GH cron is unreliable"
+# problem (see https://github.com/orgs/community/discussions/27130 etc.).
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'   # every 10 minutes UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write   # to fire other workflows via `gh workflow run`
+
+jobs:
+  safety-net:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    concurrency:
+      group: safety-net
+      cancel-in-progress: false   # don't cancel; let each tick complete
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Sync latest published_log.json
+        run: git pull --ff-only origin main || true
+
+      - name: Run scheduler
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scheduler.py

@@ -1,20 +1,13 @@
 name: Story Reshare
 
-# Reshares the just-published feed post (reel/carousel) as an IG Story.
-# Auto-fires after every successful publish-reel or publish-carousel run.
-# Can also be fired manually via workflow_dispatch with a slot input.
+# DISABLED auto-trigger as of 2026-05-04 — Dani prefers the IG mobile app's
+# native "Share → Add to Story" sticker (which embeds the original post and
+# is tappable) over a Graph API video re-upload. The Graph API does NOT
+# support that sticker pattern; only fresh Story uploads. So this workflow
+# stays available for manual workflow_dispatch (emergency / one-off use)
+# but no longer fires automatically on each IG publish.
 
 on:
-  workflow_run:
-    workflows:
-      - "Publish Reel — 8AM AST"
-      - "Publish Carousel — 12PM AST"
-      - "Publish Doc Clip — May 4 6:30PM AST"
-      - "Publish Longform Clip — May 4 7:30PM AST"
-      - "Publish Doc Clip — 2PM AST daily"
-      - "Publish Longform Clip — 3PM AST daily"
-    types:
-      - completed
   workflow_dispatch:
     inputs:
       slot:
