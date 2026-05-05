@@ -59,13 +59,15 @@ SLOTS = [
     ("publish-longform-clip.yml", "longform_clip", "15:00",
      ["2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-09","2026-05-10"]),
 
-    # ── May 4 one-shots (longforms + evening clips) ────────────────────────
-    # These are past their date — date filter skips them on May 5+.
-    # Leave them for historical reference; prune after May 11 if desired.
-    ("publish-yt-burnout-longform-may4.yml", "yt_burnout_longform", "15:00", ["2026-05-04"]),
-    ("publish-yt-doc-ep3-may4.yml",          "yt_doc_ep3",          "18:00", ["2026-05-04"]),
-    ("publish-doc-clip-may4.yml",            "doc_clip",            "18:30", ["2026-05-04"]),
-    ("publish-longform-clip-may4.yml",       "longform_clip",       "19:30", ["2026-05-04"]),
+    # ── Dated one-shots (documentary episodes, special longforms) ──────────
+    # NEW PATTERN as of 2026-05-05: dated one-shots go in pending_longforms.json,
+    # NOT as standalone .yml files with dated cron schedules. The May 4 one-shot
+    # workflows have been archived to .github/workflows/.archived/ because their
+    # dated crons fired LATE on May 5 06:29 UTC (8.5h delayed) — when delayed
+    # across AST midnight, the publish script's `today` check uses the new date
+    # and republished content under the wrong key (yt_doc_ep3 duplicate Ep3 +
+    # doc_clip published next day's content 11.5h early). Use pending_longforms.json
+    # for new one-shots; the safety net's date filter prevents this bug.
 ]
 
 
