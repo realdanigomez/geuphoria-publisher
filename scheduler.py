@@ -1,22 +1,26 @@
-"""Cron safety net.
+"""Cron safety net — multi-trigger edition (codified 2026-05-04).
 
-GitHub Actions schedule cron is unreliable — historically delayed 30 min to
-several hours, sometimes skipped entirely. This script runs every 10 minutes
-from `cron-safety-net.yml`, computes current AST time, and fires any
-publish workflow that:
-  1. Is scheduled to have run by now (current AST time >= scheduled + grace)
-  2. Has not yet been logged in published_log.json for today
-  3. (For dated one-shots) is for today's date
+GitHub Actions schedule cron is unreliable — historically delayed 2-4h,
+sometimes skipped entirely. This script runs from multiple trigger sources
+(cron every 5min, push to published_log.json, workflow_run after each
+publish completes, daily heartbeat push). Together these sources ensure
+the safety net fires even if all crons fail.
 
-Each fire is a `gh workflow run <yaml>` — same as a manual dispatch. The
-GITHUB_TOKEN with `actions: write` permission can trigger workflow_dispatch
-on workflows in the same repo. Workflow_run downstream hooks do NOT fire
-from a GITHUB_TOKEN-triggered dispatch (GitHub's loop-protection), which is
-fine for us since the auto Story-reshare hook was disabled on 2026-05-04.
+IDEMPOTENCY: publish scripts self-check published_log.json and skip if
+the slot is already logged. Double-firing is always safe.
 
-Idempotency: the underlying publish scripts check published_log.json
-themselves and skip if the slot is already published for today, so
-double-firing this script is safe.
+SLOT TYPES:
+  SLOTS — recurring daily or dated one-shot slots (fired via gh workflow run)
+  PENDING_LONGFORMS_PATH — JSON queue for documentary/longform source videos
+    that don't have a recurring cron. Format: see pending_longforms.json.
+
+HOW IT WORKS:
+  1. Compute current AST time.
+  2. For each SLOT entry: if today is in dates AND time is past (HH:MM + grace)
+     AND log key is not in published_log for today → fire `gh workflow run`.
+  3. For each entry in pending_longforms.json with publish_date=today AND
+     publish_time_ast past grace AND log_key not yet logged → fire its workflow.
+  4. Idempotent via published_log.json (and sentinel files for notify-only slots).
 """
 from __future__ import annotations
 import json
@@ -28,26 +32,36 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 LOG_FILE = ROOT / "published_log.json"
-GRACE_MIN = 5  # cron has up to ~30min jitter; only fire after grace
+PENDING_LONGFORMS_PATH = ROOT / "pending_longforms.json"
+GRACE_MIN = 5  # fire only after grace period past scheduled time
 
-# Slot definitions: (workflow_yaml, log_key_to_check, scheduled_AST_HH:MM, dates_active)
-# - "all" means every day
-# - For one-shots, list specific YYYY-MM-DD strings
-# - log_key is what the workflow's publish script writes to published_log.json[date][key]
+# ── Daily + dated one-shot slots ─────────────────────────────────────────────
+# Format: (workflow_yaml, log_key, scheduled_AST_HH:MM, dates_active)
+#   "all"  → every day
+#   list   → specific YYYY-MM-DD dates only
+#
+# MAINTENANCE: update the date lists each week.
+# Expired one-shot entries (past dates) are safe to leave — date filter skips them.
+# Add next week's dates before Monday 8AM.
+
 SLOTS = [
-    # Daily slots (all dates)
-    ("publish-reel.yml",       "reel",        "08:00", "all"),
-    ("publish-yt-reel.yml",    "yt_reel",     "08:00", "all"),
-    ("publish-carousel.yml",   "carousel",    "12:00", "all"),
-    ("publish-yt-carousel-asset.yml", "yt_carousel_asset_notif", "12:01", "all"),
+    # ── Daily slots (all dates) ────────────────────────────────────────────
+    ("publish-reel.yml",                    "reel",                    "08:00", "all"),
+    ("publish-yt-reel.yml",                 "yt_reel",                 "08:00", "all"),
+    ("publish-carousel.yml",                "carousel",                "12:00", "all"),
+    ("publish-yt-carousel-asset.yml",       "yt_carousel_asset_notif", "12:01", "all"),
 
-    # Daily slots — only fire on May 5+ (May 4's clips are the *-may4.yml versions below)
+    # ── Doc-clip + longform-clip — fire Tue-Sun May 5-10 ──────────────────
+    # (May 4 clips handled by the -may4 one-shots below)
+    # UPDATE THIS LIST each week before Monday 8AM.
     ("publish-doc-clip.yml",      "doc_clip",      "14:00",
      ["2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-09","2026-05-10"]),
     ("publish-longform-clip.yml", "longform_clip", "15:00",
      ["2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-09","2026-05-10"]),
 
-    # May 4 one-shots (longforms + evening clips)
+    # ── May 4 one-shots (longforms + evening clips) ────────────────────────
+    # These are past their date — date filter skips them on May 5+.
+    # Leave them for historical reference; prune after May 11 if desired.
     ("publish-yt-burnout-longform-may4.yml", "yt_burnout_longform", "15:00", ["2026-05-04"]),
     ("publish-yt-doc-ep3-may4.yml",          "yt_doc_ep3",          "18:00", ["2026-05-04"]),
     ("publish-doc-clip-may4.yml",            "doc_clip",            "18:30", ["2026-05-04"]),
@@ -55,18 +69,22 @@ SLOTS = [
 ]
 
 
+# ── Time helpers ─────────────────────────────────────────────────────────────
+
 def aruba_now() -> datetime:
     return datetime.now(timezone.utc) + timedelta(hours=-4)
 
 
 def is_overdue(hh_mm: str) -> bool:
-    """True if current AST time is past HH:MM today + grace minutes."""
+    """True if current AST time >= HH:MM today + GRACE_MIN."""
     h, m = map(int, hh_mm.split(":"))
     now = aruba_now()
     target = now.replace(hour=h, minute=m, second=0, microsecond=0)
     target += timedelta(minutes=GRACE_MIN)
     return now >= target
 
+
+# ── Log helpers ───────────────────────────────────────────────────────────────
 
 def load_log() -> dict:
     if LOG_FILE.exists():
@@ -76,6 +94,8 @@ def load_log() -> dict:
             print(f"[scheduler] WARN: {LOG_FILE} is corrupt; treating as empty")
     return {}
 
+
+# ── Workflow trigger ──────────────────────────────────────────────────────────
 
 def fire_workflow(yaml_name: str, dry_run: bool = False) -> bool:
     """Trigger a workflow_dispatch via gh CLI. Returns True on success."""
@@ -88,17 +108,81 @@ def fire_workflow(yaml_name: str, dry_run: bool = False) -> bool:
         capture_output=True, text=True
     )
     if result.returncode == 0:
-        print(f"[scheduler]   OK: {result.stdout.strip()}")
+        print(f"[scheduler]   OK: {result.stdout.strip() or 'dispatched'}")
         return True
     print(f"[scheduler]   FAIL: rc={result.returncode} stderr={result.stderr.strip()}")
     return False
 
 
+# ── Pending longforms queue ───────────────────────────────────────────────────
+# pending_longforms.json format:
+# [
+#   {
+#     "name": "documentary-ep4",
+#     "workflow": "publish-yt-doc-ep4.yml",
+#     "log_key": "yt_doc_ep4",
+#     "publish_date_ast": "2026-05-11",
+#     "publish_time_ast": "18:00"
+#   }
+# ]
+# Add entries here when a new documentary or longform source video is approved.
+# The scheduler fires the workflow on the specified date + time.
+# Once the workflow logs the video_id, it won't fire again (idempotent).
+
+def check_pending_longforms(today: str, today_log: dict, dry_run: bool = False) -> tuple[int, int]:
+    """Check pending_longforms.json and fire any that are overdue + unlogged."""
+    fired = 0
+    skipped = 0
+    if not PENDING_LONGFORMS_PATH.exists():
+        return fired, skipped
+
+    try:
+        entries = json.loads(PENDING_LONGFORMS_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as e:
+        print(f"[scheduler] WARN: could not read {PENDING_LONGFORMS_PATH}: {e}")
+        return fired, skipped
+
+    for entry in entries:
+        name = entry.get("name", "?")
+        workflow = entry.get("workflow")
+        log_key = entry.get("log_key")
+        pub_date = entry.get("publish_date_ast")
+        pub_time = entry.get("publish_time_ast", "18:00")
+
+        if not all([workflow, log_key, pub_date]):
+            print(f"[scheduler] SKIP pending entry {name}: missing required fields")
+            skipped += 1
+            continue
+
+        if pub_date != today:
+            skipped += 1
+            continue
+
+        if not is_overdue(pub_time):
+            print(f"[scheduler] - {workflow} ({log_key} @ {pub_time}): not yet due [pending]")
+            skipped += 1
+            continue
+
+        if log_key in today_log:
+            print(f"[scheduler] - {workflow} ({log_key} @ {pub_time}): already logged [pending]")
+            skipped += 1
+            continue
+
+        print(f"[scheduler] PENDING LONGFORM overdue: {name} ({log_key} @ {pub_time})")
+        if fire_workflow(workflow, dry_run=dry_run):
+            fired += 1
+
+    return fired, skipped
+
+
+# ── Main ──────────────────────────────────────────────────────────────────────
+
 def main() -> int:
     dry_run = "--dry-run" in sys.argv or os.environ.get("DRY_RUN") == "true"
     now = aruba_now()
     today = now.strftime("%Y-%m-%d")
-    print(f"[scheduler] === Cron safety net @ AST {now:%Y-%m-%d %H:%M:%S} (UTC{now.utcoffset()}) ===")
+
+    print(f"[scheduler] === Safety net @ AST {now:%Y-%m-%d %H:%M:%S} (UTC{now.utcoffset()}) ===")
     if dry_run:
         print("[scheduler] (DRY-RUN MODE — no workflows will actually fire)")
 
@@ -108,6 +192,8 @@ def main() -> int:
 
     fired = 0
     skipped = 0
+
+    # ── Check regular SLOTS ────────────────────────────────────────────────
     for yaml_name, key, sched_time, dates in SLOTS:
         # Date filter
         if dates != "all" and today not in dates:
@@ -119,26 +205,30 @@ def main() -> int:
             continue
         # Already logged?
         if key in today_log:
-            print(f"[scheduler] - {yaml_name} ({key} @ {sched_time}): already logged ({today_log[key][:24]})")
+            print(f"[scheduler] - {yaml_name} ({key} @ {sched_time}): already logged ({str(today_log[key])[:24]})")
             skipped += 1
             continue
         # Special case: yt_carousel_asset_notif is a notify-only workflow that
-        # doesn't write to published_log. Use a different sentinel: skip if
-        # we've already fired it once today (track via .last_fire/<date>-<key>).
+        # doesn't write to published_log. Use a sentinel file instead.
         if key == "yt_carousel_asset_notif":
             sentinel = ROOT / ".last_fire" / f"{today}-{key}"
             if sentinel.exists():
                 print(f"[scheduler] - {yaml_name} ({key}): sentinel exists, already fired today")
                 skipped += 1
                 continue
-        # Overdue + missing → fire
+        # Overdue + not logged → fire
         if fire_workflow(yaml_name, dry_run=dry_run):
             fired += 1
             if key == "yt_carousel_asset_notif" and not dry_run:
                 sentinel.parent.mkdir(exist_ok=True)
                 sentinel.write_text(now.isoformat())
 
-    print(f"[scheduler] === Done. Fired={fired}, skipped={skipped} ===")
+    # ── Check pending longforms queue ──────────────────────────────────────
+    pf_fired, pf_skipped = check_pending_longforms(today, today_log, dry_run=dry_run)
+    fired += pf_fired
+    skipped += pf_skipped
+
+    print(f"[scheduler] === Done. Fired={fired}, Skipped={skipped} ===")
     return 0
 
 

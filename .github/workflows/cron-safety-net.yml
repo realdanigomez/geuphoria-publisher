@@ -1,18 +1,56 @@
 name: Cron Safety Net
 
-# Runs every 10 minutes to catch any GH Actions cron that didn't fire on
+# Runs every 5 minutes to catch any GH Actions cron that didn't fire on
 # schedule. The scheduler.py script computes current AST time, reads
 # published_log.json, and fires any workflow whose scheduled slot has
 # passed (+5 min grace) without a log entry. Idempotent — publish scripts
 # self-check the log and skip duplicates.
 #
-# This is the safety net for the well-known "GH cron is unreliable"
-# problem (see https://github.com/orgs/community/discussions/27130 etc.).
+# MULTI-TRIGGER DESIGN (codified 2026-05-04 after GH cron skipped doc-ep3):
+# GH Actions cron is fundamentally unreliable — 2-4h delays, sometimes never
+# fires. This safety net is itself a GH cron, so it can also be skipped.
+# To break the dependency, we trigger the safety net from MULTIPLE sources:
+#
+#   1. schedule (*/5) — primary, but unreliable
+#   2. workflow_dispatch — manual fallback
+#   3. push to main paths [published_log.json] — fires every time a publish
+#      workflow successfully commits the log. Creates a chain reaction: each
+#      successful publish → safety net → checks next slot → fires if overdue.
+#   4. push to main paths [heartbeat.json] — fires when the 7:45 UTC morning
+#      heartbeat workflow pushes. Keeps crons alive daily.
+#   5. workflow_run on ALL publish workflows — fires immediately after any
+#      publish workflow completes. This is the most reliable chain trigger.
+#
+# Together these 5 sources mean: even if ALL crons fail, as soon as ONE
+# publish completes (or the morning heartbeat runs), the safety net fires
+# and checks + fires all overdue slots. A single domino starts the chain.
+#
+# Idempotency: the underlying publish scripts check published_log.json
+# themselves and skip if the slot is already published for today, so
+# firing this script multiple times per minute is safe.
 
 on:
   schedule:
-    - cron: '*/10 * * * *'   # every 10 minutes UTC
+    - cron: '*/5 * * * *'   # every 5 minutes UTC
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'published_log.json'
+      - 'heartbeat.json'
+  workflow_run:
+    workflows:
+      - "Publish Reel — 8AM AST"
+      - "Publish YT Short (Reel) — 8AM AST daily"
+      - "Publish Carousel — 12PM AST"
+      - "Notify YT Carousel Manual Upload — 12:01PM AST"
+      - "Publish Doc Clip — 2PM AST daily"
+      - "Publish Doc Clip — May 4 6:30PM AST"
+      - "Publish Longform Clip — 3PM AST daily"
+      - "Publish Longform Clip — May 4 7:30PM AST"
+      - "Publish YT Burnout Longform — May 4 3PM AST"
+      - "Publish YT Doc Ep 3 — May 4 6PM AST"
+    types: [completed]
 
 permissions:
   contents: read

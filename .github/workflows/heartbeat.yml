@@ -1,0 +1,50 @@
+name: Daily Heartbeat
+
+# Runs every morning at 7:45 UTC = 3:45 AM AST (low-traffic window).
+# Pushes a timestamp to heartbeat.json on main.
+#
+# PURPOSE: Keeps the repo "active" so GH never disables its crons
+# (GH disables crons on repos with >60 days of inactivity). Also
+# triggers the push-based safety net via the `paths: heartbeat.json`
+# trigger in cron-safety-net.yml — the safety net then verifies no
+# morning slots were missed and warms up before the 8AM publish window.
+#
+# This is the first domino of the daily chain:
+#   heartbeat push → safety net → checks slots (none due at 3:45AM) →
+#   8AM cron fires → publish → log push → safety net → checks 12PM → etc.
+
+on:
+  schedule:
+    - cron: '45 7 * * *'   # 07:45 UTC = 3:45 AM AST daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    concurrency:
+      group: heartbeat
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Write heartbeat timestamp
+        run: |
+          set -euo pipefail
+          git config user.email "bot@geuphoria.com"
+          git config user.name "Geuphoria Publisher"
+          git pull --ff-only origin main || true
+          echo "{\"last_heartbeat\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",\"note\":\"daily keepalive — triggers push-based safety net\"}" > heartbeat.json
+          git add heartbeat.json
+          git diff --staged --quiet && { echo "Heartbeat unchanged — skipping push."; exit 0; }
+          git commit -m "heartbeat: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push origin main
+          echo "Heartbeat pushed — safety net will fire on push trigger."
