@@ -20,6 +20,10 @@ on:
           - 'false'
           - 'true'
 
+concurrency:
+  group: publish-longform-clip
+  cancel-in-progress: false   # queue, never cancel — second run checks log and skips
+
 jobs:
   publish:
     runs-on: ubuntu-latest
