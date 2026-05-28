@@ -1,0 +1,94 @@
+name: Publish Story — 7PM AST daily
+
+# Posts Dani's original multi-frame IG Story sequence for the day.
+# Cron 0 23 * * * = 23:00 UTC = 7PM AST.
+# Reads publish_schedule.json[<today AST>].story and posts each frame via the
+# Graph API (media_type=STORIES). If no story slot today, exits 0 (no error).
+
+on:
+  schedule:
+    - cron: '0 23 * * *'   # 23:00 UTC = 7PM AST
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run without publishing (dry-run)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+concurrency:
+  group: publish-story
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout (with latest log)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Sync latest published_log.json
+        run: git pull --ff-only origin main || true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Check today has a story slot
+        id: gate
+        run: |
+          set -euo pipefail
+          today=$(TZ=America/Curacao date +%F)
+          echo "today=$today" >> "$GITHUB_OUTPUT"
+          slot=$(python -c "import json; d=json.load(open('publish_schedule.json')); print('yes' if 'story' in d.get('$today',{}) else 'no')")
+          echo "slot_present=$slot" >> "$GITHUB_OUTPUT"
+          echo "Today AST = $today / story slot = $slot"
+
+      - name: Publish story sequence
+        if: steps.gate.outputs.slot_present == 'yes'
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+        run: |
+          set -euo pipefail
+          if [ "$DRY_RUN" = "true" ]; then
+            python publish_story.py --dry-run
+          else
+            python publish_story.py
+          fi
+
+      - name: Save published log + push (retry on conflict)
+        if: always() && steps.gate.outputs.slot_present == 'yes' && github.event.inputs.dry_run != 'true'
+        env:
+          WORKFLOW_NAME: story-daily
+        run: |
+          set -euo pipefail
+          git config user.email "bot@geuphoria.com"
+          git config user.name "Geuphoria Publisher"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main || true
+            git add published_log.json
+            git diff --staged --quiet && { echo "Nothing to commit."; break; }
+            git commit -m "log: $WORKFLOW_NAME $(date -u +%Y-%m-%dT%H:%MZ)" || true
+            if git push origin main; then
+              echo "Pushed."
+              break
+            fi
+            echo "Push failed, retrying in 5s..."
+            sleep 5
+          done

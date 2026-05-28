@@ -301,7 +301,7 @@ def publish_yt_short(today: str, slot: str, slot_data: dict, dry_run: bool = Fal
 # ── Main ────────────────────────────────────────────────────────
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--slot", required=True, choices=["doc_clip", "longform_clip", "reel"])
+    parser.add_argument("--slot", required=True, choices=["doc_clip", "longform_clip", "longform_clip_bonus", "reel"])
     parser.add_argument("--platform", default="both", choices=["ig", "yt", "both"])
     parser.add_argument("--gate", default=None,
                         help="Dependency log key (e.g. yt_doc_ep3) — if missing in published_log "
@@ -320,6 +320,11 @@ def main() -> int:
     try:
         slot_data = load_schedule_slot(today, args.slot)
     except Exception as e:
+        # Graceful no-op when this slot simply isn't scheduled today (e.g. bonus
+        # slots only exist on some days). Daily cron then exits clean, no error.
+        if f"No {args.slot} for" in str(e):
+            log.info(f"No {args.slot} scheduled for {today}; nothing to publish. Exiting 0.")
+            return 0
         log.error(f"Schedule lookup failed: {e}")
         return 1
 

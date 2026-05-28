@@ -20,7 +20,7 @@
     "carousel": {
       "name": "carousel-2-coach-vs-business-owner",
       "folder": "carousel-2-coach-vs-business-owner",
-      "caption": "You became a coach because you're great at coaching.\n\nBut running a business is a different skill.\n\nAfter studying nearly 200 online fitness coaches, these 6 signs showed up over and over in the coaches who were stuck.\n\nThe shift isn't about coaching less. It's about building systems around your coaching.\n\n(Disclaimer: This is based on what I've observed; results are not guaranteed!)\n\n-Dani Gomez\n\n#onlinefitnesscoach #onlinefitnesscoaches"
+      "caption": "You became a coach because you're great at coaching.\n\nBut running a business is a different skill.\n\nAfter studying nearly 200 online fitness coaches, these 6 signs showed up over and over in the coaches who were stuck.\n\nThe shift isn't about coaching less. It's about building systems around your coding.\n\n(Disclaimer: This is based on what I've observed; results are not guaranteed!)\n\n-Dani Gomez\n\n#onlinefitnesscoach #onlinefitnesscoaches"
     }
   },
   "2026-04-17": {
@@ -88,200 +88,579 @@
       "caption": "\"People with half my knowledge are doing better than me.\"\n\nI hear this from online fitness coaches constantly. And they're always right.\n\nThe difference is never knowledge. It's visibility.\n\nThe coach with half your skills but twice your visibility will make more money every single time. That's not unfair. That's a skill gap you can fix.\n\n(Disclaimer: This is based on what I've observed; results are not guaranteed!)\n\n-Dani Gomez\n\n#onlinefitnesscoach #onlinefitnesscoaches"
     }
   },
-  "2026-05-04": {
+  "2026-05-29": {
+    "_note": "LAUNCH DAY — longform + documentary ship to YouTube. All times AST (UTC-4).",
+    "longform": {
+      "name": "longform-order-problem",
+      "slot_time_ast": "9:00 AM",
+      "slot_time_utc": "1:00 PM",
+      "platform": "youtube",
+      "file": "04_drafts/approved/2026-05-11-longform-order-problem/2026-05-11-longform-order-problem/longform-final-v11.mp4",
+      "title": "i studied 100 online fitness coaches. they all have an order problem.",
+      "description_file": "04_drafts/approved/2026-05-11-longform-order-problem/2026-05-11-longform-order-problem/description.txt"
+    },
+    "documentary": {
+      "name": "documentary-patience-week4",
+      "slot_time_ast": "10:00 AM",
+      "slot_time_utc": "2:00 PM",
+      "platform": "youtube",
+      "file": "04_drafts/approved/2026-05-11-documentary/documentary-final.mp4",
+      "title": "patience. | week 4 i'd rather die trying.",
+      "description_file": "04_drafts/approved/2026-05-11-documentary/description.txt"
+    },
     "reel": {
-      "name": "its-the-waiting",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/its-the-waiting-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/its-the-waiting-youtube.mp4",
-      "yt_caption_path": "captions/its-the-waiting/caption-youtube.txt",
-      "caption": "A Real lesson most coaches don't talk about.\n\nFollow for more.\n\n(Disclaimer: This is based on what I've observed; results are not guaranteed!)\n\n#onlinefitnesscoach #onlinefitnesscoaches"
+      "name": "reel-ai-gap",
+      "slot_time_ast": "8:00 AM",
+      "slot_time_utc": "12:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-12-reel-ai-gap/ai-gap-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-12-reel-ai-gap/ai-gap-youtube.mp4",
+      "caption_ig": "49% of the coaches you compete with are using AI for admin. You're still doing yours by hand. That's the whole gap.\n\nThe math: if they save 5 hours a week and you don't, that's 250 hours a year. 6 weeks of vacation they have, that you don't.\n\n3 things to automate this week → client intake summary, weekly check-in summary, FAQ DM responses.\n\nAlex Hormozi said it: \"People with tools beat people without tools.\" People with AI will beat people without AI.\n\nAI for the admin. Not for the coaching. The coaches who blur that line lose. The coaches who hold it win.\n\nFollow for more.\n\n(Disclaimer: This is based on what I've observed; results are not guaranteed!)\n\n#onlinefitnesscoach #onlinefitnesscoaches #fitnesscoachbusiness #onlinecoaching #fitnessbusiness",
+      "caption_yt": "Trainerize reported in 2026 that 49% of trainers are now offloading their admin and communication tasks to AI. Half the coaches you compete with already moved. Half haven't.\n\nHere's the cost of being in the second half. If a coach saves five hours a week on admin and you don't, that's 250 hours a year. That's six weeks of vacation they have that you don't. Same revenue, less time spent.\n\nThree places to start automating this week. Client intake summary. Weekly check-in summary. FAQ DM responses on pricing, schedule, and what's included.\n\nAlex Hormozi put it plainly: people with tools beat people without tools. People with AI will beat people without AI.\n\nThe line that matters: AI for the admin work. Never for the coaching itself. The coaches who blur that line lose the relationship. The coaches who hold it keep the craft and free up the time.\n\nSubscribe for more.\n\n(Disclaimer: This is based on what I've observed; results are not guaranteed!)\n\n#onlinefitnesscoach #fitnesscoachbusiness #onlinecoaching",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/ai-gap-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/ai-gap-youtube.mp4",
+      "caption_path": "captions/ai-gap/caption.txt",
+      "yt_caption_path": "captions/ai-gap/caption-youtube.txt"
     },
     "carousel": {
-      "name": "sharecroppers",
-      "folder": "sharecroppers",
-      "caption": "You're a sharecropper on Instagram.\n\nSharecroppers worked the land but never owned the harvest. If you don't own your audience, you don't own your business. \n\nEvery post should move 1 person off the platform and onto your list. That's the whole game.\n\nIf you found this helpful, follow for more.\n\n(Disclaimer: This is based on what I've observed; results are not guaranteed!)\n\n#onlinefitnesscoach #onlinefitnesscoaches"
+      "name": "carousel-ai-gap",
+      "slot_time_ast": "12:00 PM",
+      "slot_time_utc": "4:00 PM",
+      "platform": [
+        "instagram"
+      ],
+      "folder": "ai-gap",
+      "caption_ig": "Online Fitness Coaches...\n\n49% of the coaches you compete with are using AI for admin in 2026. You're not. That's the whole gap.\n\n3 places to start this week → client intake summary, weekly check-in summary, FAQ DM responses.\n\nAI for the admin. Not for the coaching. The coaches who blur that line lose. The ones who hold it win the time and the craft.\n\nPick one. Replace it by Friday. Then the next one.\n\nFollow for more.\n\n(Disclaimer: This is based on what I've observed; results are not guaranteed!)\n\n#onlinefitnesscoach #onlinefitnesscoaches #fitnesscoachbusiness #onlinecoaching #fitnessbusiness #personaltrainer #aiforcoaches #coachingbusiness",
+      "caption_yt": "Trainerize reported in 2026 that 49% of trainers are now offloading admin and communication tasks to AI. Half the coaches you compete with have already moved. Half haven't.\n\nHere are 3 admin tasks you can hand to AI this Friday.\n\nOne. Client intake summary. The 20-question form goes in. A 5-bullet summary comes out. Goals, history, blockers, schedule, red flags. 25 minutes back per onboarding.\n\nTwo. Weekly check-in summary. A 5-minute client voice memo goes in. The transcript plus a 5-bullet summary comes out. Across 10 clients that's five hours back every week.\n\nThree. FAQ DM responses. Pricing. Schedule. What's included. The first message stops being your job. You handle the live conversation.\n\nThe line that matters: AI for the admin. Never for the coaching itself. The intake call, the hard moments, your point of view in your content. Those are coach moments.\n\nPick one this week. Replace it by Friday. Then the next one. That's how the gap closes.\n\nSubscribe for more.\n\n(Disclaimer: This is based on what I've observed; results are not guaranteed!)\n\n#onlinefitnesscoach #fitnesscoachbusiness #onlinecoaching",
+      "caption_path": "captions/carousel-ai-gap/caption.txt"
     },
     "doc_clip": {
-      "name": "figure-it-out-thick-skin",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/figure-it-out-thick-skin-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/figure-it-out-thick-skin-youtube.mp4",
-      "caption_path": "captions/figure-it-out-thick-skin/caption.txt",
-      "yt_caption_path": "captions/figure-it-out-thick-skin/caption-youtube.txt"
+      "name": "doc-clip-die-trying-thesis",
+      "slot_time_ast": "2:00 PM",
+      "slot_time_utc": "6:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-25-doc-clip-die-trying-thesis/die-trying-thesis-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-25-doc-clip-die-trying-thesis/die-trying-thesis-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-25-doc-clip-die-trying-thesis/caption-instagram.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-25-doc-clip-die-trying-thesis/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/die-trying-thesis-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/die-trying-thesis-youtube.mp4",
+      "caption_path": "captions/die-trying-thesis/caption.txt",
+      "yt_caption_path": "captions/die-trying-thesis/caption-youtube.txt"
     },
     "longform_clip": {
-      "name": "hook-200-174",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/hook-200-174-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/hook-200-174-youtube.mp4",
-      "caption_path": "captions/hook-200-174/caption.txt",
-      "yt_caption_path": "captions/hook-200-174/caption-youtube.txt"
+      "name": "longform-clip-the-order-thesis",
+      "slot_time_ast": "3:00 PM",
+      "slot_time_utc": "7:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-25-longform-clip-the-order-thesis/the-order-thesis-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-25-longform-clip-the-order-thesis/the-order-thesis-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-25-longform-clip-the-order-thesis/caption-instagram.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-25-longform-clip-the-order-thesis/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/the-order-thesis-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/the-order-thesis-youtube.mp4",
+      "caption_path": "captions/the-order-thesis/caption.txt",
+      "yt_caption_path": "captions/the-order-thesis/caption-youtube.txt"
+    },
+    "story": {
+      "name": "story-1-order-problem",
+      "slot_time_ast": "7:00 PM",
+      "slot_time_utc": "11:00 PM",
+      "platform": "instagram_story",
+      "folder": "stories/story-1-order-problem",
+      "frames": [
+        "frame-1.png",
+        "frame-2.png",
+        "frame-3.png",
+        "frame-4.png",
+        "frame-5.png"
+      ],
+      "caption": null
     }
   },
-  "2026-05-05": {
+  "2026-05-30": {
     "reel": {
-      "name": "letting-clients-go",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/letting-clients-go-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/letting-clients-go-youtube.mp4",
-      "caption_path": "captions/letting-clients-go/caption.txt",
-      "yt_caption_path": "captions/letting-clients-go/caption-youtube.txt"
+      "name": "reel-25-year-burnout",
+      "slot_time_ast": "8:00 AM",
+      "slot_time_utc": "12:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-12-reel-25-year-burnout/25-year-burnout-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-12-reel-25-year-burnout/25-year-burnout-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-12-reel-25-year-burnout/caption.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-12-reel-25-year-burnout/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/25-year-burnout-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/25-year-burnout-youtube.mp4",
+      "caption_path": "captions/25-year-burnout/caption.txt",
+      "yt_caption_path": "captions/25-year-burnout/caption-youtube.txt"
     },
     "carousel": {
-      "name": "first-10-clients-map",
-      "folder": "first-10-clients-map",
-      "caption_path": "captions/first-10-clients-map/caption.txt"
+      "name": "carousel-25-year-burnout",
+      "slot_time_ast": "12:00 PM",
+      "slot_time_utc": "4:00 PM",
+      "platform": [
+        "instagram"
+      ],
+      "folder": "25-year-burnout",
+      "caption_ig_script": "04_drafts/approved/2026-05-04-carousel-25-year-burnout/script.md",
+      "caption_path": "captions/carousel-25-year-burnout/caption.txt"
     },
     "doc_clip": {
-      "name": "priority-whiteboard",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/priority-whiteboard-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/priority-whiteboard-youtube.mp4",
-      "caption_path": "captions/priority-whiteboard/caption.txt",
-      "yt_caption_path": "captions/priority-whiteboard/caption-youtube.txt"
+      "name": "doc-clip-inputs-we-control",
+      "slot_time_ast": "2:00 PM",
+      "slot_time_utc": "6:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-25-doc-clip-inputs-we-control/inputs-we-control-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-25-doc-clip-inputs-we-control/inputs-we-control-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-25-doc-clip-inputs-we-control/caption-instagram.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-25-doc-clip-inputs-we-control/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/inputs-we-control-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/inputs-we-control-youtube.mp4",
+      "caption_path": "captions/inputs-we-control/caption.txt",
+      "yt_caption_path": "captions/inputs-we-control/caption-youtube.txt"
     },
     "longform_clip": {
-      "name": "filter-1-pain-urgency",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/filter-1-pain-urgency-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/filter-1-pain-urgency-youtube.mp4",
-      "caption_path": "captions/filter-1-pain-urgency/caption.txt",
-      "yt_caption_path": "captions/filter-1-pain-urgency/caption-youtube.txt"
+      "name": "longform-clip-4-wrong-answers-payoff",
+      "slot_time_ast": "3:00 PM",
+      "slot_time_utc": "7:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-25-longform-clip-4-wrong-answers-payoff/4-wrong-answers-payoff-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-25-longform-clip-4-wrong-answers-payoff/4-wrong-answers-payoff-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-25-longform-clip-4-wrong-answers-payoff/caption-instagram.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-25-longform-clip-4-wrong-answers-payoff/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/4-wrong-answers-payoff-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/4-wrong-answers-payoff-youtube.mp4",
+      "caption_path": "captions/4-wrong-answers-payoff/caption.txt",
+      "yt_caption_path": "captions/4-wrong-answers-payoff/caption-youtube.txt"
+    },
+    "story": {
+      "name": "story-2-niche-is-a-person",
+      "slot_time_ast": "7:00 PM",
+      "slot_time_utc": "11:00 PM",
+      "platform": "instagram_story",
+      "folder": "stories/story-2-niche-is-a-person",
+      "frames": [
+        "frame-1.png",
+        "frame-2.png",
+        "frame-3.png",
+        "frame-4.png",
+        "frame-5.png"
+      ],
+      "caption": null
     }
   },
-  "2026-05-06": {
+  "2026-05-31": {
     "reel": {
-      "name": "hardest-hire-second",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/hardest-hire-second-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/hardest-hire-second-youtube.mp4",
-      "caption_path": "captions/hardest-hire-second/caption.txt",
-      "yt_caption_path": "captions/hardest-hire-second/caption-youtube.txt"
+      "name": "reel-hollings-unsustainable",
+      "slot_time_ast": "8:00 AM",
+      "slot_time_utc": "12:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-12-reel-hollings-unsustainable/hollings-unsustainable-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-12-reel-hollings-unsustainable/hollings-unsustainable-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-12-reel-hollings-unsustainable/caption.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-12-reel-hollings-unsustainable/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/hollings-unsustainable-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/hollings-unsustainable-youtube.mp4",
+      "caption_path": "captions/hollings-unsustainable/caption.txt",
+      "yt_caption_path": "captions/hollings-unsustainable/caption-youtube.txt"
     },
     "carousel": {
-      "name": "more-clients-more-chaos",
-      "folder": "more-clients-more-chaos",
-      "caption_path": "captions/more-clients-more-chaos/caption.txt"
+      "name": "carousel-hollings-unsustainable",
+      "slot_time_ast": "12:00 PM",
+      "slot_time_utc": "4:00 PM",
+      "platform": [
+        "instagram"
+      ],
+      "folder": "hollings-unsustainable",
+      "caption_ig_script": "04_drafts/approved/2026-05-04-carousel-hollings-unsustainable/script.md",
+      "caption_path": "captions/carousel-hollings-unsustainable/caption.txt"
     },
     "doc_clip": {
-      "name": "iteration-loop",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/iteration-loop-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/iteration-loop-youtube.mp4",
-      "caption_path": "captions/iteration-loop/caption.txt",
-      "yt_caption_path": "captions/iteration-loop/caption-youtube.txt"
+      "name": "doc-clip-the-bad-days",
+      "slot_time_ast": "2:00 PM",
+      "slot_time_utc": "6:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-25-doc-clip-the-bad-days/the-bad-days-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-25-doc-clip-the-bad-days/the-bad-days-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-25-doc-clip-the-bad-days/caption-instagram.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-25-doc-clip-the-bad-days/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/the-bad-days-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/the-bad-days-youtube.mp4",
+      "caption_path": "captions/the-bad-days/caption.txt",
+      "yt_caption_path": "captions/the-bad-days/caption-youtube.txt"
     },
     "longform_clip": {
-      "name": "filter-2-payability",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/filter-2-payability-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/filter-2-payability-youtube.mp4",
-      "caption_path": "captions/filter-2-payability/caption.txt",
-      "yt_caption_path": "captions/filter-2-payability/caption-youtube.txt"
+      "name": "longform-clip-bad-vs-good-offer",
+      "slot_time_ast": "3:00 PM",
+      "slot_time_utc": "7:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-25-longform-clip-bad-vs-good-offer/bad-vs-good-offer-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-25-longform-clip-bad-vs-good-offer/bad-vs-good-offer-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-25-longform-clip-bad-vs-good-offer/caption-instagram.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-25-longform-clip-bad-vs-good-offer/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/bad-vs-good-offer-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/bad-vs-good-offer-youtube.mp4",
+      "caption_path": "captions/bad-vs-good-offer/caption.txt",
+      "yt_caption_path": "captions/bad-vs-good-offer/caption-youtube.txt"
+    },
+    "story": {
+      "name": "story-3-offer-is-an-outcome",
+      "slot_time_ast": "7:00 PM",
+      "slot_time_utc": "11:00 PM",
+      "platform": "instagram_story",
+      "folder": "stories/story-3-offer-is-an-outcome",
+      "frames": [
+        "frame-1.png",
+        "frame-2.png",
+        "frame-3.png",
+        "frame-4.png",
+        "frame-5.png"
+      ],
+      "caption": null
     }
   },
-  "2026-05-07": {
+  "2026-06-01": {
     "reel": {
-      "name": "repackaged-certs",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/repackaged-certs-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/repackaged-certs-youtube.mp4",
-      "caption_path": "captions/repackaged-certs/caption.txt",
-      "yt_caption_path": "captions/repackaged-certs/caption-youtube.txt"
+      "name": "reel-noble-manual-burnout",
+      "slot_time_ast": "8:00 AM",
+      "slot_time_utc": "12:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-12-reel-noble-manual-burnout/noble-manual-burnout-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-12-reel-noble-manual-burnout/noble-manual-burnout-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-12-reel-noble-manual-burnout/caption.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-12-reel-noble-manual-burnout/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/noble-manual-burnout-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/noble-manual-burnout-youtube.mp4",
+      "caption_path": "captions/noble-manual-burnout/caption.txt",
+      "yt_caption_path": "captions/noble-manual-burnout/caption-youtube.txt"
     },
     "carousel": {
-      "name": "check-in-form",
-      "folder": "check-in-form",
-      "caption_path": "captions/check-in-form/caption.txt"
+      "name": "carousel-noble-manual-burnout",
+      "slot_time_ast": "12:00 PM",
+      "slot_time_utc": "4:00 PM",
+      "platform": [
+        "instagram"
+      ],
+      "folder": "noble-manual-burnout",
+      "caption_ig_script": "04_drafts/approved/2026-05-04-carousel-noble-manual-burnout/script.md",
+      "caption_path": "captions/carousel-noble-manual-burnout/caption.txt"
     },
     "doc_clip": {
-      "name": "trade-off-skip-gym",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/trade-off-skip-gym-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/trade-off-skip-gym-youtube.mp4",
-      "caption_path": "captions/trade-off-skip-gym/caption.txt",
-      "yt_caption_path": "captions/trade-off-skip-gym/caption-youtube.txt"
+      "name": "doc-clip-time-is-activities",
+      "slot_time_ast": "2:00 PM",
+      "slot_time_utc": "6:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-25-doc-clip-time-is-activities/time-is-activities-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-25-doc-clip-time-is-activities/time-is-activities-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-25-doc-clip-time-is-activities/caption-instagram.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-25-doc-clip-time-is-activities/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/time-is-activities-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/time-is-activities-youtube.mp4",
+      "caption_path": "captions/time-is-activities/caption.txt",
+      "yt_caption_path": "captions/time-is-activities/caption-youtube.txt"
     },
     "longform_clip": {
-      "name": "filter-3-coachability",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/filter-3-coachability-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/filter-3-coachability-youtube.mp4",
-      "caption_path": "captions/filter-3-coachability/caption.txt",
-      "yt_caption_path": "captions/filter-3-coachability/caption-youtube.txt"
+      "name": "longform-clip-niche-avatar-test",
+      "slot_time_ast": "3:00 PM",
+      "slot_time_utc": "7:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-25-longform-clip-niche-avatar-test/niche-avatar-test-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-25-longform-clip-niche-avatar-test/niche-avatar-test-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-25-longform-clip-niche-avatar-test/caption-instagram.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-25-longform-clip-niche-avatar-test/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/niche-avatar-test-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/niche-avatar-test-youtube.mp4",
+      "caption_path": "captions/niche-avatar-test/caption.txt",
+      "yt_caption_path": "captions/niche-avatar-test/caption-youtube.txt"
+    },
+    "story": {
+      "name": "story-4-tips-are-the-lowest-content",
+      "slot_time_ast": "7:00 PM",
+      "slot_time_utc": "11:00 PM",
+      "platform": "instagram_story",
+      "folder": "stories/story-4-tips-are-the-lowest-content",
+      "frames": [
+        "frame-1.png",
+        "frame-2.png",
+        "frame-3.png",
+        "frame-4.png",
+        "frame-5.png"
+      ],
+      "caption": null
     }
   },
-  "2026-05-08": {
+  "2026-06-02": {
     "reel": {
-      "name": "romanticize-showing-up",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/romanticize-showing-up-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/romanticize-showing-up-youtube.mp4",
-      "caption_path": "captions/romanticize-showing-up/caption.txt",
-      "yt_caption_path": "captions/romanticize-showing-up/caption-youtube.txt"
+      "name": "reel-1-thing-to-never-automate",
+      "slot_time_ast": "8:00 AM",
+      "slot_time_utc": "12:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-12-reel-1-thing-to-never-automate/1-thing-to-never-automate-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-12-reel-1-thing-to-never-automate/1-thing-to-never-automate-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-12-reel-1-thing-to-never-automate/caption.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-12-reel-1-thing-to-never-automate/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/1-thing-to-never-automate-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/1-thing-to-never-automate-youtube.mp4",
+      "caption_path": "captions/1-thing-to-never-automate/caption.txt",
+      "yt_caption_path": "captions/1-thing-to-never-automate/caption-youtube.txt"
     },
     "carousel": {
-      "name": "romanticize-showing-up",
-      "folder": "romanticize-showing-up",
-      "caption_path": "captions/romanticize-showing-up/caption.txt"
+      "name": "carousel-4-numbers-every-coach-knows",
+      "slot_time_ast": "12:00 PM",
+      "slot_time_utc": "4:00 PM",
+      "platform": [
+        "instagram"
+      ],
+      "folder": "4-numbers-every-coach-knows",
+      "caption_ig_script": "04_drafts/approved/2026-05-04-carousel-4-numbers-every-coach-knows/script.md",
+      "caption_path": "captions/carousel-4-numbers-every-coach-knows/caption.txt"
     },
     "doc_clip": {
-      "name": "late-nights-grind",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/late-nights-grind-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/late-nights-grind-youtube.mp4",
-      "caption_path": "captions/late-nights-grind/caption.txt",
-      "yt_caption_path": "captions/late-nights-grind/caption-youtube.txt"
+      "name": "doc-clip-no-one-cares-patience",
+      "slot_time_ast": "2:00 PM",
+      "slot_time_utc": "6:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-26-doc-clip-no-one-cares-patience/no-one-cares-patience-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-26-doc-clip-no-one-cares-patience/no-one-cares-patience-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-26-doc-clip-no-one-cares-patience/caption-instagram.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-26-doc-clip-no-one-cares-patience/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/no-one-cares-patience-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/no-one-cares-patience-youtube.mp4",
+      "caption_path": "captions/no-one-cares-patience/caption.txt",
+      "yt_caption_path": "captions/no-one-cares-patience/caption-youtube.txt"
     },
     "longform_clip": {
-      "name": "burnout-reframe",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/burnout-reframe-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/burnout-reframe-youtube.mp4",
-      "caption_path": "captions/burnout-reframe/caption.txt",
-      "yt_caption_path": "captions/burnout-reframe/caption-youtube.txt"
+      "name": "longform-clip-tips-are-the-lowest",
+      "slot_time_ast": "3:00 PM",
+      "slot_time_utc": "7:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-25-longform-clip-tips-are-the-lowest/tips-are-the-lowest-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-25-longform-clip-tips-are-the-lowest/tips-are-the-lowest-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-25-longform-clip-tips-are-the-lowest/caption-instagram.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-25-longform-clip-tips-are-the-lowest/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/tips-are-the-lowest-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/tips-are-the-lowest-youtube.mp4",
+      "caption_path": "captions/tips-are-the-lowest/caption.txt",
+      "yt_caption_path": "captions/tips-are-the-lowest/caption-youtube.txt"
+    },
+    "story": {
+      "name": "story-5-ads-cant-save-a-broken-funnel",
+      "slot_time_ast": "7:00 PM",
+      "slot_time_utc": "11:00 PM",
+      "platform": "instagram_story",
+      "folder": "stories/story-5-ads-cant-save-a-broken-funnel",
+      "frames": [
+        "frame-1.png",
+        "frame-2.png",
+        "frame-3.png",
+        "frame-4.png",
+        "frame-5.png"
+      ],
+      "caption": null
     }
   },
-  "2026-05-09": {
+  "2026-06-03": {
+    "_note": "9 longform clips > 7 daily 3PM slots. Sat + Sun each carry a second longform clip at 3:30 PM AST.",
     "reel": {
-      "name": "lonely-business",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/lonely-business-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/lonely-business-youtube.mp4",
-      "caption_path": "captions/lonely-business/caption.txt",
-      "yt_caption_path": "captions/lonely-business/caption-youtube.txt"
+      "name": "reel-25-hour-rule",
+      "slot_time_ast": "8:00 AM",
+      "slot_time_utc": "12:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-12-reel-25-hour-rule/25-hour-rule-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-12-reel-25-hour-rule/25-hour-rule-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-12-reel-25-hour-rule/caption.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-12-reel-25-hour-rule/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/25-hour-rule-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/25-hour-rule-youtube.mp4",
+      "caption_path": "captions/25-hour-rule/caption.txt",
+      "yt_caption_path": "captions/25-hour-rule/caption-youtube.txt"
     },
     "carousel": {
-      "name": "delegation-wall",
-      "folder": "delegation-wall",
-      "caption_path": "captions/delegation-wall/caption.txt"
-    },
-    "doc_clip": {
-      "name": "delegate-to-ai",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/delegate-to-ai-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/delegate-to-ai-youtube.mp4",
-      "caption_path": "captions/delegate-to-ai/caption.txt",
-      "yt_caption_path": "captions/delegate-to-ai/caption-youtube.txt"
+      "name": "carousel-5k-more-no-new-clients",
+      "slot_time_ast": "12:00 PM",
+      "slot_time_utc": "4:00 PM",
+      "platform": [
+        "instagram"
+      ],
+      "folder": "5k-more-no-new-clients",
+      "caption_ig_script": "04_drafts/approved/2026-05-04-carousel-5k-more-no-new-clients/script.md",
+      "caption_path": "captions/carousel-5k-more-no-new-clients/caption.txt"
     },
     "longform_clip": {
-      "name": "fewer-clients-more-revenue",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/fewer-clients-more-revenue-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/fewer-clients-more-revenue-youtube.mp4",
-      "caption_path": "captions/fewer-clients-more-revenue/caption.txt",
-      "yt_caption_path": "captions/fewer-clients-more-revenue/caption-youtube.txt"
+      "name": "longform-clip-you-cant-stanza",
+      "slot_time_ast": "3:00 PM",
+      "slot_time_utc": "7:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-25-longform-clip-you-cant-stanza/you-cant-stanza-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-25-longform-clip-you-cant-stanza/you-cant-stanza-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-25-longform-clip-you-cant-stanza/caption-instagram.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-25-longform-clip-you-cant-stanza/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/you-cant-stanza-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/you-cant-stanza-youtube.mp4",
+      "caption_path": "captions/you-cant-stanza/caption.txt",
+      "yt_caption_path": "captions/you-cant-stanza/caption-youtube.txt"
+    },
+    "longform_clip_bonus": {
+      "name": "longform-clip-wrong-sequence",
+      "slot_time_ast": "3:30 PM",
+      "slot_time_utc": "7:30 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-26-longform-clip-wrong-sequence/wrong-sequence-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-26-longform-clip-wrong-sequence/wrong-sequence-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-26-longform-clip-wrong-sequence/caption-instagram.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-26-longform-clip-wrong-sequence/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/wrong-sequence-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/wrong-sequence-youtube.mp4",
+      "caption_path": "captions/wrong-sequence/caption.txt",
+      "yt_caption_path": "captions/wrong-sequence/caption-youtube.txt"
+    },
+    "story": {
+      "name": "story-6-drowning-in-dms-trap",
+      "slot_time_ast": "7:00 PM",
+      "slot_time_utc": "11:00 PM",
+      "platform": "instagram_story",
+      "folder": "stories/story-6-drowning-in-dms-trap",
+      "frames": [
+        "frame-1.png",
+        "frame-2.png",
+        "frame-3.png",
+        "frame-4.png",
+        "frame-5.png"
+      ],
+      "caption": null
     }
   },
-  "2026-05-10": {
+  "2026-06-04": {
+    "_note": "Second bonus longform clip slot at 3:30 PM to clear all 9 longform clips.",
     "reel": {
-      "name": "120k-50-hours",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/120k-50-hours-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/120k-50-hours-youtube.mp4",
-      "caption_path": "captions/120k-50-hours/caption.txt",
-      "yt_caption_path": "captions/120k-50-hours/caption-youtube.txt"
+      "name": "reel-3-systems-before-client-5",
+      "slot_time_ast": "8:00 AM",
+      "slot_time_utc": "12:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-12-reel-3-systems-before-client-5/3-systems-before-client-5-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-12-reel-3-systems-before-client-5/3-systems-before-client-5-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-12-reel-3-systems-before-client-5/caption.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-12-reel-3-systems-before-client-5/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/3-systems-before-client-5-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/3-systems-before-client-5-youtube.mp4",
+      "caption_path": "captions/3-systems-before-client-5/caption.txt",
+      "yt_caption_path": "captions/3-systems-before-client-5/caption-youtube.txt"
     },
     "carousel": {
-      "name": "5-things-120k-coaches-do",
-      "folder": "5-things-120k-coaches-do",
-      "caption_path": "captions/5-things-120k-coaches-do/caption.txt"
-    },
-    "doc_clip": {
-      "name": "thesis-or-die",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/thesis-or-die-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/thesis-or-die-youtube.mp4",
-      "caption_path": "captions/thesis-or-die/caption.txt",
-      "yt_caption_path": "captions/thesis-or-die/caption-youtube.txt"
+      "name": "carousel-first-14-days-onboarding",
+      "slot_time_ast": "12:00 PM",
+      "slot_time_utc": "4:00 PM",
+      "platform": [
+        "instagram"
+      ],
+      "folder": "first-14-days-onboarding",
+      "caption_ig_script": "04_drafts/approved/2026-05-04-carousel-first-14-days-onboarding/script.md",
+      "caption_path": "captions/carousel-first-14-days-onboarding/caption.txt"
     },
     "longform_clip": {
-      "name": "version-of-tired",
-      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/version-of-tired-instagram.mp4",
-      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/version-of-tired-youtube.mp4",
-      "caption_path": "captions/version-of-tired/caption.txt",
-      "yt_caption_path": "captions/version-of-tired/caption-youtube.txt"
+      "name": "longform-clip-2k-ad-spend-zero-clients",
+      "slot_time_ast": "3:00 PM",
+      "slot_time_utc": "7:00 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-25-longform-clip-2k-ad-spend-zero-clients/2k-ad-spend-zero-clients-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-25-longform-clip-2k-ad-spend-zero-clients/2k-ad-spend-zero-clients-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-25-longform-clip-2k-ad-spend-zero-clients/caption-instagram.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-25-longform-clip-2k-ad-spend-zero-clients/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/2k-ad-spend-zero-clients-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/2k-ad-spend-zero-clients-youtube.mp4",
+      "caption_path": "captions/2k-ad-spend-zero-clients/caption.txt",
+      "yt_caption_path": "captions/2k-ad-spend-zero-clients/caption-youtube.txt"
+    },
+    "longform_clip_bonus": {
+      "name": "longform-clip-reddit-coach-order-problem",
+      "slot_time_ast": "3:30 PM",
+      "slot_time_utc": "7:30 PM",
+      "platform": [
+        "instagram",
+        "youtube_short"
+      ],
+      "file_ig": "04_drafts/approved/2026-05-26-longform-clip-reddit-coach-order-problem/reddit-coach-order-problem-instagram.mp4",
+      "file_yt": "04_drafts/approved/2026-05-26-longform-clip-reddit-coach-order-problem/reddit-coach-order-problem-youtube.mp4",
+      "caption_ig_file": "04_drafts/approved/2026-05-26-longform-clip-reddit-coach-order-problem/caption-instagram.txt",
+      "caption_yt_file": "04_drafts/approved/2026-05-26-longform-clip-reddit-coach-order-problem/caption-youtube.txt",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/reddit-coach-order-problem-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/clips/reddit-coach-order-problem-youtube.mp4",
+      "caption_path": "captions/reddit-coach-order-problem/caption.txt",
+      "yt_caption_path": "captions/reddit-coach-order-problem/caption-youtube.txt"
+    },
+    "story": {
+      "name": "story-7-one-thing-i-learned",
+      "slot_time_ast": "7:00 PM",
+      "slot_time_utc": "11:00 PM",
+      "platform": "instagram_story",
+      "folder": "stories/story-7-one-thing-i-learned",
+      "frames": [
+        "frame-1.png",
+        "frame-2.png",
+        "frame-3.png",
+        "frame-4.png",
+        "frame-5.png"
+      ],
+      "caption": null
     }
   }
 }
