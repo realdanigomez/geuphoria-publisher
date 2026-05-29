@@ -1,9 +1,8 @@
 name: Publish YT Carousel Short — 12PM AST daily
+# NOTE: YT carousels are posted MANUALLY via YouTube Studio Community Posts.
+# This workflow is kept for reference / future use but does NOT auto-trigger.
 
 on:
-  schedule:
-    # 12PM AST = 16:00 UTC (same as IG carousel)
-    - cron: '0 16 * * *'
   workflow_dispatch:
 
 concurrency:

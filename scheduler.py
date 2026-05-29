@@ -49,8 +49,9 @@ SLOTS = [
     ("publish-reel.yml",                    "reel",                    "08:00", "all"),
     ("publish-yt-reel.yml",                 "yt_reel",                 "08:00", "all"),
     ("publish-carousel.yml",                "carousel",                "12:00", "all"),
-    ("publish-yt-carousel.yml",             "yt_carousel",             "12:00", "all"),
     ("publish-yt-carousel-asset.yml",       "yt_carousel_asset_notif", "12:01", "all"),
+    # NOTE: yt_carousel is posted MANUALLY via YouTube Studio Community Posts (not Shorts).
+    # The slides live in carousels/*-youtube/ and captions in captions/carousel-*/caption-youtube.txt.
 
     # ── Doc-clip + longform-clip — week of 2026-05-29 ─────────────────────
     # No doc-clip on Jun 3-4 (those days only carry the bonus longform-clip slot).
