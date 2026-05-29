@@ -130,12 +130,15 @@
       "slot_time_ast": "12:00 PM",
       "slot_time_utc": "4:00 PM",
       "platform": [
-        "instagram"
+        "instagram",
+        "youtube"
       ],
       "folder": "ai-gap",
       "caption_ig": "Online Fitness Coaches...\n\n49% of the coaches you compete with are using AI for admin in 2026. You're not. That's the whole gap.\n\n3 places to start this week → client intake summary, weekly check-in summary, FAQ DM responses.\n\nAI for the admin. Not for the coaching. The coaches who blur that line lose. The ones who hold it win the time and the craft.\n\nPick one. Replace it by Friday. Then the next one.\n\nFollow for more.\n\n(Disclaimer: This is based on what I've observed; results are not guaranteed!)\n\n#onlinefitnesscoach #onlinefitnesscoaches #fitnesscoachbusiness #onlinecoaching #fitnessbusiness #personaltrainer #aiforcoaches #coachingbusiness",
       "caption_yt": "Trainerize reported in 2026 that 49% of trainers are now offloading admin and communication tasks to AI. Half the coaches you compete with have already moved. Half haven't.\n\nHere are 3 admin tasks you can hand to AI this Friday.\n\nOne. Client intake summary. The 20-question form goes in. A 5-bullet summary comes out. Goals, history, blockers, schedule, red flags. 25 minutes back per onboarding.\n\nTwo. Weekly check-in summary. A 5-minute client voice memo goes in. The transcript plus a 5-bullet summary comes out. Across 10 clients that's five hours back every week.\n\nThree. FAQ DM responses. Pricing. Schedule. What's included. The first message stops being your job. You handle the live conversation.\n\nThe line that matters: AI for the admin. Never for the coaching itself. The intake call, the hard moments, your point of view in your content. Those are coach moments.\n\nPick one this week. Replace it by Friday. Then the next one. That's how the gap closes.\n\nSubscribe for more.\n\n(Disclaimer: This is based on what I've observed; results are not guaranteed!)\n\n#onlinefitnesscoach #fitnesscoachbusiness #onlinecoaching",
-      "caption_path": "captions/carousel-ai-gap/caption.txt"
+      "caption_path": "captions/carousel-ai-gap/caption.txt",
+      "yt_carousel_folder": "ai-gap-youtube",
+      "yt_caption_path": "captions/carousel-ai-gap/caption-youtube.txt"
     },
     "doc_clip": {
       "name": "doc-clip-die-trying-thesis",
@@ -210,11 +213,14 @@
       "slot_time_ast": "12:00 PM",
       "slot_time_utc": "4:00 PM",
       "platform": [
-        "instagram"
+        "instagram",
+        "youtube"
       ],
       "folder": "25-year-burnout",
       "caption_ig_script": "04_drafts/approved/2026-05-04-carousel-25-year-burnout/script.md",
-      "caption_path": "captions/carousel-25-year-burnout/caption.txt"
+      "caption_path": "captions/carousel-25-year-burnout/caption.txt",
+      "yt_carousel_folder": "25-year-burnout-youtube",
+      "yt_caption_path": "captions/carousel-25-year-burnout/caption-youtube.txt"
     },
     "doc_clip": {
       "name": "doc-clip-inputs-we-control",
@@ -289,11 +295,14 @@
       "slot_time_ast": "12:00 PM",
       "slot_time_utc": "4:00 PM",
       "platform": [
-        "instagram"
+        "instagram",
+        "youtube"
       ],
       "folder": "hollings-unsustainable",
       "caption_ig_script": "04_drafts/approved/2026-05-04-carousel-hollings-unsustainable/script.md",
-      "caption_path": "captions/carousel-hollings-unsustainable/caption.txt"
+      "caption_path": "captions/carousel-hollings-unsustainable/caption.txt",
+      "yt_carousel_folder": "hollings-unsustainable-youtube",
+      "yt_caption_path": "captions/carousel-hollings-unsustainable/caption-youtube.txt"
     },
     "doc_clip": {
       "name": "doc-clip-the-bad-days",
@@ -368,11 +377,14 @@
       "slot_time_ast": "12:00 PM",
       "slot_time_utc": "4:00 PM",
       "platform": [
-        "instagram"
+        "instagram",
+        "youtube"
       ],
       "folder": "noble-manual-burnout",
       "caption_ig_script": "04_drafts/approved/2026-05-04-carousel-noble-manual-burnout/script.md",
-      "caption_path": "captions/carousel-noble-manual-burnout/caption.txt"
+      "caption_path": "captions/carousel-noble-manual-burnout/caption.txt",
+      "yt_carousel_folder": "noble-manual-burnout-youtube",
+      "yt_caption_path": "captions/carousel-noble-manual-burnout/caption-youtube.txt"
     },
     "doc_clip": {
       "name": "doc-clip-time-is-activities",
@@ -447,11 +459,14 @@
       "slot_time_ast": "12:00 PM",
       "slot_time_utc": "4:00 PM",
       "platform": [
-        "instagram"
+        "instagram",
+        "youtube"
       ],
       "folder": "4-numbers-every-coach-knows",
       "caption_ig_script": "04_drafts/approved/2026-05-04-carousel-4-numbers-every-coach-knows/script.md",
-      "caption_path": "captions/carousel-4-numbers-every-coach-knows/caption.txt"
+      "caption_path": "captions/carousel-4-numbers-every-coach-knows/caption.txt",
+      "yt_carousel_folder": "4-numbers-every-coach-knows-youtube",
+      "yt_caption_path": "captions/carousel-4-numbers-every-coach-knows/caption-youtube.txt"
     },
     "doc_clip": {
       "name": "doc-clip-no-one-cares-patience",
@@ -527,11 +542,14 @@
       "slot_time_ast": "12:00 PM",
       "slot_time_utc": "4:00 PM",
       "platform": [
-        "instagram"
+        "instagram",
+        "youtube"
       ],
       "folder": "5k-more-no-new-clients",
       "caption_ig_script": "04_drafts/approved/2026-05-04-carousel-5k-more-no-new-clients/script.md",
-      "caption_path": "captions/carousel-5k-more-no-new-clients/caption.txt"
+      "caption_path": "captions/carousel-5k-more-no-new-clients/caption.txt",
+      "yt_carousel_folder": "5k-more-no-new-clients-youtube",
+      "yt_caption_path": "captions/carousel-5k-more-no-new-clients/caption-youtube.txt"
     },
     "longform_clip": {
       "name": "longform-clip-you-cant-stanza",
@@ -607,11 +625,14 @@
       "slot_time_ast": "12:00 PM",
       "slot_time_utc": "4:00 PM",
       "platform": [
-        "instagram"
+        "instagram",
+        "youtube"
       ],
       "folder": "first-14-days-onboarding",
       "caption_ig_script": "04_drafts/approved/2026-05-04-carousel-first-14-days-onboarding/script.md",
-      "caption_path": "captions/carousel-first-14-days-onboarding/caption.txt"
+      "caption_path": "captions/carousel-first-14-days-onboarding/caption.txt",
+      "yt_carousel_folder": "first-14-days-onboarding-youtube",
+      "yt_caption_path": "captions/carousel-first-14-days-onboarding/caption-youtube.txt"
     },
     "longform_clip": {
       "name": "longform-clip-2k-ad-spend-zero-clients",

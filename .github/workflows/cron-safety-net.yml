@@ -43,6 +43,7 @@ on:
       - "Publish Reel — 8AM AST"
       - "Publish YT Short (Reel) — 8AM AST daily"
       - "Publish Carousel — 12PM AST"
+      - "Publish YT Carousel Short — 12PM AST daily"
       - "Notify YT Carousel Manual Upload — 12:01PM AST"
       - "Publish Doc Clip — 2PM AST daily"
       - "Publish Longform Clip — 3PM AST daily"

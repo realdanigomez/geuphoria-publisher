@@ -1,0 +1,81 @@
+name: Publish YT Carousel Short — 12PM AST daily
+
+on:
+  schedule:
+    # 12PM AST = 16:00 UTC (same as IG carousel)
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: publish-yt-carousel
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout (with latest log)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Sync latest published_log.json
+        run: git pull --ff-only origin main || true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
+
+      - name: Install ffmpeg
+        run: sudo apt-get install -y ffmpeg
+
+      - name: Decode Google OAuth token
+        env:
+          GOOGLE_TOKEN_JSON: ${{ secrets.GOOGLE_TOKEN_JSON }}
+        run: |
+          set -euo pipefail
+          if [ -z "${GOOGLE_TOKEN_JSON:-}" ]; then
+            echo "::error::Missing GOOGLE_TOKEN_JSON secret"
+            exit 1
+          fi
+          echo "$GOOGLE_TOKEN_JSON" | base64 -d > .google_token.json
+
+      - name: Publish YT Carousel Short
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: python publish_yt_carousel.py
+
+      - name: Save published log + push (retry on conflict)
+        if: always()
+        env:
+          WORKFLOW_NAME: publish-yt-carousel
+        run: |
+          set -euo pipefail
+          git config user.email "bot@geuphoria.com"
+          git config user.name "Geuphoria Publisher"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main || true
+            git add published_log.json
+            git diff --staged --quiet && { echo "Nothing to commit."; break; }
+            git commit -m "log: $WORKFLOW_NAME $(date -u +%Y-%m-%dT%H:%MZ)" || true
+            if git push origin main; then
+              echo "Pushed."
+              break
+            fi
+            echo "Push failed, retrying in 5s..."
+            sleep 5
+          done
+
+      - name: Cleanup token
+        if: always()
+        run: rm -f .google_token.json
