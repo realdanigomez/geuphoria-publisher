@@ -86,6 +86,19 @@ def resolve_frames(slot: dict) -> list:
     return [(n, f"{RAW_BASE}/{folder}/{n}") for n in names]
 
 
+def is_before_scheduled_time(slot: dict) -> bool:
+    """True if current AST time is before the slot's scheduled time."""
+    slot_time_str = slot.get('slot_time_ast', '').strip()
+    if not slot_time_str:
+        return False
+    try:
+        t = datetime.strptime(slot_time_str, '%I:%M %p')
+        now = datetime.now(timezone(timedelta(hours=-4)))
+        return (now.hour * 60 + now.minute) < (t.hour * 60 + t.minute)
+    except Exception:
+        return False
+
+
 def publish_story_frame(image_url: str) -> str:
     # 1) container
     r = requests.post(f"{API_BASE}/{IG_USER_ID}/media", data={
@@ -124,6 +137,14 @@ def main() -> int:
         return 0
 
     slot = sched[today]["story"]
+
+    # Time-window guard — skip if current AST time is before scheduled time
+    if not args.dry_run and is_before_scheduled_time(slot):
+        log.info(f'Skipping — current AST time is before scheduled time '
+                 f'({slot.get("slot_time_ast")}). Likely a delayed previous-day '
+                 f'cron. Safety net will re-trigger at the correct hour.')
+        return 0
+
     frames = resolve_frames(slot)
     log.info(f"Story '{slot.get('name')}' -> {len(frames)} frames")
 

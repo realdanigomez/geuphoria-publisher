@@ -298,6 +298,22 @@ def publish_yt_short(today: str, slot: str, slot_data: dict, dry_run: bool = Fal
                 pass
 
 
+# ── Time-window guard ────────────────────────────────────────────
+def is_before_scheduled_time(slot: dict) -> bool:
+    """True if current AST time is before the slot's scheduled time.
+    Prevents a GH cron delayed from the previous day from posting
+    the next day's content before its scheduled hour."""
+    slot_time_str = slot.get('slot_time_ast', '').strip()
+    if not slot_time_str:
+        return False
+    try:
+        t = datetime.strptime(slot_time_str, '%I:%M %p')
+        now = datetime.now(AST)
+        return (now.hour * 60 + now.minute) < (t.hour * 60 + t.minute)
+    except Exception:
+        return False
+
+
 # ── Main ────────────────────────────────────────────────────────
 def main() -> int:
     parser = argparse.ArgumentParser()
@@ -327,6 +343,13 @@ def main() -> int:
             return 0
         log.error(f"Schedule lookup failed: {e}")
         return 1
+
+    # Time-window guard — skip if current AST time is before scheduled time
+    if not args.dry_run and is_before_scheduled_time(slot_data):
+        log.info(f'Skipping — current AST time is before scheduled time '
+                 f'({slot_data.get("slot_time_ast")}). Likely a delayed previous-day '
+                 f'cron. Safety net will re-trigger at the correct hour.')
+        return 0
 
     failures = []
 
