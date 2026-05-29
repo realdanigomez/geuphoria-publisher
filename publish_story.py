@@ -125,6 +125,7 @@ def publish_story_frame(image_url: str) -> str:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
+    ap.add_argument("--slot", default="story", help="schedule slot key (story, or story_2 for 2x weeks)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -132,11 +133,11 @@ def main() -> int:
     log.info(f"=== Story publisher: today={today} dry_run={args.dry_run} ===")
 
     sched = json.loads(SCHED_PATH.read_text(encoding="utf-8"))
-    if today not in sched or "story" not in sched[today]:
-        log.info(f"No story scheduled for {today}; nothing to publish. Exiting 0.")
+    if today not in sched or args.slot not in sched[today]:
+        log.info(f"No {args.slot} scheduled for {today}; nothing to publish. Exiting 0.")
         return 0
 
-    slot = sched[today]["story"]
+    slot = sched[today][args.slot]
 
     # Time-window guard — skip if current AST time is before scheduled time
     if not args.dry_run and is_before_scheduled_time(slot):
@@ -160,7 +161,7 @@ def main() -> int:
 
     failures = 0
     for i, (name, url) in enumerate(frames, 1):
-        key = f"story_frame_{i}"
+        key = f"{args.slot}_frame_{i}"
         if already_published(today, key):
             log.info(f"  frame {i} already published ({load_log()[today][key]}); skip.")
             continue
@@ -176,7 +177,7 @@ def main() -> int:
     if failures:
         log.error(f"{failures} story frame(s) failed.")
         return 1
-    mark_published(today, "story", slot.get("name", "published"))
+    mark_published(today, args.slot, slot.get("name", "published"))
     log.info("=== Story sequence published ===")
     return 0
 

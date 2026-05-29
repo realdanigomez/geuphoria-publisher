@@ -1,0 +1,64 @@
+name: Publish Carousel #2 — 6PM AST
+
+# 2nd daily carousel for 2x split-test weeks. Cron 0 22 * * * = 22:00 UTC = 6PM AST.
+# Reads publish_schedule.json[<today AST>].carousel_2. No-op (exit 0) if absent.
+
+on:
+  workflow_dispatch:   # fired by cron-safety-net on dates go-live adds to scheduler.py (2x weeks only)
+
+concurrency:
+  group: publish-carousel-2
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout (with latest log)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Sync latest published_log.json
+        run: git pull --ff-only origin main || true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Publish Carousel (2nd daily slot)
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          FREEIMAGE_KEY: ${{ secrets.FREEIMAGE_KEY }}
+        run: python cloud_publish.py carousel_2
+
+      - name: Save published log + push (retry on conflict)
+        if: always()
+        env:
+          WORKFLOW_NAME: publish-carousel-2
+        run: |
+          set -euo pipefail
+          git config user.email "bot@geuphoria.com"
+          git config user.name "Geuphoria Publisher"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main || true
+            git add published_log.json
+            git diff --staged --quiet && { echo "Nothing to commit."; break; }
+            git commit -m "log: $WORKFLOW_NAME $(date -u +%Y-%m-%dT%H:%MZ)" || true
+            if git push origin main; then
+              echo "Pushed."
+              break
+            fi
+            echo "Push failed, retrying in 5s..."
+            sleep 5
+          done

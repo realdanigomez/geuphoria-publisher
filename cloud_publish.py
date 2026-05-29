@@ -242,11 +242,13 @@ def is_before_scheduled_time(slot: dict) -> bool:
 
 # ── Main ───────────────────────────────────────────────────────────
 def main():
-    if len(sys.argv) < 2 or sys.argv[1] not in ('reel', 'carousel'):
-        print('Usage: python cloud_publish.py reel|carousel')
+    valid = ('reel', 'reel_2', 'carousel', 'carousel_2')
+    if len(sys.argv) < 2 or sys.argv[1] not in valid:
+        print('Usage: python cloud_publish.py reel|reel_2|carousel|carousel_2')
         sys.exit(1)
 
     content_type = sys.argv[1]
+    base_type = content_type.split('_')[0]   # 'reel_2' -> 'reel' (2nd daily slot for 2x weeks)
     today = datetime.now(AST).date().isoformat()
 
     log.info(f'=== Cloud publisher: {content_type} for {today} (AST) ===')
@@ -292,13 +294,13 @@ def main():
     log.info(f'Target: {name} | Caption: {len(caption)} chars')
 
     try:
-        if content_type == 'reel':
+        if base_type == 'reel':
             cdn_url = slot.get('cdn_url')
             if not cdn_url:
                 raise Exception(f'No cdn_url in schedule for {name}. Upload the video to CDN first.')
             media_id = publish_reel(cdn_url, caption)
 
-        elif content_type == 'carousel':
+        elif base_type == 'carousel':
             media_id = publish_carousel(slot['folder'], caption)
 
         # Record success — prevents double-post on retry

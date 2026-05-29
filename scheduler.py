@@ -53,6 +53,15 @@ SLOTS = [
     # NOTE: yt_carousel is posted MANUALLY via YouTube Studio Community Posts (not Shorts).
     # The slides live in carousels/*-youtube/ and captions in captions/carousel-*/caption-youtube.txt.
 
+    # ── 2x split-test: 2nd daily slots (reel_2 / carousel_2 / story_2) ─────
+    # Dispatch-only workflows fired by THIS safety net. Date lists are EMPTY on 1x weeks
+    # (never fire). `/go-live` populates them with the week's dates ONLY for a 2x week,
+    # and adds the matching reel_2/carousel_2/story_2 entries to publish_schedule.json.
+    ("publish-reel-2.yml",      "reel_2",      "17:00", []),
+    ("publish-yt-reel-2.yml",   "yt_reel_2",   "17:00", []),
+    ("publish-carousel-2.yml",  "carousel_2",  "18:00", []),
+    ("publish-story-2.yml",     "story_2",     "11:00", []),
+
     # ── Doc-clip + longform-clip — week of 2026-05-29 ─────────────────────
     # No doc-clip on Jun 3-4 (those days only carry the bonus longform-clip slot).
     # UPDATE THIS LIST each week before Monday 8AM.

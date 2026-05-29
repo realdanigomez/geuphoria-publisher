@@ -1,0 +1,65 @@
+name: Publish Reel #2 — 5PM AST
+
+# 2nd daily reel for 2x split-test weeks. Cron 0 21 * * * = 21:00 UTC = 5PM AST.
+# Reads publish_schedule.json[<today AST>].reel_2 (IG side). No-op (exit 0) if absent.
+# Runs in parallel to publish-yt-reel-2.yml (YT side).
+
+on:
+  workflow_dispatch:   # fired by cron-safety-net on dates go-live adds to scheduler.py (2x weeks only)
+
+concurrency:
+  group: publish-reel-2
+  cancel-in-progress: false   # queue, never cancel — second run checks log and skips
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout (with latest log)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Sync latest published_log.json
+        run: git pull --ff-only origin main || true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Publish Reel (2nd daily slot)
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          FREEIMAGE_KEY: ${{ secrets.FREEIMAGE_KEY }}
+        run: python cloud_publish.py reel_2
+
+      - name: Save published log + push (retry on conflict)
+        if: always()
+        env:
+          WORKFLOW_NAME: publish-reel-2
+        run: |
+          set -euo pipefail
+          git config user.email "bot@geuphoria.com"
+          git config user.name "Geuphoria Publisher"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main || true
+            git add published_log.json
+            git diff --staged --quiet && { echo "Nothing to commit."; break; }
+            git commit -m "log: $WORKFLOW_NAME $(date -u +%Y-%m-%dT%H:%MZ)" || true
+            if git push origin main; then
+              echo "Pushed."
+              break
+            fi
+            echo "Push failed, retrying in 5s..."
+            sleep 5
+          done
