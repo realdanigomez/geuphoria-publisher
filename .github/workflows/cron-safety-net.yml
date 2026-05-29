@@ -46,6 +46,8 @@ on:
       - "Notify YT Carousel Manual Upload — 12:01PM AST"
       - "Publish Doc Clip — 2PM AST daily"
       - "Publish Longform Clip — 3PM AST daily"
+      - "Publish Longform Clip Bonus — 3:30PM AST daily"
+      - "Publish Story — 7PM AST daily"
     types: [completed]
 
 permissions:

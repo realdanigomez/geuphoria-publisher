@@ -51,13 +51,23 @@ SLOTS = [
     ("publish-carousel.yml",                "carousel",                "12:00", "all"),
     ("publish-yt-carousel-asset.yml",       "yt_carousel_asset_notif", "12:01", "all"),
 
-    # ── Doc-clip + longform-clip — fire Tue-Sun May 5-10 ──────────────────
-    # (May 4 clips handled by the -may4 one-shots below)
+    # ── Doc-clip + longform-clip — week of 2026-05-29 ─────────────────────
+    # No doc-clip on Jun 3-4 (those days only carry the bonus longform-clip slot).
     # UPDATE THIS LIST each week before Monday 8AM.
     ("publish-doc-clip.yml",      "doc_clip",      "14:00",
-     ["2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-09","2026-05-10"]),
+     ["2026-05-29","2026-05-30","2026-05-31","2026-06-01","2026-06-02"]),
     ("publish-longform-clip.yml", "longform_clip", "15:00",
-     ["2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-09","2026-05-10"]),
+     ["2026-05-29","2026-05-30","2026-05-31","2026-06-01","2026-06-02","2026-06-03","2026-06-04"]),
+
+    # ── Longform-clip bonus — weekend double-ups (Jun 3-4 this week) ───────
+    # UPDATE this date list each week for any days with a bonus slot.
+    ("publish-longform-clip-bonus.yml", "longform_clip_bonus", "15:30",
+     ["2026-06-03","2026-06-04"]),
+
+    # ── Story — 7PM AST daily ──────────────────────────────────────────────
+    # UPDATE THIS LIST each week before Monday 8AM.
+    ("publish-story.yml", "story", "19:00",
+     ["2026-05-29","2026-05-30","2026-05-31","2026-06-01","2026-06-02","2026-06-03","2026-06-04"]),
 
     # ── Dated one-shots (documentary episodes, special longforms) ──────────
     # NEW PATTERN as of 2026-05-05: dated one-shots go in pending_longforms.json,

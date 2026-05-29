@@ -155,6 +155,7 @@ def main() -> int:
     if failures:
         log.error(f"{failures} story frame(s) failed.")
         return 1
+    mark_published(today, "story", slot.get("name", "published"))
     log.info("=== Story sequence published ===")
     return 0
 

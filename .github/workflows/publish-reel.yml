@@ -18,8 +18,14 @@ jobs:
       contents: write   # needed to commit published_log.json back
 
     steps:
-      - name: Checkout
+      - name: Checkout (with latest log)
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Sync latest published_log.json
+        run: git pull --ff-only origin main || true
 
       - name: Set up Python
         uses: actions/setup-python@v5
