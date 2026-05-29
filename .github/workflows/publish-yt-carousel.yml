@@ -36,7 +36,7 @@ jobs:
         run: pip install requests google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
 
       - name: Install ffmpeg
-        run: sudo apt-get install -y ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y --fix-missing ffmpeg
 
       - name: Decode Google OAuth token
         env:
