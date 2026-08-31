@@ -62,23 +62,23 @@ SLOTS = [
     ("publish-carousel-2.yml",  "carousel_2",  "18:00", []),
     ("publish-story-2.yml",     "story_2",     "11:00", []),
 
-    # ── Doc-clip + longform-clip — week of 2026-05-29 ─────────────────────
-    # No doc-clip on Jun 3-4 (those days only carry the bonus longform-clip slot).
+    # ── Doc-clip + longform-clip — 2026-09-01 through 2026-09-14 go-live ────
+    # No 2x slots used this cycle (reel_2/carousel_2/story_2 stay empty — the
+    # backlog was spread across 2 weeks of the proven 1x cadence instead).
     # UPDATE THIS LIST each week before Monday 8AM.
     ("publish-doc-clip.yml",      "doc_clip",      "14:00",
-     ["2026-05-29","2026-05-30","2026-05-31","2026-06-01","2026-06-02"]),
+     ["2026-09-05","2026-09-09","2026-09-12"]),
     ("publish-longform-clip.yml", "longform_clip", "15:00",
-     ["2026-05-29","2026-05-30","2026-05-31","2026-06-01","2026-06-02","2026-06-03","2026-06-04"]),
+     ["2026-09-02","2026-09-03","2026-09-04","2026-09-05","2026-09-06","2026-09-07",
+      "2026-09-09","2026-09-10","2026-09-11","2026-09-12","2026-09-13","2026-09-14"]),
 
-    # ── Longform-clip bonus — weekend double-ups (Jun 3-4 this week) ───────
-    # UPDATE this date list each week for any days with a bonus slot.
-    ("publish-longform-clip-bonus.yml", "longform_clip_bonus", "15:30",
-     ["2026-06-03","2026-06-04"]),
+    # ── Longform-clip bonus — not used this cycle (12 clips fit 1/day) ─────
+    ("publish-longform-clip-bonus.yml", "longform_clip_bonus", "15:30", []),
 
     # ── Story — 7PM AST daily ──────────────────────────────────────────────
     # UPDATE THIS LIST each week before Monday 8AM.
     ("publish-story.yml", "story", "19:00",
-     ["2026-05-29","2026-05-30","2026-05-31","2026-06-01","2026-06-02","2026-06-03","2026-06-04"]),
+     ["2026-09-01","2026-09-03","2026-09-05","2026-09-07","2026-09-09","2026-09-11","2026-09-13"]),
 
     # ── Dated one-shots (documentary episodes, special longforms) ──────────
     # NEW PATTERN as of 2026-05-05: dated one-shots go in pending_longforms.json,

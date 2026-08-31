@@ -68,6 +68,9 @@ def already_published(today: str, key: str) -> bool:
 
 
 def resolve_frames(slot: dict) -> list:
+    """Returns [(name, url, is_video), ...]. Frames may be static PNG (legacy
+    story_engine.py) or animated MP4 (story_engine_animated.py, current bar as of
+    2026-07-24 — see memory story-animated-infographic-bar)."""
     folder = slot.get("folder")
     if not folder:
         raise RuntimeError("story slot has no 'folder'")
@@ -79,11 +82,12 @@ def resolve_frames(slot: dict) -> list:
         names = list(frames)
     else:
         names = sorted(f.name for f in fdir.iterdir()
-                       if f.name.lower().startswith("frame-") and f.name.lower().endswith(".png"))
+                       if f.name.lower().startswith("frame-")
+                       and f.name.lower().endswith((".png", ".mp4")))
     if not names:
-        raise FileNotFoundError(f"no frame-N.png files in {fdir}")
+        raise FileNotFoundError(f"no frame-N.png/.mp4 files in {fdir}")
     # public URL per frame
-    return [(n, f"{RAW_BASE}/{folder}/{n}") for n in names]
+    return [(n, f"{RAW_BASE}/{folder}/{n}", n.lower().endswith(".mp4")) for n in names]
 
 
 def is_before_scheduled_time(slot: dict) -> bool:
@@ -99,18 +103,39 @@ def is_before_scheduled_time(slot: dict) -> bool:
         return False
 
 
-def publish_story_frame(image_url: str) -> str:
+def publish_story_frame(media_url: str, is_video: bool = False) -> str:
     # 1) container
-    r = requests.post(f"{API_BASE}/{IG_USER_ID}/media", data={
+    payload = {
         "media_type": "STORIES",
-        "image_url": image_url,
         "access_token": IG_TOKEN,
-    }, timeout=30)
+    }
+    payload["video_url" if is_video else "image_url"] = media_url
+    r = requests.post(f"{API_BASE}/{IG_USER_ID}/media", data=payload, timeout=30)
     data = r.json()
     if "id" not in data:
         raise Exception(f"story container failed: {data}")
     cid = data["id"]
-    time.sleep(6)
+
+    if is_video:
+        # Video containers need IG-side processing before they can be published
+        # (same FINISHED-polling pattern as reels in cloud_publish.publish_reel).
+        for i in range(18):  # up to 3 minutes — story frames are short (~3-6s)
+            time.sleep(10)
+            r = requests.get(f"{API_BASE}/{cid}", params={
+                "fields": "status_code",
+                "access_token": IG_TOKEN,
+            }, timeout=15)
+            code = r.json().get("status_code", "UNKNOWN")
+            log.info(f"    processing: {code} ({i+1}/18)")
+            if code == "FINISHED":
+                break
+            if code == "ERROR":
+                raise Exception("story video processing failed at Instagram end")
+        else:
+            raise Exception("story video processing timeout after 3 minutes")
+    else:
+        time.sleep(6)
+
     # 2) publish
     r = requests.post(f"{API_BASE}/{IG_USER_ID}/media_publish", data={
         "creation_id": cid,
@@ -150,8 +175,8 @@ def main() -> int:
     log.info(f"Story '{slot.get('name')}' -> {len(frames)} frames")
 
     if args.dry_run:
-        for i, (n, url) in enumerate(frames, 1):
-            log.info(f"  [dry-run] frame {i}: {url}")
+        for i, (n, url, is_video) in enumerate(frames, 1):
+            log.info(f"  [dry-run] frame {i} ({'video' if is_video else 'image'}): {url}")
         log.info("Dry-run OK — frames resolve. No posting.")
         return 0
 
@@ -160,13 +185,13 @@ def main() -> int:
         return 1
 
     failures = 0
-    for i, (name, url) in enumerate(frames, 1):
+    for i, (name, url, is_video) in enumerate(frames, 1):
         key = f"{args.slot}_frame_{i}"
         if already_published(today, key):
             log.info(f"  frame {i} already published ({load_log()[today][key]}); skip.")
             continue
         try:
-            mid = publish_story_frame(url)
+            mid = publish_story_frame(url, is_video)
             mark_published(today, key, mid)
             log.info(f"  frame {i}/{len(frames)} published: {mid}")
             time.sleep(4)

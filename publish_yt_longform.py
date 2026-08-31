@@ -43,6 +43,12 @@ logging.basicConfig(
 log = logging.getLogger("yt_longform")
 
 ROOT = Path(__file__).resolve().parent
+# cloud_publisher lives at <Content Team root>/_system/repos/cloud_publisher — three
+# levels down, not one. CONTENT_ROOT is where youtube_publish_schedule.json and every
+# draft_folder path in it actually live. (Fixed 2026-08-31: was ROOT.parent, which
+# resolved to _system/repos/ and made every --schedule-entry run fail to find the
+# schedule file at all.)
+CONTENT_ROOT = ROOT.parent.parent.parent
 LOG_PATH = ROOT / "published_log.json"
 TOKEN_PATH = ROOT / ".google_token.json"
 AST = timezone(timedelta(hours=-4))
@@ -52,8 +58,8 @@ SCOPES = [
     "https://www.googleapis.com/auth/youtube",
 ]
 
-# youtube_publish_schedule.json lives in the Content Agent root (parent of cloud_publisher).
-YT_SCHED_PATH = ROOT.parent / "youtube_publish_schedule.json"
+# youtube_publish_schedule.json lives in the Content Agent root.
+YT_SCHED_PATH = CONTENT_ROOT / "youtube_publish_schedule.json"
 CATEGORY_MAP = {"Education": "27", "People & Blogs": "22", "Entertainment": "24"}
 DEFAULT_TAGS = {
     "longform": ["online fitness coach", "online fitness coaches", "fitness business",
@@ -82,10 +88,10 @@ def build_slot_from_schedule(entry_key: str) -> dict:
         raise ValueError(f"No schedule entry {entry_key} in {YT_SCHED_PATH.name}")
     e = sched[entry_key]
     vtype = e.get("type", "longform")
-    base = ROOT.parent / e["draft_folder"]
+    base = CONTENT_ROOT / e["draft_folder"]
     video = base / e["file"]
     # description: explicit description_file (rel to Content Agent root) or folder/description.txt
-    desc = (ROOT.parent / e["description_file"]) if e.get("description_file") else (base / "description.txt")
+    desc = (CONTENT_ROOT / e["description_file"]) if e.get("description_file") else (base / "description.txt")
     thumb = base / "thumb.jpg"
     return {
         "log_key": f"yt_{vtype}_{entry_key[:10]}",

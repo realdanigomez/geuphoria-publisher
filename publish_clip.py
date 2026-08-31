@@ -208,9 +208,14 @@ def publish_yt_short(today: str, slot: str, slot_data: dict, dry_run: bool = Fal
     yt_caption = read_caption_file(yt_caption_path)
     name = slot_data.get("name", slot)
 
-    # Pull a "title" from the first non-empty line of the caption (YT shorts title cap = 100)
-    title_line = next((ln.strip() for ln in yt_caption.splitlines() if ln.strip()), name)
-    title = title_line[:100]
+    # Prefer a dedicated yt_title_path (deliberately-written title, distinct from the
+    # caption) when present. Fall back to the first non-empty caption line otherwise.
+    yt_title_path = slot_data.get("yt_title_path")
+    if yt_title_path:
+        title = read_caption_file(yt_title_path)
+    else:
+        title = next((ln.strip() for ln in yt_caption.splitlines() if ln.strip()), name)
+    title = title[:100]
     if "#shorts" not in yt_caption.lower():
         yt_caption = yt_caption + "\n\n#Shorts"
     description = yt_caption[:5000]
