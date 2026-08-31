@@ -57,8 +57,10 @@ SLOTS = [
     # Dispatch-only workflows fired by THIS safety net. Date lists are EMPTY on 1x weeks
     # (never fire). `/go-live` populates them with the week's dates ONLY for a 2x week,
     # and adds the matching reel_2/carousel_2/story_2 entries to publish_schedule.json.
-    ("publish-reel-2.yml",      "reel_2",      "17:00", []),
-    ("publish-yt-reel-2.yml",   "yt_reel_2",   "17:00", []),
+    # One-off exception: 2026-09-14 carries should-i-quit's "B" hook variant as a single
+    # bonus reel (Dani's call, 2026-08-31) — not a full 2x week, just this one day.
+    ("publish-reel-2.yml",      "reel_2",      "17:00", ["2026-09-14"]),
+    ("publish-yt-reel-2.yml",   "yt_reel_2",   "17:00", ["2026-09-14"]),
     ("publish-carousel-2.yml",  "carousel_2",  "18:00", []),
     ("publish-story-2.yml",     "story_2",     "11:00", []),
 

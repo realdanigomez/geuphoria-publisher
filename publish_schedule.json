@@ -980,6 +980,15 @@
       "caption_path": "captions/writing-plans-was-never-the-job/caption.txt",
       "yt_caption_path": "captions/writing-plans-was-never-the-job/caption-youtube.txt",
       "yt_title_path": "captions/writing-plans-was-never-the-job/title-youtube.txt"
+    },
+    "reel_2": {
+      "name": "should-i-quit-B",
+      "slot_time_ast": "5:00 PM",
+      "cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/should-i-quit-B-instagram.mp4",
+      "yt_cdn_url": "https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main/reels/should-i-quit-B-youtube.mp4",
+      "caption_path": "captions/should-i-quit/caption.txt",
+      "yt_caption_path": "captions/should-i-quit/caption-youtube.txt",
+      "yt_title_path": "captions/should-i-quit/title-youtube.txt"
     }
   }
 }

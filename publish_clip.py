@@ -322,7 +322,8 @@ def is_before_scheduled_time(slot: dict) -> bool:
 # ── Main ────────────────────────────────────────────────────────
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--slot", required=True, choices=["doc_clip", "longform_clip", "longform_clip_bonus", "reel"])
+    parser.add_argument("--slot", required=True,
+                        choices=["doc_clip", "longform_clip", "longform_clip_bonus", "reel", "reel_2"])
     parser.add_argument("--platform", default="both", choices=["ig", "yt", "both"])
     parser.add_argument("--gate", default=None,
                         help="Dependency log key (e.g. yt_doc_ep3) — if missing in published_log "
