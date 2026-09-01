@@ -24,17 +24,26 @@ permissions:
 jobs:
   heartbeat:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 10
     concurrency:
       group: heartbeat
       cancel-in-progress: false
 
     steps:
-      - name: Checkout
+      # Sparse + blobless — this job only touches heartbeat.json. Fixed 2026-09-01
+      # alongside cron-safety-net.yml: a full checkout of the now ~4GB repo (all the
+      # go-live reel/clip/carousel/story video) took ~3 minutes on `git fetch` alone,
+      # which blew the old 3-minute timeout and got this job cancelled before it could
+      # push — silently breaking "the first domino of the daily chain" (see header).
+      - name: Checkout (sparse, blobless)
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            heartbeat.json
+          sparse-checkout-cone-mode: false
 
       - name: Write heartbeat timestamp
         run: |

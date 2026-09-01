@@ -57,20 +57,40 @@ permissions:
 jobs:
   safety-net:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 10
     concurrency:
       group: safety-net
       cancel-in-progress: false   # don't cancel; let each tick complete
 
     steps:
-      - name: Checkout
+      # Sparse + blobless checkout — scheduler.py only ever reads scheduler.py,
+      # published_log.json, and pending_longforms.json. Fixed 2026-09-01: a plain
+      # checkout of the whole repo (now ~4GB of reel/clip/carousel/story video)
+      # took ~3 minutes on `git fetch` alone and blew the old 3-minute timeout,
+      # cancelling the job before scheduler.py ever ran — the safety net had
+      # silently stopped catching missed crons since the go-live media push.
+      # `filter: blob:none` skips downloading blob contents up front (only commit/
+      # tree objects), and `sparse-checkout` limits what's actually materialized,
+      # so this job's checkout stays fast regardless of how large the repo grows.
+      - name: Checkout (sparse, blobless)
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            scheduler.py
+            published_log.json
+            pending_longforms.json
+          sparse-checkout-cone-mode: false
 
       - name: Sync latest published_log.json
         run: git pull --ff-only origin main || true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
       - name: Run scheduler
         env:
