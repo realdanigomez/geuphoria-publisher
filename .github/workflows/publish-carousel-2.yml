@@ -51,14 +51,16 @@ jobs:
           git config user.email "bot@geuphoria.com"
           git config user.name "Geuphoria Publisher"
           for i in 1 2 3 4 5; do
-            git pull --rebase origin main || true
+            git fetch origin main -q
+            python merge_published_log.py published_log.json
             git add published_log.json
             git diff --staged --quiet && { echo "Nothing to commit."; break; }
-            git commit -m "log: $WORKFLOW_NAME $(date -u +%Y-%m-%dT%H:%MZ)" || true
+            git commit -m "log: $WORKFLOW_NAME $(date -u +%Y-%m-%dT%H:%MZ)"
             if git push origin main; then
               echo "Pushed."
               break
             fi
             echo "Push failed, retrying in 5s..."
+            git reset --soft HEAD~1
             sleep 5
           done
