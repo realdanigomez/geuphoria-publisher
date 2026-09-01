@@ -6,7 +6,8 @@ name: Cron Safety Net
 # passed (+5 min grace) without a log entry. Idempotent — publish scripts
 # self-check the log and skip duplicates.
 #
-# MULTI-TRIGGER DESIGN (codified 2026-05-04 after GH cron skipped doc-ep3):
+# MULTI-TRIGGER DESIGN (codified 2026-05-04 after GH cron skipped doc-ep3;
+# external trigger added 2026-09-01 after Railway went away):
 # GH Actions cron is fundamentally unreliable — 2-4h delays, sometimes never
 # fires. This safety net is itself a GH cron, so it can also be skipped.
 # To break the dependency, we trigger the safety net from MULTIPLE sources:
@@ -20,10 +21,18 @@ name: Cron Safety Net
 #      heartbeat workflow pushes. Keeps crons alive daily.
 #   5. workflow_run on ALL publish workflows — fires immediately after any
 #      publish workflow completes. This is the most reliable chain trigger.
+#   6. repository_dispatch (event_type: external-heartbeat) — an external,
+#      GitHub-independent cron service (cron-job.org, free tier) POSTs to
+#      /repos/.../dispatches every 5 minutes. This is the ONLY trigger source
+#      here that doesn't depend on GitHub's own scheduler at all — it exists
+#      because sources 1-5 ALL failed to fire for a ~17-minute window on
+#      2026-09-01 (GH's native */5 schedule went quiet with nothing else
+#      happening to kick the chain), missing that day's noon carousel. Setup:
+#      _system/repos/cloud_publisher/EXTERNAL-CRON-SETUP.md.
 #
-# Together these 5 sources mean: even if ALL crons fail, as soon as ONE
-# publish completes (or the morning heartbeat runs), the safety net fires
-# and checks + fires all overdue slots. A single domino starts the chain.
+# Together these 6 sources mean: even if every GitHub-side trigger fails at
+# once, the external ping still wakes this workflow within 5 minutes,
+# independent of GitHub's own infrastructure.
 #
 # Idempotency: the underlying publish scripts check published_log.json
 # themselves and skip if the slot is already published for today, so
@@ -33,6 +42,8 @@ on:
   schedule:
     - cron: '*/5 * * * *'   # every 5 minutes UTC
   workflow_dispatch:
+  repository_dispatch:
+    types: [external-heartbeat]
   push:
     branches: [main]
     paths:
