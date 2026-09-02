@@ -35,7 +35,10 @@ jobs:
           fetch-depth: 1
 
       - name: Sync latest published_log.json
-        run: git pull --ff-only origin main || true
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git show origin/main:published_log.json > published_log.json
 
       - name: Set up Python
         uses: actions/setup-python@v5
