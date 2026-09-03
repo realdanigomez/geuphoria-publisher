@@ -9,14 +9,12 @@ Caption: always sent in request body (data=), never in URL params — prevents t
 Environment variables (GitHub Secrets):
   IG_USER_ID        Instagram account ID
   IG_ACCESS_TOKEN   Instagram page access token (long-lived)
-  FREEIMAGE_KEY     freeimage.host API key
 """
 
 import sys
 import os
 import json
 import time
-import base64
 import logging
 import requests
 from datetime import date, datetime, timezone, timedelta
@@ -38,7 +36,6 @@ LOG_PATH = os.path.join(ROOT, 'published_log.json')
 # ── Credentials from env ───────────────────────────────────────────
 IG_USER_ID    = os.environ['IG_USER_ID']
 IG_TOKEN      = os.environ['IG_ACCESS_TOKEN']
-FREEIMAGE_KEY = os.environ.get('FREEIMAGE_KEY', '6d207e02198a847aa98d0a2a901485a5')
 
 
 # ── Schedule ───────────────────────────────────────────────────────
@@ -70,22 +67,25 @@ def mark_published(today, content_type, media_id):
     log.info(f'Logged: {today} {content_type} = {media_id}')
 
 
-# ── Upload helpers ─────────────────────────────────────────────────
-def upload_image(image_path):
-    """Upload local PNG to freeimage.host. Returns public URL."""
-    log.info(f'  Uploading: {os.path.basename(image_path)}')
-    with open(image_path, 'rb') as f:
-        img_b64 = base64.b64encode(f.read()).decode()
-    # NOTE: data= sends as request body — not URL params
-    r = requests.post('https://freeimage.host/api/1/upload', data={
-        'key': FREEIMAGE_KEY,
-        'source': img_b64,
-        'format': 'json',
-    }, timeout=30)
-    r.raise_for_status()
-    url = r.json()['image']['url']
-    log.info(f'    -> {url}')
-    return url
+# ── Slide URLs ─────────────────────────────────────────────────────
+RAW_BASE = 'https://raw.githubusercontent.com/realdanigomez/geuphoria-publisher/main'
+
+
+def slide_url(folder_name, slide_filename):
+    """Public URL for a carousel slide already committed to this repo.
+
+    Carousel slides live in the repo at carousels/<slug>/slide-NN.png and are
+    already served publicly by raw.githubusercontent.com — the same way reel
+    and clip videos are handed to Instagram as video_url. There is no reason
+    to re-upload them anywhere first.
+
+    Fixed 2026-09-03: this used to base64 the PNG and POST it to
+    freeimage.host to obtain a public URL. That third party started returning
+    400 Bad Request on every upload and took the whole 12PM carousel slot down
+    with it — a hard dependency on an external free image host that the repo
+    never actually needed, since GitHub already hosts these files.
+    """
+    return f'{RAW_BASE}/carousels/{folder_name}/{slide_filename}'
 
 
 # ── Publish carousel ───────────────────────────────────────────────
@@ -101,10 +101,11 @@ def publish_carousel(folder_name, caption):
     log.info(f'Publishing carousel: {folder_name} ({len(slides)} slides)')
     log.info(f'Caption ({len(caption)} chars): {caption[:100]}...')
 
-    # Upload each slide and create child containers
+    # Create a child container per slide, pointed straight at the repo-hosted PNG
     children_ids = []
     for i, slide in enumerate(slides):
-        url = upload_image(os.path.join(slides_dir, slide))
+        url = slide_url(folder_name, slide)
+        log.info(f'  Slide {i+1} url: {url}')
         # NOTE: caption NOT on child containers — only on parent CAROUSEL container
         # NOTE: data= (body), NOT params= (URL) — prevents truncation
         r = requests.post(f'{API_BASE}/{IG_USER_ID}/media', data={
