@@ -15,8 +15,10 @@ never lose data the way a line-based git merge can.
 
 Usage: python merge_published_log.py [path]  (default: published_log.json)
 Reads the given file (the working tree's copy, already modified by the
-publish script's own mark_published() call), reads origin/main's current copy
-via `git show`, deep-merges them, and overwrites the local file with the
+publish script's own mark_published() call), reads the remote's current copy
+via `git show FETCH_HEAD:<path>` (the caller runs `git fetch origin main`
+immediately before this — FETCH_HEAD, not origin/main, see the comment at its
+use below for why), deep-merges them, and overwrites the local file with the
 result — ready for `git add` + `git commit` + `git push`.
 """
 import json
@@ -46,7 +48,14 @@ def main() -> int:
                 local = json.loads(content)
 
     remote = {}
-    r = subprocess.run(["git", "show", f"origin/main:{path}"], capture_output=True, text=True)
+    # FETCH_HEAD, not origin/main: the caller runs `git fetch origin main` immediately
+    # before this script, but on a shallow/single-branch checkout (as every workflow
+    # here uses) that fetch isn't guaranteed to update the origin/main tracking ref —
+    # it depends on the remote's configured fetch refspec, which actions/checkout@v4's
+    # shallow clone doesn't reliably set up. FETCH_HEAD is set unconditionally by any
+    # `git fetch <remote> <ref>`, so reading from it can't return a stale pre-fetch blob
+    # the way `origin/main` did (this exact gap caused a real triple-post, 2026-09-03).
+    r = subprocess.run(["git", "show", f"FETCH_HEAD:{path}"], capture_output=True, text=True)
     if r.returncode == 0 and r.stdout.strip():
         remote = json.loads(r.stdout)
 

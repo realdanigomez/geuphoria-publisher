@@ -38,7 +38,14 @@ jobs:
         run: |
           set -euo pipefail
           git fetch origin main
-          git show origin/main:published_log.json > published_log.json
+          # FETCH_HEAD is set directly by this fetch, unconditionally — unlike
+          # origin/main, which depends on the remote's configured fetch refspec
+          # actually mapping to refs/remotes/origin/main. actions/checkout@v4's
+          # shallow, single-branch checkout doesn't reliably set that up, so a
+          # `git show origin/main:...` right after `git fetch origin main` can
+          # silently read a STALE pre-fetch blob if the tracking ref never
+          # moved. FETCH_HEAD has no such ambiguity.
+          git show FETCH_HEAD:published_log.json > published_log.json
 
       - name: Set up Python
         uses: actions/setup-python@v5
