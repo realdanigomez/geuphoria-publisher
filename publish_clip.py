@@ -44,6 +44,8 @@ from pathlib import Path
 
 import requests
 
+import slot_lock
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -123,10 +125,14 @@ def read_caption_file(rel_path: str) -> str:
 
 # ── IG publish ───────────────────────────────────────────────────
 def publish_ig_clip(today: str, slot: str, slot_data: dict, dry_run: bool = False) -> str | None:
-    if is_already_published(today, slot):
-        existing = load_log()[today][slot]
-        log.info(f"IG already published: {today}.{slot} = {existing}. Skipping.")
-        return existing
+    # Claim before posting — see slot_lock.py. The old read-check-then-post
+    # guard here had the same minutes-wide gap that duplicated reels twice.
+    if not dry_run:
+        won, reason = slot_lock.claim_slot(today, slot)
+        if not won:
+            log.info(f"IG not publishing {slot}: {reason}.")
+            return None
+        log.info(f"Claimed IG slot {slot} for {today}.")
 
     cdn_url = slot_data.get("cdn_url")
     if not cdn_url:
@@ -150,8 +156,16 @@ def publish_ig_clip(today: str, slot: str, slot_data: dict, dry_run: bool = Fals
     # Inline import to avoid pulling Google libs when only doing IG
     from cloud_publish import publish_reel  # type: ignore
 
-    media_id = publish_reel(cdn_url, caption)
-    mark_published(today, slot, media_id)
+    try:
+        media_id = publish_reel(cdn_url, caption)
+    except Exception:
+        slot_lock.release_claim(today, slot)
+        log.info(f"Released IG claim on {slot} after failure.")
+        raise
+    if not slot_lock.complete_slot(today, slot, media_id):
+        log.error(f"POSTED but FAILED TO RECORD {slot}={media_id} — record it manually.")
+        raise RuntimeError(f"could not record {slot}={media_id}")
+    log.info(f"Logged: {today}.{slot} = {media_id}")
     return media_id
 
 
@@ -194,10 +208,12 @@ def download_yt_video(yt_cdn_url: str, dest: Path) -> None:
 
 def publish_yt_short(today: str, slot: str, slot_data: dict, dry_run: bool = False) -> str | None:
     yt_log_key = f"yt_{slot}"
-    if is_already_published(today, yt_log_key):
-        existing = load_log()[today][yt_log_key]
-        log.info(f"YT already published: {today}.{yt_log_key} = {existing}. Skipping.")
-        return existing
+    if not dry_run:
+        won, reason = slot_lock.claim_slot(today, yt_log_key)
+        if not won:
+            log.info(f"YT not publishing {yt_log_key}: {reason}.")
+            return None
+        log.info(f"Claimed YT slot {yt_log_key} for {today}.")
 
     yt_cdn_url = slot_data.get("yt_cdn_url")
     if not yt_cdn_url:
@@ -281,7 +297,10 @@ def publish_yt_short(today: str, slot: str, slot_data: dict, dry_run: bool = Fal
         public_url = f"https://www.youtube.com/shorts/{video_id}"
         log.info(f"YT Short published. Video ID: {video_id}")
         log.info(f"URL: {public_url}")
-        mark_published(today, yt_log_key, video_id)
+        if not slot_lock.complete_slot(today, yt_log_key, video_id):
+            log.error(f"POSTED but FAILED TO RECORD {yt_log_key}={video_id} — record it manually.")
+        else:
+            log.info(f"Logged: {today}.{yt_log_key} = {video_id}")
 
         summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
         if summary_file:

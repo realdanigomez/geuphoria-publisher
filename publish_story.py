@@ -33,6 +33,8 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 import requests
 
+import slot_lock
+
 ROOT = Path(__file__).resolve().parent
 SCHED_PATH = ROOT / "publish_schedule.json"
 LOG_PATH = ROOT / "published_log.json"
@@ -184,6 +186,16 @@ def main() -> int:
         log.error("Missing IG_USER_ID / IG_ACCESS_TOKEN env.")
         return 1
 
+    # Claim the whole story slot before posting any frame — see slot_lock.py.
+    # Per-frame keys below already stop a resumed run from re-posting a frame
+    # it finished, but without a slot-level claim two concurrent runs could
+    # each start the sequence from frame 1 and post the story twice.
+    won, reason = slot_lock.claim_slot(today, args.slot)
+    if not won:
+        log.info(f"Not publishing {args.slot}: {reason}.")
+        return 0
+    log.info(f"Claimed {args.slot} for {today}.")
+
     failures = 0
     for i, (name, url, is_video) in enumerate(frames, 1):
         key = f"{args.slot}_frame_{i}"
@@ -201,8 +213,12 @@ def main() -> int:
 
     if failures:
         log.error(f"{failures} story frame(s) failed.")
+        slot_lock.release_claim(today, args.slot)
+        log.info(f"Released claim on {args.slot} so a retry can resume it.")
         return 1
-    mark_published(today, args.slot, slot.get("name", "published"))
+    if not slot_lock.complete_slot(today, args.slot, slot.get("name", "published")):
+        log.error(f"POSTED but FAILED TO RECORD {args.slot} — record it manually.")
+        return 1
     log.info("=== Story sequence published ===")
     return 0
 
