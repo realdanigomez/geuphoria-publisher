@@ -34,6 +34,9 @@ ROOT = Path(__file__).resolve().parent
 LOG_FILE = ROOT / "published_log.json"
 PENDING_LONGFORMS_PATH = ROOT / "pending_longforms.json"
 GRACE_MIN = 5  # fire only after grace period past scheduled time
+# Must match slot_lock.STALE_CLAIM_MINUTES — how long an unfinished claim is
+# respected before we assume the run holding it died and allow a re-fire.
+STALE_CLAIM_MINUTES = 20
 
 # ── Daily + dated one-shot slots ─────────────────────────────────────────────
 # Format: (workflow_yaml, log_key, scheduled_AST_HH:MM, dates_active)
@@ -120,6 +123,31 @@ def load_log() -> dict:
     return {}
 
 
+def slot_settled(entry) -> bool:
+    """True if this slot needs no further firing.
+
+    A slot value is either a completed media-id string or an in-flight claim
+    dict written by slot_lock. Both mean "don't fire" — done, or owned by a
+    live run. A claim older than the staleness window means its holder died,
+    so the slot IS fireable again; that is what stops a crashed run from
+    silently costing the day's post.
+    """
+    if isinstance(entry, str):
+        return True
+    if isinstance(entry, dict):
+        if entry.get("media_id"):
+            return True
+        claimed_at = entry.get("claimed_at")
+        if not claimed_at:
+            return False
+        try:
+            ts = datetime.fromisoformat(claimed_at.replace("Z", "+00:00"))
+        except ValueError:
+            return False
+        return (datetime.now(timezone.utc) - ts) < timedelta(minutes=STALE_CLAIM_MINUTES)
+    return False
+
+
 # ── Workflow trigger ──────────────────────────────────────────────────────────
 
 def fire_workflow(yaml_name: str, dry_run: bool = False) -> bool:
@@ -188,7 +216,7 @@ def check_pending_longforms(today: str, today_log: dict, dry_run: bool = False) 
             skipped += 1
             continue
 
-        if log_key in today_log:
+        if slot_settled(today_log.get(log_key)):
             print(f"[scheduler] - {workflow} ({log_key} @ {pub_time}): already logged [pending]")
             skipped += 1
             continue
@@ -229,7 +257,7 @@ def main() -> int:
             skipped += 1
             continue
         # Already logged?
-        if key in today_log:
+        if slot_settled(today_log.get(key)):
             print(f"[scheduler] - {yaml_name} ({key} @ {sched_time}): already logged ({str(today_log[key])[:24]})")
             skipped += 1
             continue

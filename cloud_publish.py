@@ -19,6 +19,8 @@ import logging
 import requests
 from datetime import date, datetime, timezone, timedelta
 
+import slot_lock
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s] %(message)s',
@@ -254,12 +256,6 @@ def main():
 
     log.info(f'=== Cloud publisher: {content_type} for {today} (AST) ===')
 
-    # Dedup check — never double-post
-    if is_already_published(today, content_type):
-        existing = load_log()[today][content_type]
-        log.info(f'Already published today ({content_type}: post {existing}). Skipping.')
-        return
-
     schedule = load_schedule()
     if today not in schedule:
         log.info(f'Nothing scheduled for {today}. Done.')
@@ -294,6 +290,16 @@ def main():
             raise Exception(f'No caption or caption_path in slot for {name}')
     log.info(f'Target: {name} | Caption: {len(caption)} chars')
 
+    # Claim the slot before posting. Replaces the old read-log/post/write-log
+    # guard, which lost a whole post's log entry on 2026-09-04 and let a second
+    # run legitimately conclude the slot was free. claim_slot pushes a claim
+    # first; git's push rejection is the compare-and-swap that picks one winner.
+    won, reason = slot_lock.claim_slot(today, content_type)
+    if not won:
+        log.info(f'Not publishing {content_type}: {reason}.')
+        return
+    log.info(f'Claimed {content_type} for {today} — this run owns the slot.')
+
     try:
         if base_type == 'reel':
             cdn_url = slot.get('cdn_url')
@@ -304,8 +310,15 @@ def main():
         elif base_type == 'carousel':
             media_id = publish_carousel(slot['folder'], caption)
 
-        # Record success — prevents double-post on retry
-        mark_published(today, content_type, media_id)
+        # Record through the lock so the completion is pushed immediately,
+        # not left to a later workflow step that can silently fail to land.
+        if slot_lock.complete_slot(today, content_type, media_id):
+            log.info(f'Logged: {today} {content_type} = {media_id}')
+        else:
+            log.error(f'POSTED but FAILED TO RECORD {content_type}={media_id}. '
+                      f'Claim goes stale in {slot_lock.STALE_CLAIM_MINUTES} min — '
+                      f'record it manually before then.')
+            sys.exit(1)
 
         # Write GitHub Actions step summary
         summary_file = os.environ.get('GITHUB_STEP_SUMMARY')
@@ -322,6 +335,11 @@ def main():
         log.error(f'PUBLISH FAILED: {e}')
         import traceback
         log.error(traceback.format_exc())
+        try:
+            slot_lock.release_claim(today, content_type)
+            log.info('Released the claim so a retry can pick this slot up.')
+        except Exception as release_err:
+            log.error(f'Could not release claim: {release_err}')
         sys.exit(1)
 
     log.info(f'=== Done ===')
