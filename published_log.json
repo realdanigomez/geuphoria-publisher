@@ -244,6 +244,10 @@
     "yt_reel": "w3QHIR3d2_k",
     "carousel": "17904192747484420",
     "longform_clip": "17955093153013051",
-    "yt_longform_clip": "OCK743GnRLU"
+    "yt_longform_clip": "OCK743GnRLU",
+    "story": {
+      "claimed_at": "2026-09-07T23:06:04.264132Z",
+      "claimed_by": "34168873421:1"
+    }
   }
 }
