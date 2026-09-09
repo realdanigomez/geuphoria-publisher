@@ -258,6 +258,10 @@
     "carousel": "17882257977504623",
     "doc_clip": "18106072343184725",
     "yt_doc_clip": "e8FfA88NWIE",
-    "yt_longform_clip": "hNNhHPw4qFc"
+    "yt_longform_clip": "hNNhHPw4qFc",
+    "longform_clip": {
+      "claimed_at": "2026-09-09T19:45:34.729114Z",
+      "claimed_by": "34396930047:1"
+    }
   }
 }
