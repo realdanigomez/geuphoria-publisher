@@ -264,6 +264,10 @@
   },
   "2026-09-10": {
     "reel": "18110038883465575",
-    "yt_reel": "rhnwhjJargo"
+    "yt_reel": "rhnwhjJargo",
+    "carousel": {
+      "claimed_at": "2026-09-10T16:05:24.622974Z",
+      "claimed_by": "34499845938:1"
+    }
   }
 }
