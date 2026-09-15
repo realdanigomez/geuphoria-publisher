@@ -306,6 +306,10 @@
   "2026-09-15": {
     "yt_longform_2026-09-15": "qnqfUQG_Gik",
     "reel": "18126888406788242",
-    "yt_reel": "Gjo0qhtvZLU"
+    "yt_reel": "Gjo0qhtvZLU",
+    "carousel": {
+      "claimed_at": "2026-09-15T16:05:26.012218Z",
+      "claimed_by": "34992737208:1"
+    }
   }
 }
