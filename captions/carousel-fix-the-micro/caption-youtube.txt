@@ -1,0 +1,7 @@
+You can't fix your booking rate directly.
+
+It's made of your open rate, reply rate and show up rate.
+
+I moved my reply rate from 2% to 10%.
+
+The booked calls followed on their own.

@@ -68,24 +68,29 @@ SLOTS = [
     # slot is doing exactly the job it was built for (not being used to compress a backlog).
     # The 3-hour-buffer rule he set is satisfied by 8AM clip / 12PM carousel / 3PM clip /
     # 6PM carousel.
+    # 2026-09-22 -> 09-24: the same instruction for the IG Deliverability batch (7 carousels,
+    # Sep 22-25; Sep 25 has one carousel, so no carousel_2 that day).
     # carousel_2 has NO cron of its own — this date list is its ONLY trigger.
     ("publish-reel-2.yml",      "reel_2",      "17:00", ["2026-09-14"]),
     ("publish-yt-reel-2.yml",   "yt_reel_2",   "17:00", ["2026-09-14"]),
     ("publish-carousel-2.yml",  "carousel_2",  "18:00",
-     ["2026-09-15","2026-09-16","2026-09-17","2026-09-18","2026-09-19"]),
+     ["2026-09-15","2026-09-16","2026-09-17","2026-09-18","2026-09-19",
+      "2026-09-22","2026-09-23","2026-09-24"]),
     ("publish-story-2.yml",     "story_2",     "11:00", []),
 
     # ── Doc-clip + longform-clip ───────────────────────────────────────────
     # 2026-09-01 -> 09-14: the previous go-live (past dates, kept — the date
-    # filter skips them). 2026-09-15 -> 09-23: the 9-books batch's 2nd daily
-    # clip. UPDATE THIS LIST each week before Monday 8AM.
+    # filter skips them). 2026-09-15 -> 09-22: the 9-books batch's 2nd daily
+    # clip. 2026-09-23 -> 09-29: the IG Deliverability batch's 3PM clip (its 8AM
+    # clips ride the "all"-dates reel slot). UPDATE THIS LIST each week before Monday 8AM.
     ("publish-doc-clip.yml",      "doc_clip",      "14:00",
      ["2026-09-05","2026-09-09","2026-09-12"]),
     ("publish-longform-clip.yml", "longform_clip", "15:00",
      ["2026-09-02","2026-09-03","2026-09-04","2026-09-05","2026-09-06","2026-09-07",
       "2026-09-09","2026-09-10","2026-09-11","2026-09-12","2026-09-13","2026-09-14",
       "2026-09-15","2026-09-16","2026-09-17","2026-09-18","2026-09-19","2026-09-20",
-      "2026-09-21","2026-09-22"]),
+      "2026-09-21","2026-09-22",
+      "2026-09-23","2026-09-24","2026-09-25","2026-09-26","2026-09-27","2026-09-28","2026-09-29"]),
 
     # ── Longform-clip bonus — not used this cycle (12 clips fit 1/day) ─────
     ("publish-longform-clip-bonus.yml", "longform_clip_bonus", "15:30", []),

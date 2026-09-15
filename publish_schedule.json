@@ -1209,6 +1209,18 @@
       "caption_path": "captions/money-only-works-because-we-believe/caption.txt",
       "yt_caption_path": "captions/money-only-works-because-we-believe/caption-youtube.txt",
       "yt_title_path": "captions/money-only-works-because-we-believe/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "warm-up-blueprint",
+      "slot_time_ast": "12:00 PM",
+      "folder": "warm-up-blueprint",
+      "caption_path": "captions/carousel-warm-up-blueprint/caption.txt"
+    },
+    "carousel_2": {
+      "name": "the-dm-opener",
+      "slot_time_ast": "6:00 PM",
+      "folder": "the-dm-opener",
+      "caption_path": "captions/carousel-the-dm-opener/caption.txt"
     }
   },
   "2026-09-23": {
@@ -1220,6 +1232,165 @@
       "caption_path": "captions/pricing-status-scarcity/caption.txt",
       "yt_caption_path": "captions/pricing-status-scarcity/caption-youtube.txt",
       "yt_title_path": "captions/pricing-status-scarcity/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "deleted-3yr-account",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/deleted-3yr-account.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/deleted-3yr-account.mp4",
+      "caption_path": "captions/deleted-3yr-account/caption.txt",
+      "yt_caption_path": "captions/deleted-3yr-account/caption-youtube.txt",
+      "yt_title_path": "captions/deleted-3yr-account/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "less-dms-more-opens",
+      "slot_time_ast": "12:00 PM",
+      "folder": "less-dms-more-opens",
+      "caption_path": "captions/carousel-less-dms-more-opens/caption.txt"
+    },
+    "carousel_2": {
+      "name": "outreach-timing",
+      "slot_time_ast": "6:00 PM",
+      "folder": "outreach-timing",
+      "caption_path": "captions/carousel-outreach-timing/caption.txt"
+    }
+  },
+  "2026-09-24": {
+    "reel": {
+      "name": "scaling-volume-buffer",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/scaling-volume-buffer.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/scaling-volume-buffer.mp4",
+      "caption_path": "captions/scaling-volume-buffer/caption.txt",
+      "yt_caption_path": "captions/scaling-volume-buffer/caption-youtube.txt",
+      "yt_title_path": "captions/scaling-volume-buffer/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "proof-seen-tracking",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/proof-seen-tracking.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/proof-seen-tracking.mp4",
+      "caption_path": "captions/proof-seen-tracking/caption.txt",
+      "yt_caption_path": "captions/proof-seen-tracking/caption-youtube.txt",
+      "yt_title_path": "captions/proof-seen-tracking/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "fix-the-micro",
+      "slot_time_ast": "12:00 PM",
+      "folder": "fix-the-micro",
+      "caption_path": "captions/carousel-fix-the-micro/caption.txt"
+    },
+    "carousel_2": {
+      "name": "cold-dm-benchmark",
+      "slot_time_ast": "6:00 PM",
+      "folder": "cold-dm-benchmark",
+      "caption_path": "captions/carousel-cold-dm-benchmark/caption.txt"
+    }
+  },
+  "2026-09-25": {
+    "reel": {
+      "name": "warm-up-blueprint",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/warm-up-blueprint.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/warm-up-blueprint.mp4",
+      "caption_path": "captions/warm-up-blueprint/caption.txt",
+      "yt_caption_path": "captions/warm-up-blueprint/caption-youtube.txt",
+      "yt_title_path": "captions/warm-up-blueprint/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "curiosity-dm-opener",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/curiosity-dm-opener.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/curiosity-dm-opener.mp4",
+      "caption_path": "captions/curiosity-dm-opener/caption.txt",
+      "yt_caption_path": "captions/curiosity-dm-opener/caption-youtube.txt",
+      "yt_title_path": "captions/curiosity-dm-opener/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "test-one-thing",
+      "slot_time_ast": "12:00 PM",
+      "folder": "test-one-thing",
+      "caption_path": "captions/carousel-test-one-thing/caption.txt"
+    }
+  },
+  "2026-09-26": {
+    "reel": {
+      "name": "20-not-25-messages",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/20-not-25-messages.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/20-not-25-messages.mp4",
+      "caption_path": "captions/20-not-25-messages/caption.txt",
+      "yt_caption_path": "captions/20-not-25-messages/caption-youtube.txt",
+      "yt_title_path": "captions/20-not-25-messages/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "outreach-timing",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/outreach-timing.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/outreach-timing.mp4",
+      "caption_path": "captions/outreach-timing/caption.txt",
+      "yt_caption_path": "captions/outreach-timing/caption-youtube.txt",
+      "yt_title_path": "captions/outreach-timing/title-youtube.txt"
+    }
+  },
+  "2026-09-27": {
+    "reel": {
+      "name": "iterating-toward-goal",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/iterating-toward-goal.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/iterating-toward-goal.mp4",
+      "caption_path": "captions/iterating-toward-goal/caption.txt",
+      "yt_caption_path": "captions/iterating-toward-goal/caption-youtube.txt",
+      "yt_title_path": "captions/iterating-toward-goal/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "kpi-benchmark",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/kpi-benchmark.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/kpi-benchmark.mp4",
+      "caption_path": "captions/kpi-benchmark/caption.txt",
+      "yt_caption_path": "captions/kpi-benchmark/caption-youtube.txt",
+      "yt_title_path": "captions/kpi-benchmark/title-youtube.txt"
+    }
+  },
+  "2026-09-28": {
+    "reel": {
+      "name": "macro-vs-micro",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/macro-vs-micro.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/macro-vs-micro.mp4",
+      "caption_path": "captions/macro-vs-micro/caption.txt",
+      "yt_caption_path": "captions/macro-vs-micro/caption-youtube.txt",
+      "yt_title_path": "captions/macro-vs-micro/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "scientific-method",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/scientific-method.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/scientific-method.mp4",
+      "caption_path": "captions/scientific-method/caption.txt",
+      "yt_caption_path": "captions/scientific-method/caption-youtube.txt",
+      "yt_title_path": "captions/scientific-method/title-youtube.txt"
+    }
+  },
+  "2026-09-29": {
+    "reel": {
+      "name": "measuring-iteration",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/measuring-iteration.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/measuring-iteration.mp4",
+      "caption_path": "captions/measuring-iteration/caption.txt",
+      "yt_caption_path": "captions/measuring-iteration/caption-youtube.txt",
+      "yt_title_path": "captions/measuring-iteration/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "record-selfie-in-instagram",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/record-selfie-in-instagram.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/record-selfie-in-instagram.mp4",
+      "caption_path": "captions/record-selfie-in-instagram/caption.txt",
+      "yt_caption_path": "captions/record-selfie-in-instagram/caption-youtube.txt",
+      "yt_title_path": "captions/record-selfie-in-instagram/title-youtube.txt"
     }
   }
 }

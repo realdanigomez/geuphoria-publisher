@@ -1,0 +1,7 @@
+Your booking rate is made of your open rate, your reply rate and your positive reply rate.
+
+Find the lowest one and fix that.
+
+I moved my reply rate from 2% to 10% and the booking rate followed.
+
+Thanks for watching!

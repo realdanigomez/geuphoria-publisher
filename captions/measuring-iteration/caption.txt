@@ -1,0 +1,7 @@
+Most of the things you test won't work, and that's fine.
+
+Keep what moves you toward the goal, drop what moves you back.
+
+That's how you know a change actually worked.
+
+Thanks for watching!
