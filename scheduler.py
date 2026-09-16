@@ -73,11 +73,19 @@ SLOTS = [
     # carousel_2 has NO cron of its own — this date list is its ONLY trigger.
     ("publish-reel-2.yml",      "reel_2",      "17:00", ["2026-09-14"]),
     ("publish-yt-reel-2.yml",   "yt_reel_2",   "17:00", ["2026-09-14"]),
+    # 2026-09-25: the Aruba batch's one 6PM carousel (the only 6PM the other batches leave free).
     ("publish-carousel-2.yml",  "carousel_2",  "18:00",
      ["2026-09-15","2026-09-16","2026-09-17","2026-09-18","2026-09-19",
-      "2026-09-22","2026-09-23","2026-09-24",
-      "2026-09-26","2026-09-27","2026-09-28","2026-09-29","2026-09-30","2026-10-01"]),
+      "2026-09-22","2026-09-23","2026-09-24","2026-09-25"]),
     ("publish-story-2.yml",     "story_2",     "11:00", []),
+
+    # ── 3rd daily carousel — 12AM AST, added 2026-09-16 for the Aruba documentary batch ──────
+    # With 5AM/8AM/12PM/3PM/6PM/9PM all taken by three overlapping batches, midnight is the only
+    # remaining time that keeps Dani's 3-hour buffer (3h after the 9PM clip, 5h before the 5AM one).
+    # It has its own cron (0 4 * * * UTC) AND this row, so it is not safety-net-only like the _2 slots.
+    ("publish-carousel-3.yml",  "carousel_3",  "00:00",
+     ["2026-09-18","2026-09-19","2026-09-20","2026-09-21","2026-09-22","2026-09-23",
+      "2026-09-24","2026-09-25"]),
 
     # ── Doc-clip + longform-clip ───────────────────────────────────────────
     # 2026-09-01 -> 09-14: the previous go-live (past dates, kept — the date

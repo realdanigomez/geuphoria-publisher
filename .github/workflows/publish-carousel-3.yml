@@ -1,0 +1,82 @@
+name: Publish Carousel #3 — 12AM AST
+
+# 3rd daily carousel slot, added 2026-09-16 for the Aruba documentary batch: with 5AM/8AM/12PM/3PM/
+# 6PM/9PM all taken, midnight is the only remaining time that keeps Dani's 3-hour buffer (3 hours
+# after the 9PM clip, 5 hours before the 5AM one). Cron 0 4 * * * = 04:00 UTC = 12AM AST.
+# Reads publish_schedule.json[<today AST>].carousel_3. No-op (exit 0) if absent.
+# NOTE: this slot sits ON the AST date boundary. cloud_publish.py's is_before_scheduled_time() guard
+# is what keeps a delayed previous-day run from posting it early; the date key is the day it starts.
+
+on:
+  schedule:
+    - cron: '0 4 * * *'   # 04:00 UTC = 12AM AST
+  workflow_dispatch:      # also fired by cron-safety-net
+
+concurrency:
+  group: publish-carousel-3
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout (with latest log)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Sync latest published_log.json
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          # FETCH_HEAD is set directly by this fetch, unconditionally — unlike
+          # origin/main, which depends on the remote's configured fetch refspec
+          # actually mapping to refs/remotes/origin/main. actions/checkout@v4's
+          # shallow, single-branch checkout doesn't reliably set that up, so a
+          # `git show origin/main:...` right after `git fetch origin main` can
+          # silently read a STALE pre-fetch blob if the tracking ref never
+          # moved. FETCH_HEAD has no such ambiguity.
+          git show FETCH_HEAD:published_log.json > published_log.json
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Publish Carousel (3rd daily slot)
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          FREEIMAGE_KEY: ${{ secrets.FREEIMAGE_KEY }}
+        run: python cloud_publish.py carousel_3
+
+      - name: Save published log + push (retry on conflict)
+        if: always()
+        env:
+          WORKFLOW_NAME: publish-carousel-3
+        run: |
+          set -euo pipefail
+          git config user.email "bot@geuphoria.com"
+          git config user.name "Geuphoria Publisher"
+          for i in 1 2 3 4 5; do
+            git fetch origin main -q
+            python merge_published_log.py published_log.json
+            git add published_log.json
+            git diff --staged --quiet && { echo "Nothing to commit."; break; }
+            git commit -m "log: $WORKFLOW_NAME $(date -u +%Y-%m-%dT%H:%MZ)"
+            if git push origin main; then
+              echo "Pushed."
+              break
+            fi
+            echo "Push failed, retrying in 5s..."
+            git reset --soft HEAD~1
+            sleep 5
+          done

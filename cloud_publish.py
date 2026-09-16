@@ -245,9 +245,9 @@ def is_before_scheduled_time(slot: dict) -> bool:
 
 # ── Main ───────────────────────────────────────────────────────────
 def main():
-    valid = ('reel', 'reel_2', 'carousel', 'carousel_2')
+    valid = ('reel', 'reel_2', 'carousel', 'carousel_2', 'carousel_3')
     if len(sys.argv) < 2 or sys.argv[1] not in valid:
-        print('Usage: python cloud_publish.py reel|reel_2|carousel|carousel_2')
+        print('Usage: python cloud_publish.py reel|reel_2|carousel|carousel_2|carousel_3')
         sys.exit(1)
 
     content_type = sys.argv[1]

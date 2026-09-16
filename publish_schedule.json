@@ -1135,6 +1135,12 @@
       "caption_path": "captions/the-war-map/caption.txt",
       "yt_caption_path": "captions/the-war-map/caption-youtube.txt",
       "yt_title_path": "captions/the-war-map/title-youtube.txt"
+    },
+    "carousel_3": {
+      "name": "spcl-on-my-video",
+      "slot_time_ast": "12:00 AM",
+      "folder": "spcl-on-my-video",
+      "caption_path": "captions/carousel-spcl-on-my-video/caption.txt"
     }
   },
   "2026-09-19": {
@@ -1185,6 +1191,12 @@
       "caption_path": "captions/how-to-plan-tomorrow/caption.txt",
       "yt_caption_path": "captions/how-to-plan-tomorrow/caption-youtube.txt",
       "yt_title_path": "captions/how-to-plan-tomorrow/title-youtube.txt"
+    },
+    "carousel_3": {
+      "name": "one-book-personal-mba",
+      "slot_time_ast": "12:00 AM",
+      "folder": "one-book-personal-mba",
+      "caption_path": "captions/carousel-one-book-personal-mba/caption.txt"
     }
   },
   "2026-09-20": {
@@ -1223,6 +1235,18 @@
       "caption_path": "captions/food-is-the-idea/caption.txt",
       "yt_caption_path": "captions/food-is-the-idea/caption-youtube.txt",
       "yt_title_path": "captions/food-is-the-idea/title-youtube.txt"
+    },
+    "carousel_3": {
+      "name": "plan-through-the-fog",
+      "slot_time_ast": "12:00 AM",
+      "folder": "plan-through-the-fog",
+      "caption_path": "captions/carousel-plan-through-the-fog/caption.txt"
+    },
+    "carousel": {
+      "name": "avatar-document",
+      "slot_time_ast": "12:00 PM",
+      "folder": "avatar-document",
+      "caption_path": "captions/carousel-avatar-document/caption.txt"
     }
   },
   "2026-09-21": {
@@ -1261,6 +1285,18 @@
       "caption_path": "captions/stop-scripting-word-for-word/caption.txt",
       "yt_caption_path": "captions/stop-scripting-word-for-word/caption-youtube.txt",
       "yt_title_path": "captions/stop-scripting-word-for-word/title-youtube.txt"
+    },
+    "carousel_3": {
+      "name": "where-ai-still-fails",
+      "slot_time_ast": "12:00 AM",
+      "folder": "where-ai-still-fails",
+      "caption_path": "captions/carousel-where-ai-still-fails/caption.txt"
+    },
+    "carousel": {
+      "name": "my-idea-process",
+      "slot_time_ast": "12:00 PM",
+      "folder": "my-idea-process",
+      "caption_path": "captions/carousel-my-idea-process/caption.txt"
     }
   },
   "2026-09-22": {
@@ -1311,6 +1347,12 @@
       "caption_path": "captions/editing-is-useless/caption.txt",
       "yt_caption_path": "captions/editing-is-useless/caption-youtube.txt",
       "yt_title_path": "captions/editing-is-useless/title-youtube.txt"
+    },
+    "carousel_3": {
+      "name": "the-war-map",
+      "slot_time_ast": "12:00 AM",
+      "folder": "the-war-map",
+      "caption_path": "captions/carousel-the-war-map/caption.txt"
     }
   },
   "2026-09-23": {
@@ -1361,6 +1403,12 @@
       "caption_path": "captions/the-personal-mba/caption.txt",
       "yt_caption_path": "captions/the-personal-mba/caption-youtube.txt",
       "yt_title_path": "captions/the-personal-mba/title-youtube.txt"
+    },
+    "carousel_3": {
+      "name": "idea-beats-the-edit",
+      "slot_time_ast": "12:00 AM",
+      "folder": "idea-beats-the-edit",
+      "caption_path": "captions/carousel-idea-beats-the-edit/caption.txt"
     }
   },
   "2026-09-24": {
@@ -1411,6 +1459,12 @@
       "caption_path": "captions/plan-a-day-not-a-year/caption.txt",
       "yt_caption_path": "captions/plan-a-day-not-a-year/caption-youtube.txt",
       "yt_title_path": "captions/plan-a-day-not-a-year/title-youtube.txt"
+    },
+    "carousel_3": {
+      "name": "plan-tomorrow-tonight",
+      "slot_time_ast": "12:00 AM",
+      "folder": "plan-tomorrow-tonight",
+      "caption_path": "captions/carousel-plan-tomorrow-tonight/caption.txt"
     }
   },
   "2026-09-25": {
@@ -1455,6 +1509,18 @@
       "caption_path": "captions/avatar-document/caption.txt",
       "yt_caption_path": "captions/avatar-document/caption-youtube.txt",
       "yt_title_path": "captions/avatar-document/title-youtube.txt"
+    },
+    "carousel_3": {
+      "name": "proof-promise-plan",
+      "slot_time_ast": "12:00 AM",
+      "folder": "proof-promise-plan",
+      "caption_path": "captions/carousel-proof-promise-plan/caption.txt"
+    },
+    "carousel_2": {
+      "name": "stop-reading-your-script",
+      "slot_time_ast": "6:00 PM",
+      "folder": "stop-reading-your-script",
+      "caption_path": "captions/carousel-stop-reading-your-script/caption.txt"
     }
   },
   "2026-09-26": {
@@ -1476,18 +1542,6 @@
       "yt_caption_path": "captions/outreach-timing/caption-youtube.txt",
       "yt_title_path": "captions/outreach-timing/title-youtube.txt"
     },
-    "carousel": {
-      "name": "the-war-map",
-      "slot_time_ast": "12:00 PM",
-      "folder": "the-war-map",
-      "caption_path": "captions/carousel-the-war-map/caption.txt"
-    },
-    "carousel_2": {
-      "name": "idea-beats-the-edit",
-      "slot_time_ast": "6:00 PM",
-      "folder": "idea-beats-the-edit",
-      "caption_path": "captions/carousel-idea-beats-the-edit/caption.txt"
-    },
     "longform_clip_bonus": {
       "name": "fifteen-books-for-the-product",
       "slot_time_ast": "5:00 AM",
@@ -1505,6 +1559,12 @@
       "caption_path": "captions/merging-research-ideation/caption.txt",
       "yt_caption_path": "captions/merging-research-ideation/caption-youtube.txt",
       "yt_title_path": "captions/merging-research-ideation/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "skip-the-color-grading",
+      "slot_time_ast": "12:00 PM",
+      "folder": "skip-the-color-grading",
+      "caption_path": "captions/carousel-skip-the-color-grading/caption.txt"
     }
   },
   "2026-09-27": {
@@ -1525,18 +1585,6 @@
       "caption_path": "captions/kpi-benchmark/caption.txt",
       "yt_caption_path": "captions/kpi-benchmark/caption-youtube.txt",
       "yt_title_path": "captions/kpi-benchmark/title-youtube.txt"
-    },
-    "carousel": {
-      "name": "plan-tomorrow-tonight",
-      "slot_time_ast": "12:00 PM",
-      "folder": "plan-tomorrow-tonight",
-      "caption_path": "captions/carousel-plan-tomorrow-tonight/caption.txt"
-    },
-    "carousel_2": {
-      "name": "stop-reading-your-script",
-      "slot_time_ast": "6:00 PM",
-      "folder": "stop-reading-your-script",
-      "caption_path": "captions/carousel-stop-reading-your-script/caption.txt"
     }
   },
   "2026-09-28": {
@@ -1557,18 +1605,6 @@
       "caption_path": "captions/scientific-method/caption.txt",
       "yt_caption_path": "captions/scientific-method/caption-youtube.txt",
       "yt_title_path": "captions/scientific-method/title-youtube.txt"
-    },
-    "carousel": {
-      "name": "one-book-personal-mba",
-      "slot_time_ast": "12:00 PM",
-      "folder": "one-book-personal-mba",
-      "caption_path": "captions/carousel-one-book-personal-mba/caption.txt"
-    },
-    "carousel_2": {
-      "name": "skip-the-color-grading",
-      "slot_time_ast": "6:00 PM",
-      "folder": "skip-the-color-grading",
-      "caption_path": "captions/carousel-skip-the-color-grading/caption.txt"
     }
   },
   "2026-09-29": {
@@ -1589,46 +1625,6 @@
       "caption_path": "captions/record-selfie-in-instagram/caption.txt",
       "yt_caption_path": "captions/record-selfie-in-instagram/caption-youtube.txt",
       "yt_title_path": "captions/record-selfie-in-instagram/title-youtube.txt"
-    },
-    "carousel": {
-      "name": "spcl-on-my-video",
-      "slot_time_ast": "12:00 PM",
-      "folder": "spcl-on-my-video",
-      "caption_path": "captions/carousel-spcl-on-my-video/caption.txt"
-    },
-    "carousel_2": {
-      "name": "proof-promise-plan",
-      "slot_time_ast": "6:00 PM",
-      "folder": "proof-promise-plan",
-      "caption_path": "captions/carousel-proof-promise-plan/caption.txt"
-    }
-  },
-  "2026-09-30": {
-    "carousel": {
-      "name": "avatar-document",
-      "slot_time_ast": "12:00 PM",
-      "folder": "avatar-document",
-      "caption_path": "captions/carousel-avatar-document/caption.txt"
-    },
-    "carousel_2": {
-      "name": "plan-through-the-fog",
-      "slot_time_ast": "6:00 PM",
-      "folder": "plan-through-the-fog",
-      "caption_path": "captions/carousel-plan-through-the-fog/caption.txt"
-    }
-  },
-  "2026-10-01": {
-    "carousel": {
-      "name": "my-idea-process",
-      "slot_time_ast": "12:00 PM",
-      "folder": "my-idea-process",
-      "caption_path": "captions/carousel-my-idea-process/caption.txt"
-    },
-    "carousel_2": {
-      "name": "where-ai-still-fails",
-      "slot_time_ast": "6:00 PM",
-      "folder": "where-ai-still-fails",
-      "caption_path": "captions/carousel-where-ai-still-fails/caption.txt"
     }
   }
 }
