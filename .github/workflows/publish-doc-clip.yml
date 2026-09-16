@@ -1,14 +1,17 @@
-name: Publish Doc Clip — 2PM AST daily
+name: Publish Doc Clip — 9PM AST daily
 
-# Daily doc-clip publish (Tue–Sun May 5–10).
-# Cron 0 18 * * * = 18:00 UTC = 2PM AST.
+# Daily doc-clip publish.
+# Cron 0 1 * * * = 01:00 UTC = 9PM AST the PREVIOUS UTC day. Every date in this pipeline is an AST
+# date: the gate below and publish_clip.py both compute `today` with TZ=America/Curacao, so a run
+# firing at 01:00 UTC correctly reads the 9PM AST day's slot.
+# RETIMED from 2PM AST on 2026-09-16: Dani's rule is a 3-hour buffer between posts, not a post cap,
+# and with 8AM/12PM/3PM/6PM held by two live batches, 9PM and 5AM are the free 3-hour-clear times.
 # Reads publish_schedule.json[<today AST>].doc_clip and publishes IG + YT Short.
-# Auto-triggers Story reshare via story-reshare.yml on workflow_run.
-# If no doc_clip slot for today (e.g. May 11+), the script exits 0 with a notice.
+# If no doc_clip slot for today, the script exits 0 with a notice.
 
 on:
   schedule:
-    - cron: '0 18 * * *'   # 18:00 UTC = 2PM AST
+    - cron: '0 1 * * *'   # 01:00 UTC = 9PM AST (previous UTC day)
   workflow_dispatch:
     inputs:
       dry_run:

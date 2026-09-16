@@ -84,18 +84,27 @@ SLOTS = [
     # filter skips them). 2026-09-15 -> 09-22: the 9-books batch's 2nd daily
     # clip. 2026-09-23 -> 09-29: the IG Deliverability batch's 3PM clip (its 8AM
     # clips ride the "all"-dates reel slot). UPDATE THIS LIST each week before Monday 8AM.
-    ("publish-doc-clip.yml",      "doc_clip",      "14:00",
-     ["2026-09-05","2026-09-09","2026-09-12"]),
+    # doc_clip RETIMED 2PM -> 9PM AST (2026-09-16) — see the longform-clip-bonus note below.
+    # The 2026-09 dates before Sep 18 are past one-shots kept for the record; the date filter skips them.
+    ("publish-doc-clip.yml",      "doc_clip",      "21:00",
+     ["2026-09-05","2026-09-09","2026-09-12",
+      "2026-09-18","2026-09-19","2026-09-20","2026-09-21","2026-09-22","2026-09-23",
+      "2026-09-24","2026-09-25","2026-09-26"]),
     ("publish-longform-clip.yml", "longform_clip", "15:00",
      ["2026-09-02","2026-09-03","2026-09-04","2026-09-05","2026-09-06","2026-09-07",
       "2026-09-09","2026-09-10","2026-09-11","2026-09-12","2026-09-13","2026-09-14",
       "2026-09-15","2026-09-16","2026-09-17","2026-09-18","2026-09-19","2026-09-20",
       "2026-09-21","2026-09-22",
-      "2026-09-23","2026-09-24","2026-09-25","2026-09-26","2026-09-27","2026-09-28","2026-09-29",
-      "2026-09-30","2026-10-01","2026-10-02","2026-10-03","2026-10-04","2026-10-05","2026-10-06","2026-10-07","2026-10-08"]),
+      "2026-09-23","2026-09-24","2026-09-25","2026-09-26","2026-09-27","2026-09-28","2026-09-29"]),
 
-    # ── Longform-clip bonus — not used this cycle (12 clips fit 1/day) ─────
-    ("publish-longform-clip-bonus.yml", "longform_clip_bonus", "15:30", []),
+    # ── Longform-clip bonus — RETIMED 3:30PM -> 5AM AST for the Aruba batch ───
+    # Dani's rule is a 3-hour buffer between posts, not a post cap. The Aruba documentary's own
+    # clips had to start the day it goes up (Sep 18) while 9 Books + IG Deliverability still hold
+    # 8AM/12PM/3PM/6PM, so the two free 3-hour-clear times are 5AM and 9PM. This slot takes 5AM
+    # and doc_clip takes 9PM; both workflows' crons were moved to match (2026-09-16).
+    ("publish-longform-clip-bonus.yml", "longform_clip_bonus", "05:00",
+     ["2026-09-18","2026-09-19","2026-09-20","2026-09-21","2026-09-22","2026-09-23",
+      "2026-09-24","2026-09-25","2026-09-26"]),
 
     # ── Story — 7PM AST daily ──────────────────────────────────────────────
     # UPDATE THIS LIST each week before Monday 8AM.

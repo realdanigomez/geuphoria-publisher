@@ -1,13 +1,14 @@
-name: Publish Longform Clip Bonus — 3:30PM AST daily
+name: Publish Longform Clip Bonus — 5AM AST daily
 
-# Daily bonus longform-clip publish for days with 9th/2nd longform clip (e.g. weekend
-# double-ups). Cron 30 19 * * * = 19:30 UTC = 3:30PM AST.
+# The 2nd clip of the day. Cron 0 9 * * * = 09:00 UTC = 5AM AST.
+# RETIMED from 3:30PM AST on 2026-09-16: at 3:30PM it sat 30 minutes from the 3PM clip, which breaks
+# Dani's 3-hour buffer. 5AM is 3 hours clear of the 8AM slot and 8 hours after the 9PM doc_clip.
 # Reads publish_schedule.json[<today AST>].longform_clip_bonus and publishes IG + YT Short.
 # If no longform_clip_bonus slot for today, the script exits 0 with a notice (no error).
 
 on:
   schedule:
-    - cron: '30 19 * * *'   # 19:30 UTC = 3:30PM AST
+    - cron: '0 9 * * *'   # 09:00 UTC = 5AM AST
   workflow_dispatch:
     inputs:
       dry_run:
