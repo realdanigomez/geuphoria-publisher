@@ -1118,15 +1118,6 @@
       "folder": "compounding-both-ways",
       "caption_path": "captions/compounding-both-ways/caption.txt"
     },
-    "longform_clip_bonus": {
-      "name": "two-months-no-gym",
-      "slot_time_ast": "5:00 AM",
-      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/two-months-no-gym.mp4",
-      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/two-months-no-gym.mp4",
-      "caption_path": "captions/two-months-no-gym/caption.txt",
-      "yt_caption_path": "captions/two-months-no-gym/caption-youtube.txt",
-      "yt_title_path": "captions/two-months-no-gym/title-youtube.txt"
-    },
     "doc_clip": {
       "name": "the-war-map",
       "slot_time_ast": "9:00 PM",
@@ -1135,12 +1126,6 @@
       "caption_path": "captions/the-war-map/caption.txt",
       "yt_caption_path": "captions/the-war-map/caption-youtube.txt",
       "yt_title_path": "captions/the-war-map/title-youtube.txt"
-    },
-    "carousel_3": {
-      "name": "spcl-on-my-video",
-      "slot_time_ast": "12:00 AM",
-      "folder": "spcl-on-my-video",
-      "caption_path": "captions/carousel-spcl-on-my-video/caption.txt"
     }
   },
   "2026-09-19": {
@@ -1174,15 +1159,6 @@
       "folder": "money-is-psychology",
       "caption_path": "captions/money-is-psychology/caption.txt"
     },
-    "longform_clip_bonus": {
-      "name": "idea-beats-the-edit",
-      "slot_time_ast": "5:00 AM",
-      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/idea-beats-the-edit.mp4",
-      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/idea-beats-the-edit.mp4",
-      "caption_path": "captions/idea-beats-the-edit/caption.txt",
-      "yt_caption_path": "captions/idea-beats-the-edit/caption-youtube.txt",
-      "yt_title_path": "captions/idea-beats-the-edit/title-youtube.txt"
-    },
     "doc_clip": {
       "name": "how-to-plan-tomorrow",
       "slot_time_ast": "9:00 PM",
@@ -1192,11 +1168,20 @@
       "yt_caption_path": "captions/how-to-plan-tomorrow/caption-youtube.txt",
       "yt_title_path": "captions/how-to-plan-tomorrow/title-youtube.txt"
     },
+    "longform_clip_bonus": {
+      "name": "two-months-no-gym",
+      "slot_time_ast": "5:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/two-months-no-gym.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/two-months-no-gym.mp4",
+      "caption_path": "captions/two-months-no-gym/caption.txt",
+      "yt_caption_path": "captions/two-months-no-gym/caption-youtube.txt",
+      "yt_title_path": "captions/two-months-no-gym/title-youtube.txt"
+    },
     "carousel_3": {
-      "name": "one-book-personal-mba",
+      "name": "spcl-on-my-video",
       "slot_time_ast": "12:00 AM",
-      "folder": "one-book-personal-mba",
-      "caption_path": "captions/carousel-one-book-personal-mba/caption.txt"
+      "folder": "spcl-on-my-video",
+      "caption_path": "captions/carousel-spcl-on-my-video/caption.txt"
     }
   },
   "2026-09-20": {
@@ -1218,15 +1203,6 @@
       "yt_caption_path": "captions/why-you-spend-it-all/caption-youtube.txt",
       "yt_title_path": "captions/why-you-spend-it-all/title-youtube.txt"
     },
-    "longform_clip_bonus": {
-      "name": "one-client-more-outreach",
-      "slot_time_ast": "5:00 AM",
-      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/one-client-more-outreach.mp4",
-      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/one-client-more-outreach.mp4",
-      "caption_path": "captions/one-client-more-outreach/caption.txt",
-      "yt_caption_path": "captions/one-client-more-outreach/caption-youtube.txt",
-      "yt_title_path": "captions/one-client-more-outreach/title-youtube.txt"
-    },
     "doc_clip": {
       "name": "food-is-the-idea",
       "slot_time_ast": "9:00 PM",
@@ -1236,17 +1212,26 @@
       "yt_caption_path": "captions/food-is-the-idea/caption-youtube.txt",
       "yt_title_path": "captions/food-is-the-idea/title-youtube.txt"
     },
+    "longform_clip_bonus": {
+      "name": "idea-beats-the-edit",
+      "slot_time_ast": "5:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/idea-beats-the-edit.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/idea-beats-the-edit.mp4",
+      "caption_path": "captions/idea-beats-the-edit/caption.txt",
+      "yt_caption_path": "captions/idea-beats-the-edit/caption-youtube.txt",
+      "yt_title_path": "captions/idea-beats-the-edit/title-youtube.txt"
+    },
     "carousel_3": {
-      "name": "plan-through-the-fog",
+      "name": "one-book-personal-mba",
       "slot_time_ast": "12:00 AM",
-      "folder": "plan-through-the-fog",
-      "caption_path": "captions/carousel-plan-through-the-fog/caption.txt"
+      "folder": "one-book-personal-mba",
+      "caption_path": "captions/carousel-one-book-personal-mba/caption.txt"
     },
     "carousel": {
-      "name": "avatar-document",
+      "name": "plan-through-the-fog",
       "slot_time_ast": "12:00 PM",
-      "folder": "avatar-document",
-      "caption_path": "captions/carousel-avatar-document/caption.txt"
+      "folder": "plan-through-the-fog",
+      "caption_path": "captions/carousel-plan-through-the-fog/caption.txt"
     }
   },
   "2026-09-21": {
@@ -1268,15 +1253,6 @@
       "yt_caption_path": "captions/nobody-acts-for-free/caption-youtube.txt",
       "yt_title_path": "captions/nobody-acts-for-free/title-youtube.txt"
     },
-    "longform_clip_bonus": {
-      "name": "proof-promise-plan",
-      "slot_time_ast": "5:00 AM",
-      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/proof-promise-plan.mp4",
-      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/proof-promise-plan.mp4",
-      "caption_path": "captions/proof-promise-plan/caption.txt",
-      "yt_caption_path": "captions/proof-promise-plan/caption-youtube.txt",
-      "yt_title_path": "captions/proof-promise-plan/title-youtube.txt"
-    },
     "doc_clip": {
       "name": "stop-scripting-word-for-word",
       "slot_time_ast": "9:00 PM",
@@ -1292,11 +1268,20 @@
       "folder": "where-ai-still-fails",
       "caption_path": "captions/carousel-where-ai-still-fails/caption.txt"
     },
+    "longform_clip_bonus": {
+      "name": "one-client-more-outreach",
+      "slot_time_ast": "5:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/one-client-more-outreach.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/one-client-more-outreach.mp4",
+      "caption_path": "captions/one-client-more-outreach/caption.txt",
+      "yt_caption_path": "captions/one-client-more-outreach/caption-youtube.txt",
+      "yt_title_path": "captions/one-client-more-outreach/title-youtube.txt"
+    },
     "carousel": {
-      "name": "my-idea-process",
+      "name": "avatar-document",
       "slot_time_ast": "12:00 PM",
-      "folder": "my-idea-process",
-      "caption_path": "captions/carousel-my-idea-process/caption.txt"
+      "folder": "avatar-document",
+      "caption_path": "captions/carousel-avatar-document/caption.txt"
     }
   },
   "2026-09-22": {
@@ -1349,10 +1334,10 @@
       "yt_title_path": "captions/editing-is-useless/title-youtube.txt"
     },
     "carousel_3": {
-      "name": "the-war-map",
+      "name": "my-idea-process",
       "slot_time_ast": "12:00 AM",
-      "folder": "the-war-map",
-      "caption_path": "captions/carousel-the-war-map/caption.txt"
+      "folder": "my-idea-process",
+      "caption_path": "captions/carousel-my-idea-process/caption.txt"
     }
   },
   "2026-09-23": {
@@ -1405,10 +1390,10 @@
       "yt_title_path": "captions/the-personal-mba/title-youtube.txt"
     },
     "carousel_3": {
-      "name": "idea-beats-the-edit",
+      "name": "proof-promise-plan",
       "slot_time_ast": "12:00 AM",
-      "folder": "idea-beats-the-edit",
-      "caption_path": "captions/carousel-idea-beats-the-edit/caption.txt"
+      "folder": "proof-promise-plan",
+      "caption_path": "captions/carousel-proof-promise-plan/caption.txt"
     }
   },
   "2026-09-24": {
@@ -1461,10 +1446,10 @@
       "yt_title_path": "captions/plan-a-day-not-a-year/title-youtube.txt"
     },
     "carousel_3": {
-      "name": "plan-tomorrow-tonight",
+      "name": "the-war-map",
       "slot_time_ast": "12:00 AM",
-      "folder": "plan-tomorrow-tonight",
-      "caption_path": "captions/carousel-plan-tomorrow-tonight/caption.txt"
+      "folder": "the-war-map",
+      "caption_path": "captions/carousel-the-war-map/caption.txt"
     }
   },
   "2026-09-25": {
@@ -1511,16 +1496,16 @@
       "yt_title_path": "captions/avatar-document/title-youtube.txt"
     },
     "carousel_3": {
-      "name": "proof-promise-plan",
+      "name": "plan-tomorrow-tonight",
       "slot_time_ast": "12:00 AM",
-      "folder": "proof-promise-plan",
-      "caption_path": "captions/carousel-proof-promise-plan/caption.txt"
+      "folder": "plan-tomorrow-tonight",
+      "caption_path": "captions/carousel-plan-tomorrow-tonight/caption.txt"
     },
     "carousel_2": {
-      "name": "stop-reading-your-script",
+      "name": "idea-beats-the-edit",
       "slot_time_ast": "6:00 PM",
-      "folder": "stop-reading-your-script",
-      "caption_path": "captions/carousel-stop-reading-your-script/caption.txt"
+      "folder": "idea-beats-the-edit",
+      "caption_path": "captions/carousel-idea-beats-the-edit/caption.txt"
     }
   },
   "2026-09-26": {
@@ -1565,6 +1550,12 @@
       "slot_time_ast": "12:00 PM",
       "folder": "skip-the-color-grading",
       "caption_path": "captions/carousel-skip-the-color-grading/caption.txt"
+    },
+    "carousel_3": {
+      "name": "stop-reading-your-script",
+      "slot_time_ast": "12:00 AM",
+      "folder": "stop-reading-your-script",
+      "caption_path": "captions/carousel-stop-reading-your-script/caption.txt"
     }
   },
   "2026-09-27": {
@@ -1585,6 +1576,15 @@
       "caption_path": "captions/kpi-benchmark/caption.txt",
       "yt_caption_path": "captions/kpi-benchmark/caption-youtube.txt",
       "yt_title_path": "captions/kpi-benchmark/title-youtube.txt"
+    },
+    "longform_clip_bonus": {
+      "name": "proof-promise-plan",
+      "slot_time_ast": "5:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/proof-promise-plan.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/proof-promise-plan.mp4",
+      "caption_path": "captions/proof-promise-plan/caption.txt",
+      "yt_caption_path": "captions/proof-promise-plan/caption-youtube.txt",
+      "yt_title_path": "captions/proof-promise-plan/title-youtube.txt"
     }
   },
   "2026-09-28": {

@@ -83,9 +83,11 @@ SLOTS = [
     # With 5AM/8AM/12PM/3PM/6PM/9PM all taken by three overlapping batches, midnight is the only
     # remaining time that keeps Dani's 3-hour buffer (3h after the 9PM clip, 5h before the 5AM one).
     # It has its own cron (0 4 * * * UTC) AND this row, so it is not safety-net-only like the _2 slots.
+    # Starts Sep 19, not Sep 18: nothing from this batch posts before the documentary itself
+    # (Dani, 2026-09-16), so Friday's only Aruba piece is the 9PM clip.
     ("publish-carousel-3.yml",  "carousel_3",  "00:00",
-     ["2026-09-18","2026-09-19","2026-09-20","2026-09-21","2026-09-22","2026-09-23",
-      "2026-09-24","2026-09-25"]),
+     ["2026-09-19","2026-09-20","2026-09-21","2026-09-22","2026-09-23",
+      "2026-09-24","2026-09-25","2026-09-26"]),
 
     # ── Doc-clip + longform-clip ───────────────────────────────────────────
     # 2026-09-01 -> 09-14: the previous go-live (past dates, kept — the date
@@ -110,9 +112,10 @@ SLOTS = [
     # clips had to start the day it goes up (Sep 18) while 9 Books + IG Deliverability still hold
     # 8AM/12PM/3PM/6PM, so the two free 3-hour-clear times are 5AM and 9PM. This slot takes 5AM
     # and doc_clip takes 9PM; both workflows' crons were moved to match (2026-09-16).
+    # Starts Sep 19 for the same reason as carousel_3 above — Friday's 5AM would land before the film.
     ("publish-longform-clip-bonus.yml", "longform_clip_bonus", "05:00",
-     ["2026-09-18","2026-09-19","2026-09-20","2026-09-21","2026-09-22","2026-09-23",
-      "2026-09-24","2026-09-25","2026-09-26"]),
+     ["2026-09-19","2026-09-20","2026-09-21","2026-09-22","2026-09-23",
+      "2026-09-24","2026-09-25","2026-09-26","2026-09-27"]),
 
     # ── Story — 7PM AST daily ──────────────────────────────────────────────
     # UPDATE THIS LIST each week before Monday 8AM.
