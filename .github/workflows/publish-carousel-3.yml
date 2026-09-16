@@ -1,4 +1,6 @@
-name: Publish Carousel #3 — 12AM AST
+name: Publish Carousel 3 — 12AM AST
+# (No "#" in the name line: YAML reads " #" as a comment, which is why publish-carousel-2
+#  registers on GitHub as just "Publish Carousel".)
 
 # 3rd daily carousel slot, added 2026-09-16 for the Aruba documentary batch: with 5AM/8AM/12PM/3PM/
 # 6PM/9PM all taken, midnight is the only remaining time that keeps Dani's 3-hour buffer (3 hours
