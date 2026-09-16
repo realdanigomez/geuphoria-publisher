@@ -1331,6 +1331,18 @@
       "caption_path": "captions/outreach-timing/caption.txt",
       "yt_caption_path": "captions/outreach-timing/caption-youtube.txt",
       "yt_title_path": "captions/outreach-timing/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "the-war-map",
+      "slot_time_ast": "12:00 PM",
+      "folder": "the-war-map",
+      "caption_path": "captions/carousel-the-war-map/caption.txt"
+    },
+    "carousel_2": {
+      "name": "idea-beats-the-edit",
+      "slot_time_ast": "6:00 PM",
+      "folder": "idea-beats-the-edit",
+      "caption_path": "captions/carousel-idea-beats-the-edit/caption.txt"
     }
   },
   "2026-09-27": {
@@ -1351,6 +1363,18 @@
       "caption_path": "captions/kpi-benchmark/caption.txt",
       "yt_caption_path": "captions/kpi-benchmark/caption-youtube.txt",
       "yt_title_path": "captions/kpi-benchmark/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "plan-tomorrow-tonight",
+      "slot_time_ast": "12:00 PM",
+      "folder": "plan-tomorrow-tonight",
+      "caption_path": "captions/carousel-plan-tomorrow-tonight/caption.txt"
+    },
+    "carousel_2": {
+      "name": "stop-reading-your-script",
+      "slot_time_ast": "6:00 PM",
+      "folder": "stop-reading-your-script",
+      "caption_path": "captions/carousel-stop-reading-your-script/caption.txt"
     }
   },
   "2026-09-28": {
@@ -1371,6 +1395,18 @@
       "caption_path": "captions/scientific-method/caption.txt",
       "yt_caption_path": "captions/scientific-method/caption-youtube.txt",
       "yt_title_path": "captions/scientific-method/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "one-book-personal-mba",
+      "slot_time_ast": "12:00 PM",
+      "folder": "one-book-personal-mba",
+      "caption_path": "captions/carousel-one-book-personal-mba/caption.txt"
+    },
+    "carousel_2": {
+      "name": "skip-the-color-grading",
+      "slot_time_ast": "6:00 PM",
+      "folder": "skip-the-color-grading",
+      "caption_path": "captions/carousel-skip-the-color-grading/caption.txt"
     }
   },
   "2026-09-29": {
@@ -1391,6 +1427,222 @@
       "caption_path": "captions/record-selfie-in-instagram/caption.txt",
       "yt_caption_path": "captions/record-selfie-in-instagram/caption-youtube.txt",
       "yt_title_path": "captions/record-selfie-in-instagram/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "spcl-on-my-video",
+      "slot_time_ast": "12:00 PM",
+      "folder": "spcl-on-my-video",
+      "caption_path": "captions/carousel-spcl-on-my-video/caption.txt"
+    },
+    "carousel_2": {
+      "name": "proof-promise-plan",
+      "slot_time_ast": "6:00 PM",
+      "folder": "proof-promise-plan",
+      "caption_path": "captions/carousel-proof-promise-plan/caption.txt"
+    }
+  },
+  "2026-09-30": {
+    "reel": {
+      "name": "two-months-no-gym",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/two-months-no-gym.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/two-months-no-gym.mp4",
+      "caption_path": "captions/two-months-no-gym/caption.txt",
+      "yt_caption_path": "captions/two-months-no-gym/caption-youtube.txt",
+      "yt_title_path": "captions/two-months-no-gym/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "food-is-the-idea",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/food-is-the-idea.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/food-is-the-idea.mp4",
+      "caption_path": "captions/food-is-the-idea/caption.txt",
+      "yt_caption_path": "captions/food-is-the-idea/caption-youtube.txt",
+      "yt_title_path": "captions/food-is-the-idea/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "avatar-document",
+      "slot_time_ast": "12:00 PM",
+      "folder": "avatar-document",
+      "caption_path": "captions/carousel-avatar-document/caption.txt"
+    },
+    "carousel_2": {
+      "name": "plan-through-the-fog",
+      "slot_time_ast": "6:00 PM",
+      "folder": "plan-through-the-fog",
+      "caption_path": "captions/carousel-plan-through-the-fog/caption.txt"
+    }
+  },
+  "2026-10-01": {
+    "reel": {
+      "name": "idea-beats-the-edit",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/idea-beats-the-edit.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/idea-beats-the-edit.mp4",
+      "caption_path": "captions/idea-beats-the-edit/caption.txt",
+      "yt_caption_path": "captions/idea-beats-the-edit/caption-youtube.txt",
+      "yt_title_path": "captions/idea-beats-the-edit/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "one-client-more-outreach",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/one-client-more-outreach.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/one-client-more-outreach.mp4",
+      "caption_path": "captions/one-client-more-outreach/caption.txt",
+      "yt_caption_path": "captions/one-client-more-outreach/caption-youtube.txt",
+      "yt_title_path": "captions/one-client-more-outreach/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "my-idea-process",
+      "slot_time_ast": "12:00 PM",
+      "folder": "my-idea-process",
+      "caption_path": "captions/carousel-my-idea-process/caption.txt"
+    },
+    "carousel_2": {
+      "name": "where-ai-still-fails",
+      "slot_time_ast": "6:00 PM",
+      "folder": "where-ai-still-fails",
+      "caption_path": "captions/carousel-where-ai-still-fails/caption.txt"
+    }
+  },
+  "2026-10-02": {
+    "reel": {
+      "name": "the-war-map",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-war-map.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-war-map.mp4",
+      "caption_path": "captions/the-war-map/caption.txt",
+      "yt_caption_path": "captions/the-war-map/caption-youtube.txt",
+      "yt_title_path": "captions/the-war-map/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "editing-is-useless",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/editing-is-useless.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/editing-is-useless.mp4",
+      "caption_path": "captions/editing-is-useless/caption.txt",
+      "yt_caption_path": "captions/editing-is-useless/caption-youtube.txt",
+      "yt_title_path": "captions/editing-is-useless/title-youtube.txt"
+    }
+  },
+  "2026-10-03": {
+    "reel": {
+      "name": "proof-promise-plan",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/proof-promise-plan.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/proof-promise-plan.mp4",
+      "caption_path": "captions/proof-promise-plan/caption.txt",
+      "yt_caption_path": "captions/proof-promise-plan/caption-youtube.txt",
+      "yt_title_path": "captions/proof-promise-plan/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "stop-scripting-word-for-word",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/stop-scripting-word-for-word.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/stop-scripting-word-for-word.mp4",
+      "caption_path": "captions/stop-scripting-word-for-word/caption.txt",
+      "yt_caption_path": "captions/stop-scripting-word-for-word/caption-youtube.txt",
+      "yt_title_path": "captions/stop-scripting-word-for-word/title-youtube.txt"
+    }
+  },
+  "2026-10-04": {
+    "reel": {
+      "name": "no-color-grading",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/no-color-grading.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/no-color-grading.mp4",
+      "caption_path": "captions/no-color-grading/caption.txt",
+      "yt_caption_path": "captions/no-color-grading/caption-youtube.txt",
+      "yt_title_path": "captions/no-color-grading/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "how-to-plan-tomorrow",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/how-to-plan-tomorrow.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/how-to-plan-tomorrow.mp4",
+      "caption_path": "captions/how-to-plan-tomorrow/caption.txt",
+      "yt_caption_path": "captions/how-to-plan-tomorrow/caption-youtube.txt",
+      "yt_title_path": "captions/how-to-plan-tomorrow/title-youtube.txt"
+    }
+  },
+  "2026-10-05": {
+    "reel": {
+      "name": "the-personal-mba",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-personal-mba.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-personal-mba.mp4",
+      "caption_path": "captions/the-personal-mba/caption.txt",
+      "yt_caption_path": "captions/the-personal-mba/caption-youtube.txt",
+      "yt_title_path": "captions/the-personal-mba/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "plan-a-day-not-a-year",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/plan-a-day-not-a-year.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/plan-a-day-not-a-year.mp4",
+      "caption_path": "captions/plan-a-day-not-a-year/caption.txt",
+      "yt_caption_path": "captions/plan-a-day-not-a-year/caption-youtube.txt",
+      "yt_title_path": "captions/plan-a-day-not-a-year/title-youtube.txt"
+    }
+  },
+  "2026-10-06": {
+    "reel": {
+      "name": "spcl-on-a-real-video",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/spcl-on-a-real-video.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/spcl-on-a-real-video.mp4",
+      "caption_path": "captions/spcl-on-a-real-video/caption.txt",
+      "yt_caption_path": "captions/spcl-on-a-real-video/caption-youtube.txt",
+      "yt_title_path": "captions/spcl-on-a-real-video/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "avatar-document",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/avatar-document.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/avatar-document.mp4",
+      "caption_path": "captions/avatar-document/caption.txt",
+      "yt_caption_path": "captions/avatar-document/caption-youtube.txt",
+      "yt_title_path": "captions/avatar-document/title-youtube.txt"
+    }
+  },
+  "2026-10-07": {
+    "reel": {
+      "name": "week-in-review",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/week-in-review.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/week-in-review.mp4",
+      "caption_path": "captions/week-in-review/caption.txt",
+      "yt_caption_path": "captions/week-in-review/caption-youtube.txt",
+      "yt_title_path": "captions/week-in-review/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "where-ai-still-fails",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/where-ai-still-fails.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/where-ai-still-fails.mp4",
+      "caption_path": "captions/where-ai-still-fails/caption.txt",
+      "yt_caption_path": "captions/where-ai-still-fails/caption-youtube.txt",
+      "yt_title_path": "captions/where-ai-still-fails/title-youtube.txt"
+    }
+  },
+  "2026-10-08": {
+    "reel": {
+      "name": "fifteen-books-for-the-product",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/fifteen-books-for-the-product.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/fifteen-books-for-the-product.mp4",
+      "caption_path": "captions/fifteen-books-for-the-product/caption.txt",
+      "yt_caption_path": "captions/fifteen-books-for-the-product/caption-youtube.txt",
+      "yt_title_path": "captions/fifteen-books-for-the-product/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "merging-research-ideation",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/merging-research-ideation.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/merging-research-ideation.mp4",
+      "caption_path": "captions/merging-research-ideation/caption.txt",
+      "yt_caption_path": "captions/merging-research-ideation/caption-youtube.txt",
+      "yt_title_path": "captions/merging-research-ideation/title-youtube.txt"
     }
   }
 }
