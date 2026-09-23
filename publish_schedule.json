@@ -1556,6 +1556,12 @@
       "slot_time_ast": "12:00 AM",
       "folder": "stop-reading-your-script",
       "caption_path": "captions/carousel-stop-reading-your-script/caption.txt"
+    },
+    "carousel_2": {
+      "name": "count-the-free-hours",
+      "slot_time_ast": "6:00 PM",
+      "folder": "count-the-free-hours",
+      "caption_path": "captions/carousel-count-the-free-hours/caption.txt"
     }
   },
   "2026-09-27": {
@@ -1585,6 +1591,21 @@
       "caption_path": "captions/proof-promise-plan/caption.txt",
       "yt_caption_path": "captions/proof-promise-plan/caption-youtube.txt",
       "yt_title_path": "captions/proof-promise-plan/title-youtube.txt"
+    },
+    "doc_clip": {
+      "name": "four-hours-before-a-13-hour-shift",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/four-hours-before-a-13-hour-shift.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/four-hours-before-a-13-hour-shift.mp4",
+      "caption_path": "captions/four-hours-before-a-13-hour-shift/caption.txt",
+      "yt_caption_path": "captions/four-hours-before-a-13-hour-shift/caption-youtube.txt",
+      "yt_title_path": "captions/four-hours-before-a-13-hour-shift/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "ai-works-the-night-shift",
+      "slot_time_ast": "6:00 PM",
+      "folder": "ai-works-the-night-shift",
+      "caption_path": "captions/carousel-ai-works-the-night-shift/caption.txt"
     }
   },
   "2026-09-28": {
@@ -1605,6 +1626,21 @@
       "caption_path": "captions/scientific-method/caption.txt",
       "yt_caption_path": "captions/scientific-method/caption-youtube.txt",
       "yt_title_path": "captions/scientific-method/title-youtube.txt"
+    },
+    "doc_clip": {
+      "name": "its-been-too-long-already",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/its-been-too-long-already.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/its-been-too-long-already.mp4",
+      "caption_path": "captions/its-been-too-long-already/caption.txt",
+      "yt_caption_path": "captions/its-been-too-long-already/caption-youtube.txt",
+      "yt_title_path": "captions/its-been-too-long-already/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "when-i-actually-need-a-break",
+      "slot_time_ast": "6:00 PM",
+      "folder": "when-i-actually-need-a-break",
+      "caption_path": "captions/carousel-when-i-actually-need-a-break/caption.txt"
     }
   },
   "2026-09-29": {
@@ -1625,6 +1661,81 @@
       "caption_path": "captions/record-selfie-in-instagram/caption.txt",
       "yt_caption_path": "captions/record-selfie-in-instagram/caption-youtube.txt",
       "yt_title_path": "captions/record-selfie-in-instagram/title-youtube.txt"
+    },
+    "doc_clip": {
+      "name": "ai-edits-while-i-sleep",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/ai-edits-while-i-sleep.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/ai-edits-while-i-sleep.mp4",
+      "caption_path": "captions/ai-edits-while-i-sleep/caption.txt",
+      "yt_caption_path": "captions/ai-edits-while-i-sleep/caption-youtube.txt",
+      "yt_title_path": "captions/ai-edits-while-i-sleep/title-youtube.txt"
+    }
+  },
+  "2026-09-30": {
+    "doc_clip": {
+      "name": "one-long-day-isnt-a-break",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/one-long-day-isnt-a-break.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/one-long-day-isnt-a-break.mp4",
+      "caption_path": "captions/one-long-day-isnt-a-break/caption.txt",
+      "yt_caption_path": "captions/one-long-day-isnt-a-break/caption-youtube.txt",
+      "yt_title_path": "captions/one-long-day-isnt-a-break/title-youtube.txt"
+    }
+  },
+  "2026-10-01": {
+    "doc_clip": {
+      "name": "batch-the-week-around-the-job",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/batch-the-week-around-the-job.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/batch-the-week-around-the-job.mp4",
+      "caption_path": "captions/batch-the-week-around-the-job/caption.txt",
+      "yt_caption_path": "captions/batch-the-week-around-the-job/caption-youtube.txt",
+      "yt_title_path": "captions/batch-the-week-around-the-job/title-youtube.txt"
+    }
+  },
+  "2026-10-02": {
+    "doc_clip": {
+      "name": "plan-it-after-the-shift",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/plan-it-after-the-shift.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/plan-it-after-the-shift.mp4",
+      "caption_path": "captions/plan-it-after-the-shift/caption.txt",
+      "yt_caption_path": "captions/plan-it-after-the-shift/caption-youtube.txt",
+      "yt_title_path": "captions/plan-it-after-the-shift/title-youtube.txt"
+    }
+  },
+  "2026-10-03": {
+    "doc_clip": {
+      "name": "what-ai-builds-while-i-read",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/what-ai-builds-while-i-read.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/what-ai-builds-while-i-read.mp4",
+      "caption_path": "captions/what-ai-builds-while-i-read/caption.txt",
+      "yt_caption_path": "captions/what-ai-builds-while-i-read/caption-youtube.txt",
+      "yt_title_path": "captions/what-ai-builds-while-i-read/title-youtube.txt"
+    }
+  },
+  "2026-10-04": {
+    "doc_clip": {
+      "name": "one-week-what-got-done",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/one-week-what-got-done.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/one-week-what-got-done.mp4",
+      "caption_path": "captions/one-week-what-got-done/caption.txt",
+      "yt_caption_path": "captions/one-week-what-got-done/caption-youtube.txt",
+      "yt_title_path": "captions/one-week-what-got-done/title-youtube.txt"
+    }
+  },
+  "2026-10-05": {
+    "doc_clip": {
+      "name": "what-finished-means",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/what-finished-means.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/what-finished-means.mp4",
+      "caption_path": "captions/what-finished-means/caption.txt",
+      "yt_caption_path": "captions/what-finished-means/caption-youtube.txt",
+      "yt_title_path": "captions/what-finished-means/title-youtube.txt"
     }
   }
 }

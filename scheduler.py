@@ -74,9 +74,11 @@ SLOTS = [
     ("publish-reel-2.yml",      "reel_2",      "17:00", ["2026-09-14"]),
     ("publish-yt-reel-2.yml",   "yt_reel_2",   "17:00", ["2026-09-14"]),
     # 2026-09-25: the Aruba batch's one 6PM carousel (the only 6PM the other batches leave free).
+    # 2026-09-26 -> 09-28: documentary Ep.7's 3 carousels (Sat Sep 26's only 3-hour-clear time; Dani 2026-09-23).
     ("publish-carousel-2.yml",  "carousel_2",  "18:00",
      ["2026-09-15","2026-09-16","2026-09-17","2026-09-18","2026-09-19",
-      "2026-09-22","2026-09-23","2026-09-24","2026-09-25"]),
+      "2026-09-22","2026-09-23","2026-09-24","2026-09-25",
+      "2026-09-26","2026-09-27","2026-09-28"]),
     ("publish-story-2.yml",     "story_2",     "11:00", []),
 
     # ── 3rd daily carousel — 12AM AST, added 2026-09-16 for the Aruba documentary batch ──────
@@ -96,10 +98,12 @@ SLOTS = [
     # clips ride the "all"-dates reel slot). UPDATE THIS LIST each week before Monday 8AM.
     # doc_clip RETIMED 2PM -> 9PM AST (2026-09-16) — see the longform-clip-bonus note below.
     # The 2026-09 dates before Sep 18 are past one-shots kept for the record; the date filter skips them.
+    # 2026-09-27 -> 10-05: documentary Ep.7's 9 clips, one a day at 9PM, after the film premieres Fri Sep 25.
     ("publish-doc-clip.yml",      "doc_clip",      "21:00",
      ["2026-09-05","2026-09-09","2026-09-12",
       "2026-09-18","2026-09-19","2026-09-20","2026-09-21","2026-09-22","2026-09-23",
-      "2026-09-24","2026-09-25","2026-09-26"]),
+      "2026-09-24","2026-09-25","2026-09-26",
+      "2026-09-27","2026-09-28","2026-09-29","2026-09-30","2026-10-01","2026-10-02","2026-10-03","2026-10-04","2026-10-05"]),
     ("publish-longform-clip.yml", "longform_clip", "15:00",
      ["2026-09-02","2026-09-03","2026-09-04","2026-09-05","2026-09-06","2026-09-07",
       "2026-09-09","2026-09-10","2026-09-11","2026-09-12","2026-09-13","2026-09-14",
