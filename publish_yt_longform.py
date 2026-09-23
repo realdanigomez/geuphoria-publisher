@@ -260,6 +260,7 @@ def publish_one(which, dry_run: bool = False) -> dict:
 
     from googleapiclient.http import MediaFileUpload
     from googleapiclient.errors import HttpError
+    import httplib2
 
     yt = build_youtube()
 
@@ -294,17 +295,40 @@ def publish_one(which, dry_run: bool = False) -> dict:
     request = yt.videos().insert(part="snippet,status", body=body, media_body=media)
     response = None
     last_progress = 0
+    # A dropped connection must RESUME, not kill the upload (fixed 2026-09-23: Ep.7's 16.7 GB upload died at ~54%
+    # on an ssl.SSLEOFError after 2.5 h, leaving a half-uploaded private video scheduled to publish). After any
+    # exception googleapiclient marks the request in error; the next next_chunk() asks YouTube how many bytes it
+    # has and carries on from there. num_retries covers short blips inside one chunk; this loop covers the rest.
+    failures, session_logged = 0, False
     while response is None:
         try:
-            status, response = request.next_chunk()
+            status, response = request.next_chunk(num_retries=5)
+            failures = 0
+            if not session_logged and getattr(request, "resumable_uri", None):
+                log.info(f"Resumable session: {request.resumable_uri}")   # lets a dead process be resumed by hand
+                session_logged = True
             if status:
                 pct = int(status.progress() * 100)
                 if pct >= last_progress + 5:
                     log.info(f"  {pct}% uploaded")
                     last_progress = pct
         except HttpError as e:
+            if e.resp.status in (500, 502, 503, 504) and failures < 12:
+                failures += 1
+                wait = min(300, 10 * 2 ** failures)
+                log.warning(f"Upload error {e.resp.status}; resuming in {wait}s (attempt {failures}/12)")
+                time.sleep(wait)
+                continue
             log.error(f"Upload error: {e}")
             raise
+        except (OSError, ConnectionError, TimeoutError, httplib2.HttpLib2Error) as e:   # ssl.SSLError is an OSError
+            if failures >= 12:
+                log.error(f"Upload failed after {failures} resume attempts: {e!r}")
+                raise
+            failures += 1
+            wait = min(300, 10 * 2 ** failures)
+            log.warning(f"Connection dropped ({e!r}); resuming in {wait}s (attempt {failures}/12)")
+            time.sleep(wait)
 
     video_id = response["id"]
     public_url = f"https://www.youtube.com/watch?v={video_id}"
