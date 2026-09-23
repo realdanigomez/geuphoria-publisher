@@ -1936,6 +1936,21 @@
       "caption_path": "captions/instagram-outreach-no-nos/caption.txt",
       "yt_caption_path": "captions/instagram-outreach-no-nos/caption-youtube.txt",
       "yt_title_path": "captions/instagram-outreach-no-nos/title-youtube.txt"
+    },
+    "doc_clip": {
+      "name": "hate-outreach-because-of-you",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/hate-outreach-because-of-you.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/hate-outreach-because-of-you.mp4",
+      "caption_path": "captions/hate-outreach-because-of-you/caption.txt",
+      "yt_caption_path": "captions/hate-outreach-because-of-you/caption-youtube.txt",
+      "yt_title_path": "captions/hate-outreach-because-of-you/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "belief-equals-a-times-a",
+      "slot_time_ast": "12:00 PM",
+      "folder": "belief-equals-a-times-a",
+      "caption_path": "captions/carousel-belief-equals-a-times-a/caption.txt"
     }
   },
   "2026-10-07": {
@@ -1956,6 +1971,186 @@
       "caption_path": "captions/14-mistakes-recap/caption.txt",
       "yt_caption_path": "captions/14-mistakes-recap/caption-youtube.txt",
       "yt_title_path": "captions/14-mistakes-recap/title-youtube.txt"
+    },
+    "longform_clip_bonus": {
+      "name": "write-down-every-belief",
+      "slot_time_ast": "5:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/write-down-every-belief.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/write-down-every-belief.mp4",
+      "caption_path": "captions/write-down-every-belief/caption.txt",
+      "yt_caption_path": "captions/write-down-every-belief/caption-youtube.txt",
+      "yt_title_path": "captions/write-down-every-belief/title-youtube.txt"
+    },
+    "doc_clip": {
+      "name": "flip-bad-beliefs",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/flip-bad-beliefs.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/flip-bad-beliefs.mp4",
+      "caption_path": "captions/flip-bad-beliefs/caption.txt",
+      "yt_caption_path": "captions/flip-bad-beliefs/caption-youtube.txt",
+      "yt_title_path": "captions/flip-bad-beliefs/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "why-people-love-outreach",
+      "slot_time_ast": "12:00 PM",
+      "folder": "why-people-love-outreach",
+      "caption_path": "captions/carousel-why-people-love-outreach/caption.txt"
+    }
+  },
+  "2026-10-08": {
+    "reel": {
+      "name": "research-good-beliefs",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/research-good-beliefs.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/research-good-beliefs.mp4",
+      "caption_path": "captions/research-good-beliefs/caption.txt",
+      "yt_caption_path": "captions/research-good-beliefs/caption-youtube.txt",
+      "yt_title_path": "captions/research-good-beliefs/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "believe-it-3-steps",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/believe-it-3-steps.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/believe-it-3-steps.mp4",
+      "caption_path": "captions/believe-it-3-steps/caption.txt",
+      "yt_caption_path": "captions/believe-it-3-steps/caption-youtube.txt",
+      "yt_title_path": "captions/believe-it-3-steps/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "18-forms-of-resistance",
+      "slot_time_ast": "12:00 PM",
+      "folder": "18-forms-of-resistance",
+      "caption_path": "captions/carousel-18-forms-of-resistance/caption.txt"
+    }
+  },
+  "2026-10-09": {
+    "reel": {
+      "name": "affirmation-times-action",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/affirmation-times-action.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/affirmation-times-action.mp4",
+      "caption_path": "captions/affirmation-times-action/caption.txt",
+      "yt_caption_path": "captions/affirmation-times-action/caption-youtube.txt",
+      "yt_title_path": "captions/affirmation-times-action/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "belief-like-growing-muscle",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/belief-like-growing-muscle.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/belief-like-growing-muscle.mp4",
+      "caption_path": "captions/belief-like-growing-muscle/caption.txt",
+      "yt_caption_path": "captions/belief-like-growing-muscle/caption-youtube.txt",
+      "yt_title_path": "captions/belief-like-growing-muscle/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "four-hours-feels-like-play",
+      "slot_time_ast": "12:00 PM",
+      "folder": "four-hours-feels-like-play",
+      "caption_path": "captions/carousel-four-hours-feels-like-play/caption.txt"
+    }
+  },
+  "2026-10-10": {
+    "reel": {
+      "name": "trial-by-fire",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/trial-by-fire.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/trial-by-fire.mp4",
+      "caption_path": "captions/trial-by-fire/caption.txt",
+      "yt_caption_path": "captions/trial-by-fire/caption-youtube.txt",
+      "yt_title_path": "captions/trial-by-fire/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "people-will-tell-you-off",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/people-will-tell-you-off.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/people-will-tell-you-off.mp4",
+      "caption_path": "captions/people-will-tell-you-off/caption.txt",
+      "yt_caption_path": "captions/people-will-tell-you-off/caption-youtube.txt",
+      "yt_title_path": "captions/people-will-tell-you-off/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "you-hate-it-because-of-you",
+      "slot_time_ast": "12:00 PM",
+      "folder": "you-hate-it-because-of-you",
+      "caption_path": "captions/carousel-you-hate-it-because-of-you/caption.txt"
+    }
+  },
+  "2026-10-11": {
+    "reel": {
+      "name": "why-you-feel-resistance",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/why-you-feel-resistance.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/why-you-feel-resistance.mp4",
+      "caption_path": "captions/why-you-feel-resistance/caption.txt",
+      "yt_caption_path": "captions/why-you-feel-resistance/caption-youtube.txt",
+      "yt_title_path": "captions/why-you-feel-resistance/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "forms-of-resistance",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/forms-of-resistance.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/forms-of-resistance.mp4",
+      "caption_path": "captions/forms-of-resistance/caption.txt",
+      "yt_caption_path": "captions/forms-of-resistance/caption-youtube.txt",
+      "yt_title_path": "captions/forms-of-resistance/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "thought-image-emotion",
+      "slot_time_ast": "12:00 PM",
+      "folder": "thought-image-emotion",
+      "caption_path": "captions/carousel-thought-image-emotion/caption.txt"
+    }
+  },
+  "2026-10-12": {
+    "reel": {
+      "name": "resistance-hits-everyone",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/resistance-hits-everyone.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/resistance-hits-everyone.mp4",
+      "caption_path": "captions/resistance-hits-everyone/caption.txt",
+      "yt_caption_path": "captions/resistance-hits-everyone/caption-youtube.txt",
+      "yt_title_path": "captions/resistance-hits-everyone/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "write-down-your-resistance",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/write-down-your-resistance.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/write-down-your-resistance.mp4",
+      "caption_path": "captions/write-down-your-resistance/caption.txt",
+      "yt_caption_path": "captions/write-down-your-resistance/caption-youtube.txt",
+      "yt_title_path": "captions/write-down-your-resistance/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "where-good-beliefs-come-from",
+      "slot_time_ast": "12:00 PM",
+      "folder": "where-good-beliefs-come-from",
+      "caption_path": "captions/carousel-where-good-beliefs-come-from/caption.txt"
+    }
+  },
+  "2026-10-13": {
+    "reel": {
+      "name": "my-resistance-changed",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/my-resistance-changed.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/my-resistance-changed.mp4",
+      "caption_path": "captions/my-resistance-changed/caption.txt",
+      "yt_caption_path": "captions/my-resistance-changed/caption-youtube.txt",
+      "yt_title_path": "captions/my-resistance-changed/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "candy-positive-reinforcement",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/candy-positive-reinforcement.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/candy-positive-reinforcement.mp4",
+      "caption_path": "captions/candy-positive-reinforcement/caption.txt",
+      "yt_caption_path": "captions/candy-positive-reinforcement/caption-youtube.txt",
+      "yt_title_path": "captions/candy-positive-reinforcement/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "the-wall-of-fire",
+      "slot_time_ast": "12:00 PM",
+      "folder": "the-wall-of-fire",
+      "caption_path": "captions/carousel-the-wall-of-fire/caption.txt"
     }
   }
 }
