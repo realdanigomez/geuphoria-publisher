@@ -1670,6 +1670,18 @@
       "caption_path": "captions/ai-edits-while-i-sleep/caption.txt",
       "yt_caption_path": "captions/ai-edits-while-i-sleep/caption-youtube.txt",
       "yt_title_path": "captions/ai-edits-while-i-sleep/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "stop-listening-to-bob",
+      "slot_time_ast": "12:00 PM",
+      "folder": "stop-listening-to-bob",
+      "caption_path": "captions/carousel-stop-listening-to-bob/caption.txt"
+    },
+    "carousel_2": {
+      "name": "feel-behind-on-social",
+      "slot_time_ast": "6:00 PM",
+      "folder": "feel-behind-on-social",
+      "caption_path": "captions/carousel-feel-behind-on-social/caption.txt"
     }
   },
   "2026-09-30": {
@@ -1681,6 +1693,36 @@
       "caption_path": "captions/one-long-day-isnt-a-break/caption.txt",
       "yt_caption_path": "captions/one-long-day-isnt-a-break/caption-youtube.txt",
       "yt_title_path": "captions/one-long-day-isnt-a-break/title-youtube.txt"
+    },
+    "reel": {
+      "name": "root-of-your-goal",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/root-of-your-goal.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/root-of-your-goal.mp4",
+      "caption_path": "captions/root-of-your-goal/caption.txt",
+      "yt_caption_path": "captions/root-of-your-goal/caption-youtube.txt",
+      "yt_title_path": "captions/root-of-your-goal/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "three-years-inconsistent",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/three-years-inconsistent.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/three-years-inconsistent.mp4",
+      "caption_path": "captions/three-years-inconsistent/caption.txt",
+      "yt_caption_path": "captions/three-years-inconsistent/caption-youtube.txt",
+      "yt_title_path": "captions/three-years-inconsistent/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "14-mistakes-no-clients",
+      "slot_time_ast": "12:00 PM",
+      "folder": "14-mistakes-no-clients",
+      "caption_path": "captions/carousel-14-mistakes-no-clients/caption.txt"
+    },
+    "carousel_2": {
+      "name": "tomorrow-isnt-certain",
+      "slot_time_ast": "6:00 PM",
+      "folder": "tomorrow-isnt-certain",
+      "caption_path": "captions/carousel-tomorrow-isnt-certain/caption.txt"
     }
   },
   "2026-10-01": {
@@ -1692,6 +1734,36 @@
       "caption_path": "captions/batch-the-week-around-the-job/caption.txt",
       "yt_caption_path": "captions/batch-the-week-around-the-job/caption-youtube.txt",
       "yt_title_path": "captions/batch-the-week-around-the-job/title-youtube.txt"
+    },
+    "reel": {
+      "name": "focused-vs-distracted",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/focused-vs-distracted.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/focused-vs-distracted.mp4",
+      "caption_path": "captions/focused-vs-distracted/caption.txt",
+      "yt_caption_path": "captions/focused-vs-distracted/caption-youtube.txt",
+      "yt_title_path": "captions/focused-vs-distracted/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "undisciplined",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/undisciplined.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/undisciplined.mp4",
+      "caption_path": "captions/undisciplined/caption.txt",
+      "yt_caption_path": "captions/undisciplined/caption-youtube.txt",
+      "yt_title_path": "captions/undisciplined/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "six-hours-isnt-a-lot",
+      "slot_time_ast": "12:00 PM",
+      "folder": "six-hours-isnt-a-lot",
+      "caption_path": "captions/carousel-six-hours-isnt-a-lot/caption.txt"
+    },
+    "carousel_2": {
+      "name": "release-before-perfect",
+      "slot_time_ast": "6:00 PM",
+      "folder": "release-before-perfect",
+      "caption_path": "captions/carousel-release-before-perfect/caption.txt"
     }
   },
   "2026-10-02": {
@@ -1703,6 +1775,36 @@
       "caption_path": "captions/plan-it-after-the-shift/caption.txt",
       "yt_caption_path": "captions/plan-it-after-the-shift/caption-youtube.txt",
       "yt_title_path": "captions/plan-it-after-the-shift/title-youtube.txt"
+    },
+    "reel": {
+      "name": "fear-of-judgment",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/fear-of-judgment.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/fear-of-judgment.mp4",
+      "caption_path": "captions/fear-of-judgment/caption.txt",
+      "yt_caption_path": "captions/fear-of-judgment/caption-youtube.txt",
+      "yt_title_path": "captions/fear-of-judgment/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "comparison-impatience",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/comparison-impatience.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/comparison-impatience.mp4",
+      "caption_path": "captions/comparison-impatience/caption.txt",
+      "yt_caption_path": "captions/comparison-impatience/caption-youtube.txt",
+      "yt_title_path": "captions/comparison-impatience/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "eight-tactics-zero-action",
+      "slot_time_ast": "12:00 PM",
+      "folder": "eight-tactics-zero-action",
+      "caption_path": "captions/carousel-eight-tactics-zero-action/caption.txt"
+    },
+    "carousel_2": {
+      "name": "highest-leverage-task",
+      "slot_time_ast": "6:00 PM",
+      "folder": "highest-leverage-task",
+      "caption_path": "captions/carousel-highest-leverage-task/caption.txt"
     }
   },
   "2026-10-03": {
@@ -1714,6 +1816,36 @@
       "caption_path": "captions/what-ai-builds-while-i-read/caption.txt",
       "yt_caption_path": "captions/what-ai-builds-while-i-read/caption-youtube.txt",
       "yt_title_path": "captions/what-ai-builds-while-i-read/title-youtube.txt"
+    },
+    "reel": {
+      "name": "no-talent-no-goal",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/no-talent-no-goal.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/no-talent-no-goal.mp4",
+      "caption_path": "captions/no-talent-no-goal/caption.txt",
+      "yt_caption_path": "captions/no-talent-no-goal/caption-youtube.txt",
+      "yt_title_path": "captions/no-talent-no-goal/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "i-thought-i-had-time",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/i-thought-i-had-time.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/i-thought-i-had-time.mp4",
+      "caption_path": "captions/i-thought-i-had-time/caption.txt",
+      "yt_caption_path": "captions/i-thought-i-had-time/caption-youtube.txt",
+      "yt_title_path": "captions/i-thought-i-had-time/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "goal-surface-and-root",
+      "slot_time_ast": "12:00 PM",
+      "folder": "goal-surface-and-root",
+      "caption_path": "captions/carousel-goal-surface-and-root/caption.txt"
+    },
+    "carousel_2": {
+      "name": "same-outreach-until-i-quit",
+      "slot_time_ast": "6:00 PM",
+      "folder": "same-outreach-until-i-quit",
+      "caption_path": "captions/carousel-same-outreach-until-i-quit/caption.txt"
     }
   },
   "2026-10-04": {
@@ -1725,6 +1857,36 @@
       "caption_path": "captions/one-week-what-got-done/caption.txt",
       "yt_caption_path": "captions/one-week-what-got-done/caption-youtube.txt",
       "yt_title_path": "captions/one-week-what-got-done/title-youtube.txt"
+    },
+    "reel": {
+      "name": "low-endurance",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/low-endurance.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/low-endurance.mp4",
+      "caption_path": "captions/low-endurance/caption.txt",
+      "yt_caption_path": "captions/low-endurance/caption-youtube.txt",
+      "yt_title_path": "captions/low-endurance/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "perfection",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/perfection.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/perfection.mp4",
+      "caption_path": "captions/perfection/caption.txt",
+      "yt_caption_path": "captions/perfection/caption-youtube.txt",
+      "yt_title_path": "captions/perfection/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "biggest-regret-consistency",
+      "slot_time_ast": "12:00 PM",
+      "folder": "biggest-regret-consistency",
+      "caption_path": "captions/carousel-biggest-regret-consistency/caption.txt"
+    },
+    "carousel_2": {
+      "name": "a-bit-of-progress",
+      "slot_time_ast": "6:00 PM",
+      "folder": "a-bit-of-progress",
+      "caption_path": "captions/carousel-a-bit-of-progress/caption.txt"
     }
   },
   "2026-10-05": {
@@ -1736,6 +1898,64 @@
       "caption_path": "captions/what-finished-means/caption.txt",
       "yt_caption_path": "captions/what-finished-means/caption-youtube.txt",
       "yt_title_path": "captions/what-finished-means/title-youtube.txt"
+    },
+    "reel": {
+      "name": "plan-your-day",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/plan-your-day.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/plan-your-day.mp4",
+      "caption_path": "captions/plan-your-day/caption.txt",
+      "yt_caption_path": "captions/plan-your-day/caption-youtube.txt",
+      "yt_title_path": "captions/plan-your-day/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "too-much-advice",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/too-much-advice.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/too-much-advice.mp4",
+      "caption_path": "captions/too-much-advice/caption.txt",
+      "yt_caption_path": "captions/too-much-advice/caption-youtube.txt",
+      "yt_title_path": "captions/too-much-advice/title-youtube.txt"
+    }
+  },
+  "2026-10-06": {
+    "reel": {
+      "name": "same-dm-100-a-day",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/same-dm-100-a-day.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/same-dm-100-a-day.mp4",
+      "caption_path": "captions/same-dm-100-a-day/caption.txt",
+      "yt_caption_path": "captions/same-dm-100-a-day/caption-youtube.txt",
+      "yt_title_path": "captions/same-dm-100-a-day/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "instagram-outreach-no-nos",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/instagram-outreach-no-nos.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/instagram-outreach-no-nos.mp4",
+      "caption_path": "captions/instagram-outreach-no-nos/caption.txt",
+      "yt_caption_path": "captions/instagram-outreach-no-nos/caption-youtube.txt",
+      "yt_title_path": "captions/instagram-outreach-no-nos/title-youtube.txt"
+    }
+  },
+  "2026-10-07": {
+    "reel": {
+      "name": "business-is-a-system",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/business-is-a-system.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/business-is-a-system.mp4",
+      "caption_path": "captions/business-is-a-system/caption.txt",
+      "yt_caption_path": "captions/business-is-a-system/caption-youtube.txt",
+      "yt_title_path": "captions/business-is-a-system/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "14-mistakes-recap",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/14-mistakes-recap.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/14-mistakes-recap.mp4",
+      "caption_path": "captions/14-mistakes-recap/caption.txt",
+      "yt_caption_path": "captions/14-mistakes-recap/caption-youtube.txt",
+      "yt_title_path": "captions/14-mistakes-recap/title-youtube.txt"
     }
   }
 }

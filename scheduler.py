@@ -75,10 +75,13 @@ SLOTS = [
     ("publish-yt-reel-2.yml",   "yt_reel_2",   "17:00", ["2026-09-14"]),
     # 2026-09-25: the Aruba batch's one 6PM carousel (the only 6PM the other batches leave free).
     # 2026-09-26 -> 09-28: documentary Ep.7's 3 carousels (Sat Sep 26's only 3-hour-clear time; Dani 2026-09-23).
+    # 2026-09-29 -> 10-04: the 14 Deadly Sins batch's 2nd carousel of the day (6PM), from its longform's launch day
+    # (Dani OK'd the calendar 2026-09-23).
     ("publish-carousel-2.yml",  "carousel_2",  "18:00",
      ["2026-09-15","2026-09-16","2026-09-17","2026-09-18","2026-09-19",
       "2026-09-22","2026-09-23","2026-09-24","2026-09-25",
-      "2026-09-26","2026-09-27","2026-09-28"]),
+      "2026-09-26","2026-09-27","2026-09-28",
+      "2026-09-29","2026-09-30","2026-10-01","2026-10-02","2026-10-03","2026-10-04"]),
     ("publish-story-2.yml",     "story_2",     "11:00", []),
 
     # ── 3rd daily carousel — 12AM AST, added 2026-09-16 for the Aruba documentary batch ──────
@@ -109,7 +112,9 @@ SLOTS = [
       "2026-09-09","2026-09-10","2026-09-11","2026-09-12","2026-09-13","2026-09-14",
       "2026-09-15","2026-09-16","2026-09-17","2026-09-18","2026-09-19","2026-09-20",
       "2026-09-21","2026-09-22",
-      "2026-09-23","2026-09-24","2026-09-25","2026-09-26","2026-09-27","2026-09-28","2026-09-29"]),
+      "2026-09-23","2026-09-24","2026-09-25","2026-09-26","2026-09-27","2026-09-28","2026-09-29",
+      # 2026-09-30 -> 10-07: the 14 Deadly Sins batch's 3PM clip (its 8AM clips ride the "all"-dates reel slot).
+      "2026-09-30","2026-10-01","2026-10-02","2026-10-03","2026-10-04","2026-10-05","2026-10-06","2026-10-07"]),
 
     # ── Longform-clip bonus — RETIMED 3:30PM -> 5AM AST for the Aruba batch ───
     # Dani's rule is a 3-hour buffer between posts, not a post cap. The Aruba documentary's own
