@@ -2151,6 +2151,245 @@
       "slot_time_ast": "12:00 PM",
       "folder": "the-wall-of-fire",
       "caption_path": "captions/carousel-the-wall-of-fire/caption.txt"
+    },
+    "doc_clip": {
+      "name": "pre-over-post",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/pre-over-post.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/pre-over-post.mp4",
+      "caption_path": "captions/pre-over-post/caption.txt",
+      "yt_caption_path": "captions/pre-over-post/caption-youtube.txt",
+      "yt_title_path": "captions/pre-over-post/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "do-it-then-talk-about-it",
+      "slot_time_ast": "6:00 PM",
+      "folder": "do-it-then-talk-about-it",
+      "caption_path": "captions/carousel-do-it-then-talk-about-it/caption.txt"
+    }
+  },
+  "2026-10-14": {
+    "reel": {
+      "name": "first-principles-battery",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/first-principles-battery.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/first-principles-battery.mp4",
+      "caption_path": "captions/first-principles-battery/caption.txt",
+      "yt_caption_path": "captions/first-principles-battery/caption-youtube.txt",
+      "yt_title_path": "captions/first-principles-battery/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "value-over-everything",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/value-over-everything.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/value-over-everything.mp4",
+      "caption_path": "captions/value-over-everything/caption.txt",
+      "yt_caption_path": "captions/value-over-everything/caption-youtube.txt",
+      "yt_title_path": "captions/value-over-everything/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "keep-the-idea-outsource-the-rest",
+      "slot_time_ast": "12:00 PM",
+      "folder": "keep-the-idea-outsource-the-rest",
+      "caption_path": "captions/carousel-keep-the-idea-outsource-the-rest/caption.txt"
+    }
+  },
+  "2026-10-15": {
+    "reel": {
+      "name": "act-with-urgency",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/act-with-urgency.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/act-with-urgency.mp4",
+      "caption_path": "captions/act-with-urgency/caption.txt",
+      "yt_caption_path": "captions/act-with-urgency/caption-youtube.txt",
+      "yt_title_path": "captions/act-with-urgency/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "question-the-requirements",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/question-the-requirements.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/question-the-requirements.mp4",
+      "caption_path": "captions/question-the-requirements/caption.txt",
+      "yt_caption_path": "captions/question-the-requirements/caption-youtube.txt",
+      "yt_title_path": "captions/question-the-requirements/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "judged-by-the-cover",
+      "slot_time_ast": "12:00 PM",
+      "folder": "judged-by-the-cover",
+      "caption_path": "captions/carousel-judged-by-the-cover/caption.txt"
+    }
+  },
+  "2026-10-16": {
+    "reel": {
+      "name": "what-value-is",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/what-value-is.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/what-value-is.mp4",
+      "caption_path": "captions/what-value-is/caption.txt",
+      "yt_caption_path": "captions/what-value-is/caption-youtube.txt",
+      "yt_title_path": "captions/what-value-is/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "spcl-components",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/spcl-components.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/spcl-components.mp4",
+      "caption_path": "captions/spcl-components/caption.txt",
+      "yt_caption_path": "captions/spcl-components/caption-youtube.txt",
+      "yt_title_path": "captions/spcl-components/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "six-months-zero-profit",
+      "slot_time_ast": "12:00 PM",
+      "folder": "six-months-zero-profit",
+      "caption_path": "captions/carousel-six-months-zero-profit/caption.txt"
+    }
+  },
+  "2026-10-17": {
+    "reel": {
+      "name": "garbage-in-garbage-out",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/garbage-in-garbage-out.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/garbage-in-garbage-out.mp4",
+      "caption_path": "captions/garbage-in-garbage-out/caption.txt",
+      "yt_caption_path": "captions/garbage-in-garbage-out/caption-youtube.txt",
+      "yt_title_path": "captions/garbage-in-garbage-out/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "outsource-low-leverage",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/outsource-low-leverage.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/outsource-low-leverage.mp4",
+      "caption_path": "captions/outsource-low-leverage/caption.txt",
+      "yt_caption_path": "captions/outsource-low-leverage/caption-youtube.txt",
+      "yt_title_path": "captions/outsource-low-leverage/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "ten-times-better",
+      "slot_time_ast": "12:00 PM",
+      "folder": "ten-times-better",
+      "caption_path": "captions/carousel-ten-times-better/caption.txt"
+    }
+  },
+  "2026-10-18": {
+    "reel": {
+      "name": "bullets-not-word-for-word",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/bullets-not-word-for-word.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/bullets-not-word-for-word.mp4",
+      "caption_path": "captions/bullets-not-word-for-word/caption.txt",
+      "yt_caption_path": "captions/bullets-not-word-for-word/caption-youtube.txt",
+      "yt_title_path": "captions/bullets-not-word-for-word/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "do-epic-shit",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/do-epic-shit.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/do-epic-shit.mp4",
+      "caption_path": "captions/do-epic-shit/caption.txt",
+      "yt_caption_path": "captions/do-epic-shit/caption-youtube.txt",
+      "yt_title_path": "captions/do-epic-shit/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "one-long-form-many-shorts",
+      "slot_time_ast": "12:00 PM",
+      "folder": "one-long-form-many-shorts",
+      "caption_path": "captions/carousel-one-long-form-many-shorts/caption.txt"
+    }
+  },
+  "2026-10-19": {
+    "reel": {
+      "name": "most-value-wins",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/most-value-wins.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/most-value-wins.mp4",
+      "caption_path": "captions/most-value-wins/caption.txt",
+      "yt_caption_path": "captions/most-value-wins/caption-youtube.txt",
+      "yt_title_path": "captions/most-value-wins/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "title-and-thumbnail",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/title-and-thumbnail.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/title-and-thumbnail.mp4",
+      "caption_path": "captions/title-and-thumbnail/caption.txt",
+      "yt_caption_path": "captions/title-and-thumbnail/caption-youtube.txt",
+      "yt_title_path": "captions/title-and-thumbnail/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "why-six-months",
+      "slot_time_ast": "12:00 PM",
+      "folder": "why-six-months",
+      "caption_path": "captions/carousel-why-six-months/caption.txt"
+    }
+  },
+  "2026-10-20": {
+    "reel": {
+      "name": "give-more-than-you-take",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/give-more-than-you-take.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/give-more-than-you-take.mp4",
+      "caption_path": "captions/give-more-than-you-take/caption.txt",
+      "yt_caption_path": "captions/give-more-than-you-take/caption-youtube.txt",
+      "yt_title_path": "captions/give-more-than-you-take/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "proof-promise-plan-intro",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/proof-promise-plan-intro.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/proof-promise-plan-intro.mp4",
+      "caption_path": "captions/proof-promise-plan-intro/caption.txt",
+      "yt_caption_path": "captions/proof-promise-plan-intro/caption-youtube.txt",
+      "yt_title_path": "captions/proof-promise-plan-intro/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "done-by-end-of-day",
+      "slot_time_ast": "12:00 PM",
+      "folder": "done-by-end-of-day",
+      "caption_path": "captions/carousel-done-by-end-of-day/caption.txt"
+    }
+  },
+  "2026-10-21": {
+    "reel": {
+      "name": "long-form-first",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/long-form-first.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/long-form-first.mp4",
+      "caption_path": "captions/long-form-first/caption.txt",
+      "yt_caption_path": "captions/long-form-first/caption-youtube.txt",
+      "yt_title_path": "captions/long-form-first/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "what-matters-in-a-short",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/what-matters-in-a-short.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/what-matters-in-a-short.mp4",
+      "caption_path": "captions/what-matters-in-a-short/caption.txt",
+      "yt_caption_path": "captions/what-matters-in-a-short/caption-youtube.txt",
+      "yt_title_path": "captions/what-matters-in-a-short/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "what-is-it-made-of",
+      "slot_time_ast": "12:00 PM",
+      "folder": "what-is-it-made-of",
+      "caption_path": "captions/carousel-what-is-it-made-of/caption.txt"
+    }
+  },
+  "2026-10-22": {
+    "carousel": {
+      "name": "value-starts-with-pain",
+      "slot_time_ast": "12:00 PM",
+      "folder": "value-starts-with-pain",
+      "caption_path": "captions/carousel-value-starts-with-pain/caption.txt"
+    }
+  },
+  "2026-10-23": {
+    "carousel": {
+      "name": "spcl-goes-into-the-proof",
+      "slot_time_ast": "12:00 PM",
+      "folder": "spcl-goes-into-the-proof",
+      "caption_path": "captions/carousel-spcl-goes-into-the-proof/caption.txt"
     }
   }
 }
