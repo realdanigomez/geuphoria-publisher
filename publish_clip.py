@@ -206,6 +206,100 @@ def download_yt_video(yt_cdn_url: str, dest: Path) -> None:
     log.info(f"Downloaded {size_mb:.1f} MB to {dest}")
 
 
+# ── YT Short hardening (2026-09-25) ─────────────────────────────
+# The 3 PM Short of 2026-09-25: YouTube answered a finished upload with 409 "Requested entity already exists", the
+# run failed, and the video it left (hsZ7Ud02zK4) listed as public but stayed stuck in processing (duration P0D) until
+# Dani caught it an hour later. So a Short now counts as posted only once YouTube reports it PROCESSED with a real
+# duration. A 409 is resolved by finding the upload by its title. A stuck upload is retired (private + renamed) and
+# re-uploaded ONCE. Worst case (IG 5 min + 2 x (upload + PROCESS_WAIT_S)) stays inside the workflows' 30-min timeout.
+PROCESS_WAIT_S = 480
+PROCESS_POLL_S = 15
+RETIRED_TITLE = "INCOMPLETE UPLOAD, DELETE ME"
+
+
+def _find_upload_by_title(yt, title: str, since: datetime) -> str | None:
+    """The video on our channel with exactly this title, created since `since` (UTC), or None."""
+    ch = yt.channels().list(part="contentDetails", mine=True).execute()["items"][0]
+    uploads = ch["contentDetails"]["relatedPlaylists"]["uploads"]
+    items = yt.playlistItems().list(part="snippet", playlistId=uploads, maxResults=15).execute().get("items", [])
+    for it in items:
+        s = it["snippet"]
+        if s.get("title") != title:
+            continue
+        created = datetime.fromisoformat(s["publishedAt"].replace("Z", "+00:00"))
+        if created >= since - timedelta(seconds=60):
+            return s["resourceId"]["videoId"]
+    return None
+
+
+def _upload_short(yt, body: dict, local_video: Path, title: str) -> str:
+    """Resumable videos.insert -> the video id. A 409 'already exists' after the upload is looked up by title."""
+    from googleapiclient.http import MediaFileUpload
+    from googleapiclient.errors import HttpError
+
+    since = datetime.now(timezone.utc)
+    media = MediaFileUpload(str(local_video), mimetype="video/mp4", resumable=True, chunksize=8 * 1024 * 1024)
+    request = yt.videos().insert(part="snippet,status", body=body, media_body=media)
+    response = None
+    last_progress = 0
+    while response is None:
+        try:
+            status, response = request.next_chunk(num_retries=5)
+            if status:
+                pct = int(status.progress() * 100)
+                if pct >= last_progress + 10:
+                    log.info(f"  {pct}% uploaded")
+                    last_progress = pct
+        except HttpError as e:
+            if getattr(getattr(e, "resp", None), "status", None) == 409:
+                log.warning(f"YT answered 409 after the upload ({e}); looking the video up by its title...")
+                for _ in range(6):
+                    time.sleep(10)
+                    found = _find_upload_by_title(yt, title, since)
+                    if found:
+                        log.info(f"Found the upload on the channel: {found}")
+                        return found
+            log.error(f"Upload error: {e}")
+            raise
+    return response["id"]
+
+
+def _wait_processed(yt, video_id: str, wait_s: float | None = None) -> tuple[bool, dict]:
+    """Poll until YouTube has PROCESSED the video. -> (ok, info); ok = uploadStatus processed + a real duration."""
+    deadline = time.time() + (PROCESS_WAIT_S if wait_s is None else wait_s)
+    info: dict = {}
+    while True:
+        items = yt.videos().list(part="status,processingDetails,contentDetails", id=video_id).execute().get("items", [])
+        if items:
+            v = items[0]
+            up = (v.get("status") or {}).get("uploadStatus")
+            ps = (v.get("processingDetails") or {}).get("processingStatus")
+            dur = (v.get("contentDetails") or {}).get("duration")
+            info = {"uploadStatus": up, "processingStatus": ps, "duration": dur}
+            if up == "processed" and dur not in (None, "P0D"):
+                return True, info
+            if up in ("failed", "rejected", "deleted") or ps in ("failed", "terminated"):
+                return False, info
+        if time.time() > deadline:
+            return False, dict(info, timeout_s=PROCESS_WAIT_S if wait_s is None else wait_s)
+        time.sleep(PROCESS_POLL_S)
+
+
+def _retire_upload(yt, video_id: str) -> None:
+    """A broken upload: private, then titled RETIRED_TITLE. Two separate calls, because a stuck video took the privacy
+    change before the title on 2026-09-25. Deleting it stays Dani's, in Studio."""
+    try:
+        snip = yt.videos().list(part="snippet", id=video_id).execute()["items"][0]["snippet"]
+        yt.videos().update(part="status", body={"id": video_id, "status": {
+            "privacyStatus": "private", "selfDeclaredMadeForKids": False}}).execute()
+        yt.videos().update(part="snippet", body={"id": video_id, "snippet": {
+            "title": RETIRED_TITLE, "description": snip.get("description", ""),
+            "categoryId": snip.get("categoryId", "27")}}).execute()
+        log.warning(f"Retired the broken upload {video_id}: private, titled '{RETIRED_TITLE}'.")
+    except Exception as e:
+        log.error(f"Could not retire the broken upload {video_id}: {e}")
+
+
 def publish_yt_short(today: str, slot: str, slot_data: dict, dry_run: bool = False) -> str | None:
     yt_log_key = f"yt_{slot}"
     if not dry_run:
@@ -245,9 +339,6 @@ def publish_yt_short(today: str, slot: str, slot_data: dict, dry_run: bool = Fal
     if dry_run:
         return None
 
-    from googleapiclient.http import MediaFileUpload
-    from googleapiclient.errors import HttpError
-
     # Download MP4 to local temp
     local_video = ROOT / f"_tmp_{slot}_{name}.mp4"
     try:
@@ -272,28 +363,21 @@ def publish_yt_short(today: str, slot: str, slot_data: dict, dry_run: bool = Fal
                 "selfDeclaredMadeForKids": False,
             },
         }
-        media = MediaFileUpload(
-            str(local_video),
-            mimetype="video/mp4",
-            resumable=True,
-            chunksize=8 * 1024 * 1024,
-        )
-        log.info("Uploading YT Short (resumable)...")
-        request = yt.videos().insert(part="snippet,status", body=body, media_body=media)
-        response = None
-        last_progress = 0
-        while response is None:
-            try:
-                status, response = request.next_chunk()
-                if status:
-                    pct = int(status.progress() * 100)
-                    if pct >= last_progress + 10:
-                        log.info(f"  {pct}% uploaded")
-                        last_progress = pct
-            except HttpError as e:
-                log.error(f"Upload error: {e}")
-                raise
-        video_id = response["id"]
+        # Upload, then WAIT until YouTube has processed it; a stuck upload is retired and re-uploaded ONCE
+        video_id, proc = None, {}
+        for attempt in (1, 2):
+            log.info(f"Uploading YT Short (resumable), attempt {attempt}...")
+            vid = _upload_short(yt, body, local_video, title)
+            log.info(f"Uploaded {vid}; waiting for YouTube to process it (up to {PROCESS_WAIT_S}s)...")
+            ok, proc = _wait_processed(yt, vid)
+            log.info(f"Processing: {proc}")
+            if ok:
+                video_id = vid
+                break
+            log.error(f"YT Short {vid} did not process ({proc}).")
+            _retire_upload(yt, vid)
+        if video_id is None:
+            raise RuntimeError(f"YT Short did not process after 2 uploads (last: {proc})")
         public_url = f"https://www.youtube.com/shorts/{video_id}"
         log.info(f"YT Short published. Video ID: {video_id}")
         log.info(f"URL: {public_url}")
@@ -311,6 +395,7 @@ def publish_yt_short(today: str, slot: str, slot_data: dict, dry_run: bool = Fal
                 f.write(f"- **Video ID**: `{video_id}`\n")
                 f.write(f"- **URL**: {public_url}\n")
                 f.write(f"- **Title**: {title}\n")
+                f.write(f"- **Processing**: {proc}\n")
                 f.write(f"- **Date (AST)**: {today}\n")
 
         return video_id
