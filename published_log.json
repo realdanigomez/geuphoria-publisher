@@ -445,6 +445,10 @@
   "2026-09-27": {
     "longform_clip_bonus": "18496926823103598",
     "yt_longform_clip_bonus": "JsELvi-aIys",
-    "reel": "18372482665242984"
+    "reel": "18372482665242984",
+    "yt_reel": {
+      "claimed_at": "2026-09-27T12:10:29.354400Z",
+      "claimed_by": "36318095956:1"
+    }
   }
 }
