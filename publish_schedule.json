@@ -2914,6 +2914,15 @@
       "slot_time_ast": "6:00 PM",
       "folder": "ibuprofen-iphone-amazon-google",
       "caption_path": "captions/carousel-ibuprofen-iphone-amazon-google/caption.txt"
+    },
+    "doc_clip": {
+      "name": "thumbnail-reference-outliers",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/thumbnail-reference-outliers.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/thumbnail-reference-outliers.mp4",
+      "caption_path": "captions/thumbnail-reference-outliers/caption.txt",
+      "yt_caption_path": "captions/thumbnail-reference-outliers/caption-youtube.txt",
+      "yt_title_path": "captions/thumbnail-reference-outliers/title-youtube.txt"
     }
   },
   "2026-10-31": {
