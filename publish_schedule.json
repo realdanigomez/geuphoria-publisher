@@ -2767,6 +2767,21 @@
       "slot_time_ast": "12:00 PM",
       "folder": "ask-why-again-and-again",
       "caption_path": "captions/carousel-ask-why-again-and-again/caption.txt"
+    },
+    "doc_clip": {
+      "name": "what-money-actually-is",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/what-money-actually-is.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/what-money-actually-is.mp4",
+      "caption_path": "captions/what-money-actually-is/caption.txt",
+      "yt_caption_path": "captions/what-money-actually-is/caption-youtube.txt",
+      "yt_title_path": "captions/what-money-actually-is/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "the-8k-coaching-trade",
+      "slot_time_ast": "6:00 PM",
+      "folder": "the-8k-coaching-trade",
+      "caption_path": "captions/carousel-the-8k-coaching-trade/caption.txt"
     }
   },
   "2026-10-28": {
@@ -2793,6 +2808,30 @@
       "slot_time_ast": "12:00 PM",
       "folder": "all-my-focus-on-customers",
       "caption_path": "captions/carousel-all-my-focus-on-customers/caption.txt"
+    },
+    "longform_clip_bonus": {
+      "name": "every-cause-has-an-effect",
+      "slot_time_ast": "5:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/every-cause-has-an-effect.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/every-cause-has-an-effect.mp4",
+      "caption_path": "captions/every-cause-has-an-effect/caption.txt",
+      "yt_caption_path": "captions/every-cause-has-an-effect/caption-youtube.txt",
+      "yt_title_path": "captions/every-cause-has-an-effect/title-youtube.txt"
+    },
+    "doc_clip": {
+      "name": "you-are-the-bridge",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/you-are-the-bridge.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/you-are-the-bridge.mp4",
+      "caption_path": "captions/you-are-the-bridge/caption.txt",
+      "yt_caption_path": "captions/you-are-the-bridge/caption-youtube.txt",
+      "yt_title_path": "captions/you-are-the-bridge/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "the-bigger-the-pain",
+      "slot_time_ast": "6:00 PM",
+      "folder": "the-bigger-the-pain",
+      "caption_path": "captions/carousel-the-bigger-the-pain/caption.txt"
     }
   },
   "2026-10-29": {
@@ -2819,6 +2858,30 @@
       "slot_time_ast": "12:00 PM",
       "folder": "deadlines-so-tight",
       "caption_path": "captions/carousel-deadlines-so-tight/caption.txt"
+    },
+    "longform_clip_bonus": {
+      "name": "money-is-fake",
+      "slot_time_ast": "5:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/money-is-fake.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/money-is-fake.mp4",
+      "caption_path": "captions/money-is-fake/caption.txt",
+      "yt_caption_path": "captions/money-is-fake/caption-youtube.txt",
+      "yt_title_path": "captions/money-is-fake/title-youtube.txt"
+    },
+    "doc_clip": {
+      "name": "supply-and-demand",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/supply-and-demand.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/supply-and-demand.mp4",
+      "caption_path": "captions/supply-and-demand/caption.txt",
+      "yt_caption_path": "captions/supply-and-demand/caption-youtube.txt",
+      "yt_title_path": "captions/supply-and-demand/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "the-financial-freedom-loop",
+      "slot_time_ast": "6:00 PM",
+      "folder": "the-financial-freedom-loop",
+      "caption_path": "captions/carousel-the-financial-freedom-loop/caption.txt"
     }
   },
   "2026-10-30": {
@@ -2827,6 +2890,30 @@
       "slot_time_ast": "12:00 PM",
       "folder": "what-your-product-is-made-of",
       "caption_path": "captions/carousel-what-your-product-is-made-of/caption.txt"
+    },
+    "reel": {
+      "name": "your-coaching-is-worth-8k",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/your-coaching-is-worth-8k.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/your-coaching-is-worth-8k.mp4",
+      "caption_path": "captions/your-coaching-is-worth-8k/caption.txt",
+      "yt_caption_path": "captions/your-coaching-is-worth-8k/caption-youtube.txt",
+      "yt_title_path": "captions/your-coaching-is-worth-8k/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "value-is-pain-alleviated",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/value-is-pain-alleviated.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/value-is-pain-alleviated.mp4",
+      "caption_path": "captions/value-is-pain-alleviated/caption.txt",
+      "yt_caption_path": "captions/value-is-pain-alleviated/caption-youtube.txt",
+      "yt_title_path": "captions/value-is-pain-alleviated/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "ibuprofen-iphone-amazon-google",
+      "slot_time_ast": "6:00 PM",
+      "folder": "ibuprofen-iphone-amazon-google",
+      "caption_path": "captions/carousel-ibuprofen-iphone-amazon-google/caption.txt"
     }
   },
   "2026-10-31": {
@@ -2835,6 +2922,30 @@
       "slot_time_ast": "12:00 PM",
       "folder": "confusion-creates-churn",
       "caption_path": "captions/carousel-confusion-creates-churn/caption.txt"
+    },
+    "reel": {
+      "name": "how-money-is-made",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/how-money-is-made.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/how-money-is-made.mp4",
+      "caption_path": "captions/how-money-is-made/caption.txt",
+      "yt_caption_path": "captions/how-money-is-made/caption-youtube.txt",
+      "yt_title_path": "captions/how-money-is-made/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "why-your-money-loses-value",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/why-your-money-loses-value.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/why-your-money-loses-value.mp4",
+      "caption_path": "captions/why-your-money-loses-value/caption.txt",
+      "yt_caption_path": "captions/why-your-money-loses-value/caption-youtube.txt",
+      "yt_title_path": "captions/why-your-money-loses-value/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "good-trade-off-bad-trade-off",
+      "slot_time_ast": "6:00 PM",
+      "folder": "good-trade-off-bad-trade-off",
+      "caption_path": "captions/carousel-good-trade-off-bad-trade-off/caption.txt"
     }
   },
   "2026-11-01": {
@@ -2843,6 +2954,30 @@
       "slot_time_ast": "12:00 PM",
       "folder": "how-musk-made-batteries-cheap",
       "caption_path": "captions/carousel-how-musk-made-batteries-cheap/caption.txt"
+    },
+    "reel": {
+      "name": "paid-before-the-value-exists",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/paid-before-the-value-exists.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/paid-before-the-value-exists.mp4",
+      "caption_path": "captions/paid-before-the-value-exists/caption.txt",
+      "yt_caption_path": "captions/paid-before-the-value-exists/caption-youtube.txt",
+      "yt_title_path": "captions/paid-before-the-value-exists/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "solve-a-problem",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/solve-a-problem.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/solve-a-problem.mp4",
+      "caption_path": "captions/solve-a-problem/caption.txt",
+      "yt_caption_path": "captions/solve-a-problem/caption-youtube.txt",
+      "yt_title_path": "captions/solve-a-problem/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "the-bridge-from-pain-to-goal",
+      "slot_time_ast": "6:00 PM",
+      "folder": "the-bridge-from-pain-to-goal",
+      "caption_path": "captions/carousel-the-bridge-from-pain-to-goal/caption.txt"
     }
   },
   "2026-11-02": {
@@ -2851,6 +2986,30 @@
       "slot_time_ast": "12:00 PM",
       "folder": "cut-everywhere-but-the-company",
       "caption_path": "captions/carousel-cut-everywhere-but-the-company/caption.txt"
+    },
+    "reel": {
+      "name": "why-gold-became-paper",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/why-gold-became-paper.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/why-gold-became-paper.mp4",
+      "caption_path": "captions/why-gold-became-paper/caption.txt",
+      "yt_caption_path": "captions/why-gold-became-paper/caption-youtube.txt",
+      "yt_title_path": "captions/why-gold-became-paper/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "what-people-pay-100k-for",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/what-people-pay-100k-for.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/what-people-pay-100k-for.mp4",
+      "caption_path": "captions/what-people-pay-100k-for/caption.txt",
+      "yt_caption_path": "captions/what-people-pay-100k-for/caption-youtube.txt",
+      "yt_title_path": "captions/what-people-pay-100k-for/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "money-runs-on-belief",
+      "slot_time_ast": "6:00 PM",
+      "folder": "money-runs-on-belief",
+      "caption_path": "captions/carousel-money-runs-on-belief/caption.txt"
     }
   },
   "2026-11-03": {
@@ -2859,6 +3018,24 @@
       "slot_time_ast": "12:00 PM",
       "folder": "is-there-a-law-stopping-you",
       "caption_path": "captions/carousel-is-there-a-law-stopping-you/caption.txt"
+    },
+    "reel": {
+      "name": "good-and-bad-trade-offs",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/good-and-bad-trade-offs.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/good-and-bad-trade-offs.mp4",
+      "caption_path": "captions/good-and-bad-trade-offs/caption.txt",
+      "yt_caption_path": "captions/good-and-bad-trade-offs/caption-youtube.txt",
+      "yt_title_path": "captions/good-and-bad-trade-offs/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "four-products-four-pains",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/four-products-four-pains.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/four-products-four-pains.mp4",
+      "caption_path": "captions/four-products-four-pains/caption.txt",
+      "yt_caption_path": "captions/four-products-four-pains/caption-youtube.txt",
+      "yt_title_path": "captions/four-products-four-pains/title-youtube.txt"
     }
   },
   "2026-11-04": {
@@ -2867,6 +3044,15 @@
       "slot_time_ast": "12:00 PM",
       "folder": "give-over-take",
       "caption_path": "captions/carousel-give-over-take/caption.txt"
+    },
+    "reel": {
+      "name": "the-loop-to-financial-freedom",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-loop-to-financial-freedom.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-loop-to-financial-freedom.mp4",
+      "caption_path": "captions/the-loop-to-financial-freedom/caption.txt",
+      "yt_caption_path": "captions/the-loop-to-financial-freedom/caption-youtube.txt",
+      "yt_title_path": "captions/the-loop-to-financial-freedom/title-youtube.txt"
     }
   }
 }
