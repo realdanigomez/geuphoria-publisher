@@ -2348,6 +2348,21 @@
       "slot_time_ast": "12:00 PM",
       "folder": "done-by-end-of-day",
       "caption_path": "captions/carousel-done-by-end-of-day/caption.txt"
+    },
+    "doc_clip": {
+      "name": "asymmetry-lever",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/asymmetry-lever.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/asymmetry-lever.mp4",
+      "caption_path": "captions/asymmetry-lever/caption.txt",
+      "yt_caption_path": "captions/asymmetry-lever/caption-youtube.txt",
+      "yt_title_path": "captions/asymmetry-lever/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "seven-big-bets",
+      "slot_time_ast": "6:00 PM",
+      "folder": "seven-big-bets",
+      "caption_path": "captions/carousel-seven-big-bets/caption.txt"
     }
   },
   "2026-10-21": {
@@ -2374,6 +2389,21 @@
       "slot_time_ast": "12:00 PM",
       "folder": "what-is-it-made-of",
       "caption_path": "captions/carousel-what-is-it-made-of/caption.txt"
+    },
+    "doc_clip": {
+      "name": "the-product-sells-itself",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-product-sells-itself.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-product-sells-itself.mp4",
+      "caption_path": "captions/the-product-sells-itself/caption.txt",
+      "yt_caption_path": "captions/the-product-sells-itself/caption-youtube.txt",
+      "yt_title_path": "captions/the-product-sells-itself/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "your-mission",
+      "slot_time_ast": "6:00 PM",
+      "folder": "your-mission",
+      "caption_path": "captions/carousel-your-mission/caption.txt"
     }
   },
   "2026-10-22": {
@@ -2382,6 +2412,30 @@
       "slot_time_ast": "12:00 PM",
       "folder": "value-starts-with-pain",
       "caption_path": "captions/carousel-value-starts-with-pain/caption.txt"
+    },
+    "reel": {
+      "name": "why-why-why",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/why-why-why.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/why-why-why.mp4",
+      "caption_path": "captions/why-why-why/caption.txt",
+      "yt_caption_path": "captions/why-why-why/caption-youtube.txt",
+      "yt_title_path": "captions/why-why-why/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "people-follow-a-belief",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/people-follow-a-belief.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/people-follow-a-belief.mp4",
+      "caption_path": "captions/people-follow-a-belief/caption.txt",
+      "yt_caption_path": "captions/people-follow-a-belief/caption-youtube.txt",
+      "yt_title_path": "captions/people-follow-a-belief/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "one-company-compounding",
+      "slot_time_ast": "6:00 PM",
+      "folder": "one-company-compounding",
+      "caption_path": "captions/carousel-one-company-compounding/caption.txt"
     }
   },
   "2026-10-23": {
@@ -2390,6 +2444,234 @@
       "slot_time_ast": "12:00 PM",
       "folder": "spcl-goes-into-the-proof",
       "caption_path": "captions/carousel-spcl-goes-into-the-proof/caption.txt"
+    },
+    "reel": {
+      "name": "cause-and-effect",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/cause-and-effect.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/cause-and-effect.mp4",
+      "caption_path": "captions/cause-and-effect/caption.txt",
+      "yt_caption_path": "captions/cause-and-effect/caption-youtube.txt",
+      "yt_title_path": "captions/cause-and-effect/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "customers-over-competitors",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/customers-over-competitors.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/customers-over-competitors.mp4",
+      "caption_path": "captions/customers-over-competitors/caption.txt",
+      "yt_caption_path": "captions/customers-over-competitors/caption-youtube.txt",
+      "yt_title_path": "captions/customers-over-competitors/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "a-bit-in-a-lot-out",
+      "slot_time_ast": "6:00 PM",
+      "folder": "a-bit-in-a-lot-out",
+      "caption_path": "captions/carousel-a-bit-in-a-lot-out/caption.txt"
+    }
+  },
+  "2026-10-24": {
+    "reel": {
+      "name": "vision-and-mission",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/vision-and-mission.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/vision-and-mission.mp4",
+      "caption_path": "captions/vision-and-mission/caption.txt",
+      "yt_caption_path": "captions/vision-and-mission/caption-youtube.txt",
+      "yt_title_path": "captions/vision-and-mission/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "cutting-expenses",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/cutting-expenses.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/cutting-expenses.mp4",
+      "caption_path": "captions/cutting-expenses/caption.txt",
+      "yt_caption_path": "captions/cutting-expenses/caption-youtube.txt",
+      "yt_title_path": "captions/cutting-expenses/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "why-i-wanted-an-iphone",
+      "slot_time_ast": "12:00 PM",
+      "folder": "why-i-wanted-an-iphone",
+      "caption_path": "captions/carousel-why-i-wanted-an-iphone/caption.txt"
+    }
+  },
+  "2026-10-25": {
+    "reel": {
+      "name": "one-company-forever",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/one-company-forever.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/one-company-forever.mp4",
+      "caption_path": "captions/one-company-forever/caption.txt",
+      "yt_caption_path": "captions/one-company-forever/caption-youtube.txt",
+      "yt_title_path": "captions/one-company-forever/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "spacex-impossible-deadlines",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/spacex-impossible-deadlines.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/spacex-impossible-deadlines.mp4",
+      "caption_path": "captions/spacex-impossible-deadlines/caption.txt",
+      "yt_caption_path": "captions/spacex-impossible-deadlines/caption-youtube.txt",
+      "yt_title_path": "captions/spacex-impossible-deadlines/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "a-good-product-sells-itself",
+      "slot_time_ast": "12:00 PM",
+      "folder": "a-good-product-sells-itself",
+      "caption_path": "captions/carousel-a-good-product-sells-itself/caption.txt"
+    }
+  },
+  "2026-10-26": {
+    "reel": {
+      "name": "invest-in-the-company",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/invest-in-the-company.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/invest-in-the-company.mp4",
+      "caption_path": "captions/invest-in-the-company/caption.txt",
+      "yt_caption_path": "captions/invest-in-the-company/caption-youtube.txt",
+      "yt_title_path": "captions/invest-in-the-company/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "the-80-20-rule",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-80-20-rule.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-80-20-rule.mp4",
+      "caption_path": "captions/the-80-20-rule/caption.txt",
+      "yt_caption_path": "captions/the-80-20-rule/caption-youtube.txt",
+      "yt_title_path": "captions/the-80-20-rule/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "the-belief-people-follow",
+      "slot_time_ast": "12:00 PM",
+      "folder": "the-belief-people-follow",
+      "caption_path": "captions/carousel-the-belief-people-follow/caption.txt"
+    }
+  },
+  "2026-10-27": {
+    "reel": {
+      "name": "what-a-product-is-made-of",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/what-a-product-is-made-of.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/what-a-product-is-made-of.mp4",
+      "caption_path": "captions/what-a-product-is-made-of/caption.txt",
+      "yt_caption_path": "captions/what-a-product-is-made-of/caption-youtube.txt",
+      "yt_title_path": "captions/what-a-product-is-made-of/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "a-mission-that-gives-hope",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/a-mission-that-gives-hope.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/a-mission-that-gives-hope.mp4",
+      "caption_path": "captions/a-mission-that-gives-hope/caption.txt",
+      "yt_caption_path": "captions/a-mission-that-gives-hope/caption-youtube.txt",
+      "yt_title_path": "captions/a-mission-that-gives-hope/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "ask-why-again-and-again",
+      "slot_time_ast": "12:00 PM",
+      "folder": "ask-why-again-and-again",
+      "caption_path": "captions/carousel-ask-why-again-and-again/caption.txt"
+    }
+  },
+  "2026-10-28": {
+    "reel": {
+      "name": "give-give-give",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/give-give-give.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/give-give-give.mp4",
+      "caption_path": "captions/give-give-give/caption.txt",
+      "yt_caption_path": "captions/give-give-give/caption-youtube.txt",
+      "yt_title_path": "captions/give-give-give/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "simple-beats-complicated",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/simple-beats-complicated.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/simple-beats-complicated.mp4",
+      "caption_path": "captions/simple-beats-complicated/caption.txt",
+      "yt_caption_path": "captions/simple-beats-complicated/caption-youtube.txt",
+      "yt_title_path": "captions/simple-beats-complicated/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "all-my-focus-on-customers",
+      "slot_time_ast": "12:00 PM",
+      "folder": "all-my-focus-on-customers",
+      "caption_path": "captions/carousel-all-my-focus-on-customers/caption.txt"
+    }
+  },
+  "2026-10-29": {
+    "reel": {
+      "name": "musk-battery-first-principles",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/musk-battery-first-principles.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/musk-battery-first-principles.mp4",
+      "caption_path": "captions/musk-battery-first-principles/caption.txt",
+      "yt_caption_path": "captions/musk-battery-first-principles/caption-youtube.txt",
+      "yt_title_path": "captions/musk-battery-first-principles/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "whats-stopping-you",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/whats-stopping-you.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/whats-stopping-you.mp4",
+      "caption_path": "captions/whats-stopping-you/caption.txt",
+      "yt_caption_path": "captions/whats-stopping-you/caption-youtube.txt",
+      "yt_title_path": "captions/whats-stopping-you/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "deadlines-so-tight",
+      "slot_time_ast": "12:00 PM",
+      "folder": "deadlines-so-tight",
+      "caption_path": "captions/carousel-deadlines-so-tight/caption.txt"
+    }
+  },
+  "2026-10-30": {
+    "carousel": {
+      "name": "what-your-product-is-made-of",
+      "slot_time_ast": "12:00 PM",
+      "folder": "what-your-product-is-made-of",
+      "caption_path": "captions/carousel-what-your-product-is-made-of/caption.txt"
+    }
+  },
+  "2026-10-31": {
+    "carousel": {
+      "name": "confusion-creates-churn",
+      "slot_time_ast": "12:00 PM",
+      "folder": "confusion-creates-churn",
+      "caption_path": "captions/carousel-confusion-creates-churn/caption.txt"
+    }
+  },
+  "2026-11-01": {
+    "carousel": {
+      "name": "how-musk-made-batteries-cheap",
+      "slot_time_ast": "12:00 PM",
+      "folder": "how-musk-made-batteries-cheap",
+      "caption_path": "captions/carousel-how-musk-made-batteries-cheap/caption.txt"
+    }
+  },
+  "2026-11-02": {
+    "carousel": {
+      "name": "cut-everywhere-but-the-company",
+      "slot_time_ast": "12:00 PM",
+      "folder": "cut-everywhere-but-the-company",
+      "caption_path": "captions/carousel-cut-everywhere-but-the-company/caption.txt"
+    }
+  },
+  "2026-11-03": {
+    "carousel": {
+      "name": "is-there-a-law-stopping-you",
+      "slot_time_ast": "12:00 PM",
+      "folder": "is-there-a-law-stopping-you",
+      "caption_path": "captions/carousel-is-there-a-law-stopping-you/caption.txt"
+    }
+  },
+  "2026-11-04": {
+    "carousel": {
+      "name": "give-over-take",
+      "slot_time_ast": "12:00 PM",
+      "folder": "give-over-take",
+      "caption_path": "captions/carousel-give-over-take/caption.txt"
     }
   }
 }
