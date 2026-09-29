@@ -1,0 +1,5 @@
+A transaction can happen before the value is created, based on trust.
+
+Like paying for a course before having access to it.
+
+Thanks for watching!
