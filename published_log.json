@@ -489,6 +489,10 @@
     "longform_clip": "18111721838106677",
     "yt_longform_clip": "uql60XmCmLI",
     "carousel_2": "18127170097886291",
-    "doc_clip": "18088129700279568"
+    "doc_clip": "18088129700279568",
+    "yt_doc_clip": {
+      "claimed_at": "2026-10-02T01:06:11.870055Z",
+      "claimed_by": "36949225513:1"
+    }
   }
 }
