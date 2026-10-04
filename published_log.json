@@ -519,6 +519,10 @@
     "carousel_3": "18100795868629929",
     "longform_clip_bonus": "17884232013622480",
     "yt_longform_clip_bonus": "OOSLc4X1VBA",
-    "reel": "18099739013283796"
+    "reel": "18099739013283796",
+    "yt_reel": {
+      "claimed_at": "2026-10-04T12:10:30.123169Z",
+      "claimed_by": "37201183189:1"
+    }
   }
 }
