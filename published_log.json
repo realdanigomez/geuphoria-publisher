@@ -517,6 +517,10 @@
   },
   "2026-10-04": {
     "carousel_3": "18100795868629929",
-    "longform_clip_bonus": "17884232013622480"
+    "longform_clip_bonus": "17884232013622480",
+    "yt_longform_clip_bonus": {
+      "claimed_at": "2026-10-04T09:06:36.114626Z",
+      "claimed_by": "37191013369:1"
+    }
   }
 }
