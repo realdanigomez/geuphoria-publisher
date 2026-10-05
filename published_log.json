@@ -525,6 +525,10 @@
     "longform_clip": "18102238916322619",
     "yt_longform_clip": "8TRPuWFIwPY",
     "carousel_2": "18101424167029266",
-    "doc_clip": "18181065967426295"
+    "doc_clip": "18181065967426295",
+    "yt_doc_clip": {
+      "claimed_at": "2026-10-05T01:06:32.212247Z",
+      "claimed_by": "37250003380:1"
+    }
   }
 }
