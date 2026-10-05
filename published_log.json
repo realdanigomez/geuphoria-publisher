@@ -532,6 +532,10 @@
     "longform_clip_bonus": "17991908898106999",
     "yt_longform_clip_bonus": "B9lr0Le-E0I",
     "reel": "18133415818721969",
-    "yt_reel": "PJ7Oly4gpU4"
+    "yt_reel": "PJ7Oly4gpU4",
+    "longform_clip": {
+      "claimed_at": "2026-10-05T19:05:42.532507Z",
+      "claimed_by": "37360847127:1"
+    }
   }
 }
