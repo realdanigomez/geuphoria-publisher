@@ -530,6 +530,10 @@
   },
   "2026-10-05": {
     "longform_clip_bonus": "17991908898106999",
-    "yt_longform_clip_bonus": "B9lr0Le-E0I"
+    "yt_longform_clip_bonus": "B9lr0Le-E0I",
+    "reel": {
+      "claimed_at": "2026-10-05T12:05:26.085810Z",
+      "claimed_by": "37307127178:1"
+    }
   }
 }
