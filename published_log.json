@@ -543,6 +543,10 @@
     "longform_clip_bonus": "18123048892930505",
     "yt_longform_clip_bonus": "USMWo42HnPM",
     "reel": "18092581454467137",
-    "yt_reel": "VlIT-I45N5g"
+    "yt_reel": "VlIT-I45N5g",
+    "carousel": {
+      "claimed_at": "2026-10-06T16:05:30.088797Z",
+      "claimed_by": "37492897419:1"
+    }
   }
 }
