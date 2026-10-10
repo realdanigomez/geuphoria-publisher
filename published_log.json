@@ -590,6 +590,10 @@
   "2026-10-10": {
     "longform_clip_bonus": "18072418877740661",
     "yt_longform_clip_bonus": "gLlvMFFOy1o",
-    "reel": "18185117449418960"
+    "reel": "18185117449418960",
+    "yt_reel": {
+      "claimed_at": "2026-10-10T12:10:29.904372Z",
+      "claimed_by": "38050984098:1"
+    }
   }
 }
