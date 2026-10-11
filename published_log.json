@@ -605,6 +605,10 @@
     "reel": "17897950056608074",
     "yt_reel": "J9bJjbXysXo",
     "carousel": "18128631044477288",
-    "longform_clip": "18074060945742822"
+    "longform_clip": "18074060945742822",
+    "yt_longform_clip": {
+      "claimed_at": "2026-10-11T19:06:31.657017Z",
+      "claimed_by": "38166522220:1"
+    }
   }
 }
