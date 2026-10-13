@@ -628,6 +628,10 @@
     "longform_clip_bonus": "18338308456276436",
     "yt_longform_clip_bonus": "sG13BrVaMI8",
     "reel": "18119296594944178",
-    "yt_reel": "MisC_eHI8Ck"
+    "yt_reel": "MisC_eHI8Ck",
+    "carousel": {
+      "claimed_at": "2026-10-13T16:05:24.349782Z",
+      "claimed_by": "38427580870:1"
+    }
   }
 }
