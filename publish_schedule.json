@@ -2505,6 +2505,12 @@
       "caption_path": "captions/my-work-and-ais-then-compare/caption.txt",
       "yt_caption_path": "captions/my-work-and-ais-then-compare/caption-youtube.txt",
       "yt_title_path": "captions/my-work-and-ais-then-compare/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "tomorrow-is-simple",
+      "slot_time_ast": "6:00 PM",
+      "folder": "tomorrow-is-simple",
+      "caption_path": "captions/carousel-tomorrow-is-simple/caption.txt"
     }
   },
   "2026-10-17": {
@@ -2549,6 +2555,18 @@
       "caption_path": "captions/plan-tomorrow-around-my-job/caption.txt",
       "yt_caption_path": "captions/plan-tomorrow-around-my-job/caption-youtube.txt",
       "yt_title_path": "captions/plan-tomorrow-around-my-job/title-youtube.txt"
+    },
+    "carousel_3": {
+      "name": "cut-to-lean",
+      "slot_time_ast": "12:00 AM",
+      "folder": "cut-to-lean",
+      "caption_path": "captions/carousel-cut-to-lean/caption.txt"
+    },
+    "carousel_2": {
+      "name": "hand-it-to-ai",
+      "slot_time_ast": "6:00 PM",
+      "folder": "hand-it-to-ai",
+      "caption_path": "captions/carousel-hand-it-to-ai/caption.txt"
     }
   },
   "2026-10-18": {
@@ -2593,6 +2611,21 @@
       "caption_path": "captions/eight-months-in-decades-to-go/caption.txt",
       "yt_caption_path": "captions/eight-months-in-decades-to-go/caption-youtube.txt",
       "yt_title_path": "captions/eight-months-in-decades-to-go/title-youtube.txt"
+    },
+    "reel_2": {
+      "name": "cut-what-isnt-critical",
+      "slot_time_ast": "12:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/cut-what-isnt-critical.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/cut-what-isnt-critical.mp4",
+      "caption_path": "captions/cut-what-isnt-critical/caption.txt",
+      "yt_caption_path": "captions/cut-what-isnt-critical/caption-youtube.txt",
+      "yt_title_path": "captions/cut-what-isnt-critical/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "the-plan-after-the-product",
+      "slot_time_ast": "6:00 PM",
+      "folder": "the-plan-after-the-product",
+      "caption_path": "captions/carousel-the-plan-after-the-product/caption.txt"
     }
   },
   "2026-10-19": {
@@ -2637,6 +2670,21 @@
       "caption_path": "captions/i-edit-the-cut-ai-does-the-add-ons/caption.txt",
       "yt_caption_path": "captions/i-edit-the-cut-ai-does-the-add-ons/caption-youtube.txt",
       "yt_title_path": "captions/i-edit-the-cut-ai-does-the-add-ons/title-youtube.txt"
+    },
+    "reel_2": {
+      "name": "tomorrow-in-three-tasks",
+      "slot_time_ast": "12:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/tomorrow-in-three-tasks.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/tomorrow-in-three-tasks.mp4",
+      "caption_path": "captions/tomorrow-in-three-tasks/caption.txt",
+      "yt_caption_path": "captions/tomorrow-in-three-tasks/caption-youtube.txt",
+      "yt_title_path": "captions/tomorrow-in-three-tasks/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "record-so-you-dont-skip",
+      "slot_time_ast": "6:00 PM",
+      "folder": "record-so-you-dont-skip",
+      "caption_path": "captions/carousel-record-so-you-dont-skip/caption.txt"
     }
   },
   "2026-10-20": {
@@ -2687,6 +2735,15 @@
       "caption_path": "captions/first-version-into-the-market/caption.txt",
       "yt_caption_path": "captions/first-version-into-the-market/caption-youtube.txt",
       "yt_title_path": "captions/first-version-into-the-market/title-youtube.txt"
+    },
+    "reel_2": {
+      "name": "two-tests-for-critical-information",
+      "slot_time_ast": "12:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/two-tests-for-critical-information.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/two-tests-for-critical-information.mp4",
+      "caption_path": "captions/two-tests-for-critical-information/caption.txt",
+      "yt_caption_path": "captions/two-tests-for-critical-information/caption-youtube.txt",
+      "yt_title_path": "captions/two-tests-for-critical-information/title-youtube.txt"
     }
   },
   "2026-10-21": {
@@ -2737,6 +2794,15 @@
       "caption_path": "captions/missed-the-plan-do-it-in-the-morning/caption.txt",
       "yt_caption_path": "captions/missed-the-plan-do-it-in-the-morning/caption-youtube.txt",
       "yt_title_path": "captions/missed-the-plan-do-it-in-the-morning/title-youtube.txt"
+    },
+    "reel_2": {
+      "name": "outreach-after-the-product",
+      "slot_time_ast": "12:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/outreach-after-the-product.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/outreach-after-the-product.mp4",
+      "caption_path": "captions/outreach-after-the-product/caption.txt",
+      "yt_caption_path": "captions/outreach-after-the-product/caption-youtube.txt",
+      "yt_title_path": "captions/outreach-after-the-product/title-youtube.txt"
     }
   },
   "2026-10-22": {
@@ -2787,6 +2853,15 @@
       "caption_path": "captions/finish-the-books-before-content/caption.txt",
       "yt_caption_path": "captions/finish-the-books-before-content/caption-youtube.txt",
       "yt_title_path": "captions/finish-the-books-before-content/title-youtube.txt"
+    },
+    "reel_2": {
+      "name": "i-record-to-keep-you-updated",
+      "slot_time_ast": "12:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/i-record-to-keep-you-updated.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/i-record-to-keep-you-updated.mp4",
+      "caption_path": "captions/i-record-to-keep-you-updated/caption.txt",
+      "yt_caption_path": "captions/i-record-to-keep-you-updated/caption-youtube.txt",
+      "yt_title_path": "captions/i-record-to-keep-you-updated/title-youtube.txt"
     }
   },
   "2026-10-23": {
@@ -2819,6 +2894,24 @@
       "slot_time_ast": "6:00 PM",
       "folder": "a-bit-in-a-lot-out",
       "caption_path": "captions/carousel-a-bit-in-a-lot-out/caption.txt"
+    },
+    "reel_2": {
+      "name": "i-cut-it-ai-does-the-rest",
+      "slot_time_ast": "12:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/i-cut-it-ai-does-the-rest.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/i-cut-it-ai-does-the-rest.mp4",
+      "caption_path": "captions/i-cut-it-ai-does-the-rest/caption.txt",
+      "yt_caption_path": "captions/i-cut-it-ai-does-the-rest/caption-youtube.txt",
+      "yt_title_path": "captions/i-cut-it-ai-does-the-rest/title-youtube.txt"
+    },
+    "longform_clip_bonus": {
+      "name": "a-slow-day-then-all-in",
+      "slot_time_ast": "5:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/a-slow-day-then-all-in.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/a-slow-day-then-all-in.mp4",
+      "caption_path": "captions/a-slow-day-then-all-in/caption.txt",
+      "yt_caption_path": "captions/a-slow-day-then-all-in/caption-youtube.txt",
+      "yt_title_path": "captions/a-slow-day-then-all-in/title-youtube.txt"
     }
   },
   "2026-10-24": {
@@ -2845,6 +2938,15 @@
       "slot_time_ast": "12:00 PM",
       "folder": "why-i-wanted-an-iphone",
       "caption_path": "captions/carousel-why-i-wanted-an-iphone/caption.txt"
+    },
+    "doc_clip": {
+      "name": "two-days-before-friday",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/two-days-before-friday.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/two-days-before-friday.mp4",
+      "caption_path": "captions/two-days-before-friday/caption.txt",
+      "yt_caption_path": "captions/two-days-before-friday/caption-youtube.txt",
+      "yt_title_path": "captions/two-days-before-friday/title-youtube.txt"
     }
   },
   "2026-10-25": {

@@ -71,8 +71,12 @@ SLOTS = [
     # 2026-09-22 -> 09-24: the same instruction for the IG Deliverability batch (7 carousels,
     # Sep 22-25; Sep 25 has one carousel, so no carousel_2 that day).
     # carousel_2 has NO cron of its own — this date list is its ONLY trigger.
-    ("publish-reel-2.yml",      "reel_2",      "17:00", ["2026-09-14"]),
-    ("publish-yt-reel-2.yml",   "yt_reel_2",   "17:00", ["2026-09-14"]),
+    ("publish-reel-2.yml",      "reel_2",      "00:00", ["2026-09-14",
+      # 2026-10-18 -> 10-23 (6 dates): Documentary Ep 10 (Dani's OK 2026-10-15, version A).
+      "2026-10-18","2026-10-19","2026-10-20","2026-10-21","2026-10-22","2026-10-23"]),
+    ("publish-yt-reel-2.yml",   "yt_reel_2",   "00:00", ["2026-09-14",
+      # 2026-10-18 -> 10-23 (6 dates): Documentary Ep 10 (Dani's OK 2026-10-15, version A).
+      "2026-10-18","2026-10-19","2026-10-20","2026-10-21","2026-10-22","2026-10-23"]),
     # 2026-09-25: the Aruba batch's one 6PM carousel (the only 6PM the other batches leave free).
     # 2026-09-26 -> 09-28: documentary Ep.7's 3 carousels (Sat Sep 26's only 3-hour-clear time; Dani 2026-09-23).
     # 2026-09-29 -> 10-04: the 14 Deadly Sins batch's 2nd carousel of the day (6PM), from its longform's launch day
@@ -91,7 +95,9 @@ SLOTS = [
       # 2026-10-27 -> 11-02: the Financial Freedom & Money batch (Dani OK'd the calendar 2026-09-29).
       "2026-10-27","2026-10-28","2026-10-29","2026-10-30","2026-10-31","2026-11-01","2026-11-02",
       # 2026-10-10 -> 10-14 (4 dates): Documentary Ep 9 (Dani's OK 2026-10-08).
-      "2026-10-10","2026-10-11","2026-10-12","2026-10-14"]),
+      "2026-10-10","2026-10-11","2026-10-12","2026-10-14",
+      # 2026-10-16 -> 10-19 (4 dates): Documentary Ep 10 (Dani's OK 2026-10-15, version A).
+      "2026-10-16","2026-10-17","2026-10-18","2026-10-19"]),
     ("publish-story-2.yml",     "story_2",     "11:00", []),
 
     # ── 3rd daily carousel — 12AM AST, added 2026-09-16 for the Aruba documentary batch ──────
@@ -106,7 +112,9 @@ SLOTS = [
       # 2026-10-03 -> 10-14: Documentary Ep 8 (Dani's OK 2026-09-29: the film Fri Oct 2).
       "2026-10-03","2026-10-04",
       # 2026-10-13: Documentary Ep 9 (Dani's OK 2026-10-08).
-      "2026-10-13"]),
+      "2026-10-13",
+      # 2026-10-17: Documentary Ep 10 (Dani's OK 2026-10-15, version A).
+      "2026-10-17"]),
 
     # ── Doc-clip + longform-clip ───────────────────────────────────────────
     # 2026-09-01 -> 09-14: the previous go-live (past dates, kept — the date
@@ -133,7 +141,9 @@ SLOTS = [
       # 2026-10-30: Documentary Ep 8 (Dani's OK 2026-09-29).
       "2026-10-30",
       # 2026-10-15 -> 10-22 (6 dates): Documentary Ep 9 (Dani's OK 2026-10-08).
-      "2026-10-15","2026-10-16","2026-10-17","2026-10-18","2026-10-19","2026-10-22"]),
+      "2026-10-15","2026-10-16","2026-10-17","2026-10-18","2026-10-19","2026-10-22",
+      # 2026-10-24: Documentary Ep 10 (Dani's OK 2026-10-15, version A).
+      "2026-10-24"]),
     ("publish-longform-clip.yml", "longform_clip", "15:00",
      ["2026-09-02","2026-09-03","2026-09-04","2026-09-05","2026-09-06","2026-09-07",
       "2026-09-09","2026-09-10","2026-09-11","2026-09-12","2026-09-13","2026-09-14",
@@ -165,7 +175,9 @@ SLOTS = [
       # 2026-10-28 -> 10-29: the Financial Freedom & Money batch (Dani OK'd the calendar 2026-09-29).
       "2026-10-28","2026-10-29",
       # 2026-10-15 -> 10-22 (8 dates): Documentary Ep 9 (Dani's OK 2026-10-08).
-      "2026-10-15","2026-10-16","2026-10-17","2026-10-18","2026-10-19","2026-10-20","2026-10-21","2026-10-22"]),
+      "2026-10-15","2026-10-16","2026-10-17","2026-10-18","2026-10-19","2026-10-20","2026-10-21","2026-10-22",
+      # 2026-10-23: Documentary Ep 10 (Dani's OK 2026-10-15, version A).
+      "2026-10-23"]),
 
     # ── Story — 7PM AST daily ──────────────────────────────────────────────
     # UPDATE THIS LIST each week before Monday 8AM.
