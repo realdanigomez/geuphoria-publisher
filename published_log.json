@@ -649,6 +649,10 @@
     "yt_doc_clip": "7x8g6amOzlw"
   },
   "2026-10-15": {
-    "longform_clip_bonus": "18372620470246037"
+    "longform_clip_bonus": "18372620470246037",
+    "yt_longform_clip_bonus": {
+      "claimed_at": "2026-10-15T09:06:35.258141Z",
+      "claimed_by": "38710338611:1"
+    }
   }
 }
