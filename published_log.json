@@ -661,6 +661,10 @@
   },
   "2026-10-16": {
     "longform_clip_bonus": "17874764880593615",
-    "yt_longform_clip_bonus": "IKGVlskkgFA"
+    "yt_longform_clip_bonus": "IKGVlskkgFA",
+    "reel": {
+      "claimed_at": "2026-10-16T12:05:24.263783Z",
+      "claimed_by": "38898093164:1"
+    }
   }
 }
