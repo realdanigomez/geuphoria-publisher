@@ -742,6 +742,10 @@
   },
   "2026-10-22": {
     "reel_2": "18127274845920343",
-    "yt_reel_2": "GExaYP8-3jM"
+    "yt_reel_2": "GExaYP8-3jM",
+    "longform_clip_bonus": {
+      "claimed_at": "2026-10-22T09:05:28.270551Z",
+      "claimed_by": "39752687228:1"
+    }
   }
 }
