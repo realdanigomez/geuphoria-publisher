@@ -744,6 +744,10 @@
     "reel_2": "18127274845920343",
     "yt_reel_2": "GExaYP8-3jM",
     "longform_clip_bonus": "18647307121060438",
-    "yt_longform_clip_bonus": "Z6QyCh0qcCY"
+    "yt_longform_clip_bonus": "Z6QyCh0qcCY",
+    "reel": {
+      "claimed_at": "2026-10-22T12:05:24.985584Z",
+      "claimed_by": "39775507310:1"
+    }
   }
 }
