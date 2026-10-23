@@ -2912,6 +2912,15 @@
       "caption_path": "captions/a-slow-day-then-all-in/caption.txt",
       "yt_caption_path": "captions/a-slow-day-then-all-in/caption-youtube.txt",
       "yt_title_path": "captions/a-slow-day-then-all-in/title-youtube.txt"
+    },
+    "doc_clip": {
+      "name": "cutting-beats-adding",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/cutting-beats-adding.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/cutting-beats-adding.mp4",
+      "caption_path": "captions/cutting-beats-adding/caption.txt",
+      "yt_caption_path": "captions/cutting-beats-adding/caption-youtube.txt",
+      "yt_title_path": "captions/cutting-beats-adding/title-youtube.txt"
     }
   },
   "2026-10-24": {
@@ -2953,6 +2962,15 @@
       "slot_time_ast": "12:00 AM",
       "folder": "five-people-before-selling",
       "caption_path": "captions/carousel-five-people-before-selling/caption.txt"
+    },
+    "longform_clip_bonus": {
+      "name": "a-year-of-work-no-results",
+      "slot_time_ast": "5:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/a-year-of-work-no-results.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/a-year-of-work-no-results.mp4",
+      "caption_path": "captions/a-year-of-work-no-results/caption.txt",
+      "yt_caption_path": "captions/a-year-of-work-no-results/caption-youtube.txt",
+      "yt_title_path": "captions/a-year-of-work-no-results/title-youtube.txt"
     }
   },
   "2026-10-25": {
@@ -2985,6 +3003,15 @@
       "slot_time_ast": "12:00 AM",
       "folder": "subtraction-beats-addition",
       "caption_path": "captions/carousel-subtraction-beats-addition/caption.txt"
+    },
+    "longform_clip_bonus": {
+      "name": "one-focus-content-compounds",
+      "slot_time_ast": "5:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/one-focus-content-compounds.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/one-focus-content-compounds.mp4",
+      "caption_path": "captions/one-focus-content-compounds/caption.txt",
+      "yt_caption_path": "captions/one-focus-content-compounds/caption-youtube.txt",
+      "yt_title_path": "captions/one-focus-content-compounds/title-youtube.txt"
     }
   },
   "2026-10-26": {
@@ -3017,6 +3044,15 @@
       "slot_time_ast": "6:00 PM",
       "folder": "work-before-results",
       "caption_path": "captions/carousel-work-before-results/caption.txt"
+    },
+    "doc_clip": {
+      "name": "dont-sell-it-yet",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/dont-sell-it-yet.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/dont-sell-it-yet.mp4",
+      "caption_path": "captions/dont-sell-it-yet/caption.txt",
+      "yt_caption_path": "captions/dont-sell-it-yet/caption-youtube.txt",
+      "yt_title_path": "captions/dont-sell-it-yet/title-youtube.txt"
     }
   },
   "2026-10-27": {
@@ -3064,6 +3100,15 @@
       "slot_time_ast": "12:00 AM",
       "folder": "let-the-content-compound",
       "caption_path": "captions/carousel-let-the-content-compound/caption.txt"
+    },
+    "longform_clip_bonus": {
+      "name": "is-it-critical-to-the-problem",
+      "slot_time_ast": "5:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/is-it-critical-to-the-problem.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/is-it-critical-to-the-problem.mp4",
+      "caption_path": "captions/is-it-critical-to-the-problem/caption.txt",
+      "yt_caption_path": "captions/is-it-critical-to-the-problem/caption-youtube.txt",
+      "yt_title_path": "captions/is-it-critical-to-the-problem/title-youtube.txt"
     }
   },
   "2026-10-28": {
