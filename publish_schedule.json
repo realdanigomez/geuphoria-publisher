@@ -2947,6 +2947,12 @@
       "caption_path": "captions/two-days-before-friday/caption.txt",
       "yt_caption_path": "captions/two-days-before-friday/caption-youtube.txt",
       "yt_title_path": "captions/two-days-before-friday/title-youtube.txt"
+    },
+    "carousel_3": {
+      "name": "five-people-before-selling",
+      "slot_time_ast": "12:00 AM",
+      "folder": "five-people-before-selling",
+      "caption_path": "captions/carousel-five-people-before-selling/caption.txt"
     }
   },
   "2026-10-25": {
@@ -2973,6 +2979,12 @@
       "slot_time_ast": "12:00 PM",
       "folder": "a-good-product-sells-itself",
       "caption_path": "captions/carousel-a-good-product-sells-itself/caption.txt"
+    },
+    "carousel_3": {
+      "name": "subtraction-beats-addition",
+      "slot_time_ast": "12:00 AM",
+      "folder": "subtraction-beats-addition",
+      "caption_path": "captions/carousel-subtraction-beats-addition/caption.txt"
     }
   },
   "2026-10-26": {
@@ -2999,6 +3011,12 @@
       "slot_time_ast": "12:00 PM",
       "folder": "the-belief-people-follow",
       "caption_path": "captions/carousel-the-belief-people-follow/caption.txt"
+    },
+    "carousel_2": {
+      "name": "work-before-results",
+      "slot_time_ast": "6:00 PM",
+      "folder": "work-before-results",
+      "caption_path": "captions/carousel-work-before-results/caption.txt"
     }
   },
   "2026-10-27": {
@@ -3040,6 +3058,12 @@
       "slot_time_ast": "6:00 PM",
       "folder": "the-8k-coaching-trade",
       "caption_path": "captions/carousel-the-8k-coaching-trade/caption.txt"
+    },
+    "carousel_3": {
+      "name": "let-the-content-compound",
+      "slot_time_ast": "12:00 AM",
+      "folder": "let-the-content-compound",
+      "caption_path": "captions/carousel-let-the-content-compound/caption.txt"
     }
   },
   "2026-10-28": {
