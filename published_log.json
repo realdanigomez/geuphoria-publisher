@@ -783,6 +783,10 @@
   "2026-10-25": {
     "carousel_3": "18119010388987923",
     "longform_clip_bonus": "17966339208198809",
-    "yt_longform_clip_bonus": "IM23FUrb-kc"
+    "yt_longform_clip_bonus": "IM23FUrb-kc",
+    "reel": {
+      "claimed_at": "2026-10-25T12:05:22.949244Z",
+      "claimed_by": "40191585944:1"
+    }
   }
 }
