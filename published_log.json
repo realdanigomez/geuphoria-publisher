@@ -784,6 +784,10 @@
     "carousel_3": "18119010388987923",
     "longform_clip_bonus": "17966339208198809",
     "yt_longform_clip_bonus": "IM23FUrb-kc",
-    "reel": "18086598233319793"
+    "reel": "18086598233319793",
+    "yt_reel": {
+      "claimed_at": "2026-10-25T12:10:26.953240Z",
+      "claimed_by": "40191938728:1"
+    }
   }
 }
