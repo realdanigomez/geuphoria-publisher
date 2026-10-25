@@ -776,6 +776,10 @@
     "yt_reel": "__rLarmXGlI",
     "carousel": "18113123804614496",
     "longform_clip": "18254557141308046",
-    "yt_longform_clip": "bvOS8hl0MRI"
+    "yt_longform_clip": "bvOS8hl0MRI",
+    "doc_clip": {
+      "claimed_at": "2026-10-25T01:05:27.595412Z",
+      "claimed_by": "40149237491:1"
+    }
   }
 }
