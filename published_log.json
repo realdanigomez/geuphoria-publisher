@@ -785,6 +785,10 @@
     "longform_clip_bonus": "17966339208198809",
     "yt_longform_clip_bonus": "IM23FUrb-kc",
     "reel": "18086598233319793",
-    "yt_reel": "EYMIdsK0liI"
+    "yt_reel": "EYMIdsK0liI",
+    "carousel": {
+      "claimed_at": "2026-10-25T16:05:21.249365Z",
+      "claimed_by": "40209991786:1"
+    }
   }
 }
