@@ -3288,6 +3288,24 @@
       "slot_time_ast": "12:00 AM",
       "folder": "demo-then-pre-order",
       "caption_path": "captions/carousel-demo-then-pre-order/caption.txt"
+    },
+    "longform_clip_bonus": {
+      "name": "two-by-four-equals-eight-ideas",
+      "slot_time_ast": "5:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/two-by-four-equals-eight-ideas.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/two-by-four-equals-eight-ideas.mp4",
+      "caption_path": "captions/two-by-four-equals-eight-ideas/caption.txt",
+      "yt_caption_path": "captions/two-by-four-equals-eight-ideas/caption-youtube.txt",
+      "yt_title_path": "captions/two-by-four-equals-eight-ideas/title-youtube.txt"
+    },
+    "doc_clip": {
+      "name": "after-the-launch-only-outreach",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/after-the-launch-only-outreach.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/after-the-launch-only-outreach.mp4",
+      "caption_path": "captions/after-the-launch-only-outreach/caption.txt",
+      "yt_caption_path": "captions/after-the-launch-only-outreach/caption-youtube.txt",
+      "yt_title_path": "captions/after-the-launch-only-outreach/title-youtube.txt"
     }
   },
   "2026-11-01": {
@@ -3358,6 +3376,15 @@
       "slot_time_ast": "12:00 AM",
       "folder": "eight-ideas-for-a-month",
       "caption_path": "captions/carousel-eight-ideas-for-a-month/caption.txt"
+    },
+    "doc_clip": {
+      "name": "refine-the-demo-then-launch",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/refine-the-demo-then-launch.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/refine-the-demo-then-launch.mp4",
+      "caption_path": "captions/refine-the-demo-then-launch/caption.txt",
+      "yt_caption_path": "captions/refine-the-demo-then-launch/caption-youtube.txt",
+      "yt_title_path": "captions/refine-the-demo-then-launch/title-youtube.txt"
     }
   },
   "2026-11-03": {

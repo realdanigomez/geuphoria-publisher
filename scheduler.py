@@ -153,7 +153,9 @@ SLOTS = [
       # 2026-10-24: Documentary Ep 10 (Dani's OK 2026-10-15, version A).
       "2026-10-24",
       # 2026-10-23 -> 10-26 (2 dates): Documentary Ep 11 (Dani's blanket go-ahead 2026-10-23).
-      "2026-10-23","2026-10-26"]),
+      "2026-10-23","2026-10-26",
+      # 2026-10-31 -> 11-02 (2 dates): Documentary Ep 12 (Dani's OK of the proposal).
+      "2026-10-31","2026-11-02"]),
     ("publish-longform-clip.yml", "longform_clip", "15:00",
      ["2026-09-02","2026-09-03","2026-09-04","2026-09-05","2026-09-06","2026-09-07",
       "2026-09-09","2026-09-10","2026-09-11","2026-09-12","2026-09-13","2026-09-14",
@@ -189,7 +191,9 @@ SLOTS = [
       # 2026-10-23: Documentary Ep 10 (Dani's OK 2026-10-15, version A).
       "2026-10-23",
       # 2026-10-24 -> 10-27 (3 dates): Documentary Ep 11 (Dani's blanket go-ahead 2026-10-23).
-      "2026-10-24","2026-10-25","2026-10-27"]),
+      "2026-10-24","2026-10-25","2026-10-27",
+      # 2026-10-31: Documentary Ep 12 (Dani's OK of the proposal).
+      "2026-10-31"]),
 
     # ── Story — 7PM AST daily ──────────────────────────────────────────────
     # UPDATE THIS LIST each week before Monday 8AM.
