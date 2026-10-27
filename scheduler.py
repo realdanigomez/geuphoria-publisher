@@ -99,7 +99,9 @@ SLOTS = [
       # 2026-10-16 -> 10-19 (4 dates): Documentary Ep 10 (Dani's OK 2026-10-15, version A).
       "2026-10-16","2026-10-17","2026-10-18","2026-10-19",
       # 2026-10-26: Documentary Ep 11 (Dani's blanket go-ahead 2026-10-23).
-      "2026-10-26"]),
+      "2026-10-26",
+      # 2026-11-03: Documentary Ep 12 (Dani's OK of the proposal).
+      "2026-11-03"]),
     ("publish-story-2.yml",     "story_2",     "11:00", []),
 
     # ── 3rd daily carousel — 12AM AST, added 2026-09-16 for the Aruba documentary batch ──────
@@ -118,7 +120,9 @@ SLOTS = [
       # 2026-10-17: Documentary Ep 10 (Dani's OK 2026-10-15, version A).
       "2026-10-17",
       # 2026-10-24 -> 10-27 (3 dates): Documentary Ep 11 (Dani's blanket go-ahead 2026-10-23).
-      "2026-10-24","2026-10-25","2026-10-27"]),
+      "2026-10-24","2026-10-25","2026-10-27",
+      # 2026-10-31 -> 11-02 (2 dates): Documentary Ep 12 (Dani's OK of the proposal).
+      "2026-10-31","2026-11-02"]),
 
     # ── Doc-clip + longform-clip ───────────────────────────────────────────
     # 2026-09-01 -> 09-14: the previous go-live (past dates, kept — the date

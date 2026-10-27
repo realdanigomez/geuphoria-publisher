@@ -3282,6 +3282,12 @@
       "slot_time_ast": "6:00 PM",
       "folder": "good-trade-off-bad-trade-off",
       "caption_path": "captions/carousel-good-trade-off-bad-trade-off/caption.txt"
+    },
+    "carousel_3": {
+      "name": "demo-then-pre-order",
+      "slot_time_ast": "12:00 AM",
+      "folder": "demo-then-pre-order",
+      "caption_path": "captions/carousel-demo-then-pre-order/caption.txt"
     }
   },
   "2026-11-01": {
@@ -3346,6 +3352,12 @@
       "slot_time_ast": "6:00 PM",
       "folder": "money-runs-on-belief",
       "caption_path": "captions/carousel-money-runs-on-belief/caption.txt"
+    },
+    "carousel_3": {
+      "name": "eight-ideas-for-a-month",
+      "slot_time_ast": "12:00 AM",
+      "folder": "eight-ideas-for-a-month",
+      "caption_path": "captions/carousel-eight-ideas-for-a-month/caption.txt"
     }
   },
   "2026-11-03": {
@@ -3372,6 +3384,12 @@
       "caption_path": "captions/four-products-four-pains/caption.txt",
       "yt_caption_path": "captions/four-products-four-pains/caption-youtube.txt",
       "yt_title_path": "captions/four-products-four-pains/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "content-is-outreach-too",
+      "slot_time_ast": "6:00 PM",
+      "folder": "content-is-outreach-too",
+      "caption_path": "captions/carousel-content-is-outreach-too/caption.txt"
     }
   },
   "2026-11-04": {
