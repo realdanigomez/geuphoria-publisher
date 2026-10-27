@@ -1,0 +1,3 @@
+Client comes first, delivery comes second.
+
+Delivery without clients is the same thing as having no delivery.
