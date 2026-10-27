@@ -3417,6 +3417,15 @@
       "slot_time_ast": "6:00 PM",
       "folder": "content-is-outreach-too",
       "caption_path": "captions/carousel-content-is-outreach-too/caption.txt"
+    },
+    "doc_clip": {
+      "name": "client-first-delivery-second",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/client-first-delivery-second.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/client-first-delivery-second.mp4",
+      "caption_path": "captions/client-first-delivery-second/caption.txt",
+      "yt_caption_path": "captions/client-first-delivery-second/caption-youtube.txt",
+      "yt_title_path": "captions/client-first-delivery-second/title-youtube.txt"
     }
   },
   "2026-11-04": {
@@ -3434,6 +3443,65 @@
       "caption_path": "captions/the-loop-to-financial-freedom/caption.txt",
       "yt_caption_path": "captions/the-loop-to-financial-freedom/caption-youtube.txt",
       "yt_title_path": "captions/the-loop-to-financial-freedom/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "free-first-then-charge",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/free-first-then-charge.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/free-first-then-charge.mp4",
+      "caption_path": "captions/free-first-then-charge/caption.txt",
+      "yt_caption_path": "captions/free-first-then-charge/caption-youtube.txt",
+      "yt_title_path": "captions/free-first-then-charge/title-youtube.txt"
+    }
+  },
+  "2026-11-05": {
+    "reel": {
+      "name": "the-highest-leverage-activity",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-highest-leverage-activity.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-highest-leverage-activity.mp4",
+      "caption_path": "captions/the-highest-leverage-activity/caption.txt",
+      "yt_caption_path": "captions/the-highest-leverage-activity/caption-youtube.txt",
+      "yt_title_path": "captions/the-highest-leverage-activity/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "client-comes-first",
+      "slot_time_ast": "12:00 PM",
+      "folder": "client-comes-first",
+      "caption_path": "captions/carousel-client-comes-first/caption.txt"
+    }
+  },
+  "2026-11-06": {
+    "reel": {
+      "name": "content-is-not-the-main-thing",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/content-is-not-the-main-thing.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/content-is-not-the-main-thing.mp4",
+      "caption_path": "captions/content-is-not-the-main-thing/caption.txt",
+      "yt_caption_path": "captions/content-is-not-the-main-thing/caption-youtube.txt",
+      "yt_title_path": "captions/content-is-not-the-main-thing/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "free-before-you-charge",
+      "slot_time_ast": "12:00 PM",
+      "folder": "free-before-you-charge",
+      "caption_path": "captions/carousel-free-before-you-charge/caption.txt"
+    }
+  },
+  "2026-11-07": {
+    "carousel": {
+      "name": "the-question-that-changed-my-perspective",
+      "slot_time_ast": "12:00 PM",
+      "folder": "the-question-that-changed-my-perspective",
+      "caption_path": "captions/carousel-the-question-that-changed-my-perspective/caption.txt"
+    }
+  },
+  "2026-11-08": {
+    "carousel": {
+      "name": "the-main-thing-is-clients",
+      "slot_time_ast": "12:00 PM",
+      "folder": "the-main-thing-is-clients",
+      "caption_path": "captions/carousel-the-main-thing-is-clients/caption.txt"
     }
   }
 }
