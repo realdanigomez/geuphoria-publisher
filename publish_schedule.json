@@ -3699,5 +3699,187 @@
       "folder": "price-is-a-quality-signal",
       "caption_path": "captions/carousel-price-is-a-quality-signal/caption.txt"
     }
+  },
+  "2026-11-17": {
+    "longform_clip": {
+      "name": "everyone-looks-the-same",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/everyone-looks-the-same.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/everyone-looks-the-same.mp4",
+      "caption_path": "captions/everyone-looks-the-same/caption.txt",
+      "yt_caption_path": "captions/everyone-looks-the-same/caption-youtube.txt",
+      "yt_title_path": "captions/everyone-looks-the-same/title-youtube.txt"
+    },
+    "doc_clip": {
+      "name": "copy-cat-and-galls-law",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/copy-cat-and-galls-law.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/copy-cat-and-galls-law.mp4",
+      "caption_path": "captions/copy-cat-and-galls-law/caption.txt",
+      "yt_caption_path": "captions/copy-cat-and-galls-law/caption-youtube.txt",
+      "yt_title_path": "captions/copy-cat-and-galls-law/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "house-on-a-cliff",
+      "slot_time_ast": "12:00 PM",
+      "folder": "house-on-a-cliff",
+      "caption_path": "captions/carousel-house-on-a-cliff/caption.txt"
+    },
+    "carousel_2": {
+      "name": "not-the-reason-you-think",
+      "slot_time_ast": "6:00 PM",
+      "folder": "not-the-reason-you-think",
+      "caption_path": "captions/carousel-not-the-reason-you-think/caption.txt"
+    }
+  },
+  "2026-11-18": {
+    "reel": {
+      "name": "views-dont-equal-cash",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/views-dont-equal-cash.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/views-dont-equal-cash.mp4",
+      "caption_path": "captions/views-dont-equal-cash/caption.txt",
+      "yt_caption_path": "captions/views-dont-equal-cash/caption-youtube.txt",
+      "yt_title_path": "captions/views-dont-equal-cash/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "likes-dont-pay",
+      "slot_time_ast": "6:00 PM",
+      "folder": "likes-dont-pay",
+      "caption_path": "captions/carousel-likes-dont-pay/caption.txt"
+    }
+  },
+  "2026-11-19": {
+    "reel": {
+      "name": "standing-out-gets-attention",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/standing-out-gets-attention.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/standing-out-gets-attention.mp4",
+      "caption_path": "captions/standing-out-gets-attention/caption.txt",
+      "yt_caption_path": "captions/standing-out-gets-attention/caption-youtube.txt",
+      "yt_title_path": "captions/standing-out-gets-attention/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "pick-and-stick",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/pick-and-stick.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/pick-and-stick.mp4",
+      "caption_path": "captions/pick-and-stick/caption.txt",
+      "yt_caption_path": "captions/pick-and-stick/caption-youtube.txt",
+      "yt_title_path": "captions/pick-and-stick/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "you-cant-copy-cat-success",
+      "slot_time_ast": "12:00 PM",
+      "folder": "you-cant-copy-cat-success",
+      "caption_path": "captions/carousel-you-cant-copy-cat-success/caption.txt"
+    }
+  },
+  "2026-11-20": {
+    "reel": {
+      "name": "the-six-boxes-of-a-viable-niche",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-six-boxes-of-a-viable-niche.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-six-boxes-of-a-viable-niche.mp4",
+      "caption_path": "captions/the-six-boxes-of-a-viable-niche/caption.txt",
+      "yt_caption_path": "captions/the-six-boxes-of-a-viable-niche/caption-youtube.txt",
+      "yt_title_path": "captions/the-six-boxes-of-a-viable-niche/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "your-niche-is-your-foundation",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/your-niche-is-your-foundation.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/your-niche-is-your-foundation.mp4",
+      "caption_path": "captions/your-niche-is-your-foundation/caption.txt",
+      "yt_caption_path": "captions/your-niche-is-your-foundation/caption-youtube.txt",
+      "yt_title_path": "captions/your-niche-is-your-foundation/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "platform-rules-systems",
+      "slot_time_ast": "12:00 PM",
+      "folder": "platform-rules-systems",
+      "caption_path": "captions/carousel-platform-rules-systems/caption.txt"
+    },
+    "carousel_2": {
+      "name": "structure-of-a-killer-offer",
+      "slot_time_ast": "6:00 PM",
+      "folder": "structure-of-a-killer-offer",
+      "caption_path": "captions/carousel-structure-of-a-killer-offer/caption.txt"
+    }
+  },
+  "2026-11-21": {
+    "reel": {
+      "name": "how-to-research-your-niche",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/how-to-research-your-niche.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/how-to-research-your-niche.mp4",
+      "caption_path": "captions/how-to-research-your-niche/caption.txt",
+      "yt_caption_path": "captions/how-to-research-your-niche/caption-youtube.txt",
+      "yt_title_path": "captions/how-to-research-your-niche/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "create-your-avatar",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/create-your-avatar.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/create-your-avatar.mp4",
+      "caption_path": "captions/create-your-avatar/caption.txt",
+      "yt_caption_path": "captions/create-your-avatar/caption-youtube.txt",
+      "yt_title_path": "captions/create-your-avatar/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "inputs-to-feedback",
+      "slot_time_ast": "6:00 PM",
+      "folder": "inputs-to-feedback",
+      "caption_path": "captions/carousel-inputs-to-feedback/caption.txt"
+    }
+  },
+  "2026-11-22": {
+    "longform_clip": {
+      "name": "killer-offer-formula",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/killer-offer-formula.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/killer-offer-formula.mp4",
+      "caption_path": "captions/killer-offer-formula/caption.txt",
+      "yt_caption_path": "captions/killer-offer-formula/caption-youtube.txt",
+      "yt_title_path": "captions/killer-offer-formula/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "three-ways-to-research",
+      "slot_time_ast": "12:00 PM",
+      "folder": "three-ways-to-research",
+      "caption_path": "captions/carousel-three-ways-to-research/caption.txt"
+    }
+  },
+  "2026-11-23": {
+    "reel": {
+      "name": "build-systems-around-niche-platform-offer",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/build-systems-around-niche-platform-offer.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/build-systems-around-niche-platform-offer.mp4",
+      "caption_path": "captions/build-systems-around-niche-platform-offer/caption.txt",
+      "yt_caption_path": "captions/build-systems-around-niche-platform-offer/caption-youtube.txt",
+      "yt_title_path": "captions/build-systems-around-niche-platform-offer/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "inputs-processes-outputs-feedback",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/inputs-processes-outputs-feedback.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/inputs-processes-outputs-feedback.mp4",
+      "caption_path": "captions/inputs-processes-outputs-feedback/caption.txt",
+      "yt_caption_path": "captions/inputs-processes-outputs-feedback/caption-youtube.txt",
+      "yt_title_path": "captions/inputs-processes-outputs-feedback/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "one-avatar-many-people",
+      "slot_time_ast": "12:00 PM",
+      "folder": "one-avatar-many-people",
+      "caption_path": "captions/carousel-one-avatar-many-people/caption.txt"
+    },
+    "carousel_2": {
+      "name": "tick-every-box-niche",
+      "slot_time_ast": "6:00 PM",
+      "folder": "tick-every-box-niche",
+      "caption_path": "captions/carousel-tick-every-box-niche/caption.txt"
+    }
   }
 }
