@@ -101,7 +101,9 @@ SLOTS = [
       # 2026-10-26: Documentary Ep 11 (Dani's blanket go-ahead 2026-10-23).
       "2026-10-26",
       # 2026-11-03: Documentary Ep 12 (Dani's OK of the proposal).
-      "2026-11-03"]),
+      "2026-11-03",
+      # 2026-11-06 -> 11-09: the Documentary Ep 13 batch (Dani OK'd the calendar 2026-11-03).
+      "2026-11-06","2026-11-09"]),
     ("publish-story-2.yml",     "story_2",     "11:00", []),
 
     # ── 3rd daily carousel — 12AM AST, added 2026-09-16 for the Aruba documentary batch ──────
@@ -122,7 +124,9 @@ SLOTS = [
       # 2026-10-24 -> 10-27 (3 dates): Documentary Ep 11 (Dani's blanket go-ahead 2026-10-23).
       "2026-10-24","2026-10-25","2026-10-27",
       # 2026-10-31 -> 11-02 (2 dates): Documentary Ep 12 (Dani's OK of the proposal).
-      "2026-10-31","2026-11-02"]),
+      "2026-10-31","2026-11-02",
+      # 2026-11-08: the Documentary Ep 13 batch (Dani OK'd the calendar 2026-11-03).
+      "2026-11-08"]),
 
     # ── Doc-clip + longform-clip ───────────────────────────────────────────
     # 2026-09-01 -> 09-14: the previous go-live (past dates, kept — the date
@@ -174,7 +178,9 @@ SLOTS = [
       # 2026-10-30 -> 11-03: the Financial Freedom & Money batch (Dani OK'd the calendar 2026-09-29).
       "2026-10-30","2026-10-31","2026-11-01","2026-11-02","2026-11-03",
       # 2026-11-04: the call-with-my-friend batch (Dani OK'd the calendar 2026-10-27).
-      "2026-11-04"]),
+      "2026-11-04",
+      # 2026-11-06 -> 11-09: the Documentary Ep 13 batch (Dani OK'd the calendar 2026-11-03).
+      "2026-11-06","2026-11-08","2026-11-09"]),
 
     # ── Longform-clip bonus — RETIMED 3:30PM -> 5AM AST for the Aruba batch ───
     # Dani's rule is a 3-hour buffer between posts, not a post cap. The Aruba documentary's own
