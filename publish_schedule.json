@@ -3559,5 +3559,145 @@
       "folder": "good-product-no-ads",
       "caption_path": "captions/carousel-good-product-no-ads/caption.txt"
     }
+  },
+  "2026-11-10": {
+    "longform_clip": {
+      "name": "vicious-cycle-clients",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/vicious-cycle-clients.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/vicious-cycle-clients.mp4",
+      "caption_path": "captions/vicious-cycle-clients/caption.txt",
+      "yt_caption_path": "captions/vicious-cycle-clients/caption-youtube.txt",
+      "yt_title_path": "captions/vicious-cycle-clients/title-youtube.txt"
+    },
+    "doc_clip": {
+      "name": "vicious-cycle-business",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/vicious-cycle-business.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/vicious-cycle-business.mp4",
+      "caption_path": "captions/vicious-cycle-business/caption.txt",
+      "yt_caption_path": "captions/vicious-cycle-business/caption-youtube.txt",
+      "yt_title_path": "captions/vicious-cycle-business/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "three-people-say-raise-prices",
+      "slot_time_ast": "12:00 PM",
+      "folder": "three-people-say-raise-prices",
+      "caption_path": "captions/carousel-three-people-say-raise-prices/caption.txt"
+    }
+  },
+  "2026-11-11": {
+    "longform_clip": {
+      "name": "price-is-a-quality-signal-clip",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/price-is-a-quality-signal-clip.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/price-is-a-quality-signal-clip.mp4",
+      "caption_path": "captions/price-is-a-quality-signal-clip/caption.txt",
+      "yt_caption_path": "captions/price-is-a-quality-signal-clip/caption-youtube.txt",
+      "yt_title_path": "captions/price-is-a-quality-signal-clip/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "when-charging-more-backfires",
+      "slot_time_ast": "6:00 PM",
+      "folder": "when-charging-more-backfires",
+      "caption_path": "captions/carousel-when-charging-more-backfires/caption.txt"
+    }
+  },
+  "2026-11-12": {
+    "reel": {
+      "name": "status-is-why-we-pay-more",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/status-is-why-we-pay-more.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/status-is-why-we-pay-more.mp4",
+      "caption_path": "captions/status-is-why-we-pay-more/caption.txt",
+      "yt_caption_path": "captions/status-is-why-we-pay-more/caption-youtube.txt",
+      "yt_title_path": "captions/status-is-why-we-pay-more/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "cheap-prices-vicious-cycle",
+      "slot_time_ast": "6:00 PM",
+      "folder": "cheap-prices-vicious-cycle",
+      "caption_path": "captions/carousel-cheap-prices-vicious-cycle/caption.txt"
+    }
+  },
+  "2026-11-13": {
+    "reel": {
+      "name": "low-price-low-status",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/low-price-low-status.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/low-price-low-status.mp4",
+      "caption_path": "captions/low-price-low-status/caption.txt",
+      "yt_caption_path": "captions/low-price-low-status/caption-youtube.txt",
+      "yt_title_path": "captions/low-price-low-status/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "status-is-a-scale",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/status-is-a-scale.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/status-is-a-scale.mp4",
+      "caption_path": "captions/status-is-a-scale/caption.txt",
+      "yt_caption_path": "captions/status-is-a-scale/caption-youtube.txt",
+      "yt_title_path": "captions/status-is-a-scale/title-youtube.txt"
+    }
+  },
+  "2026-11-14": {
+    "longform_clip": {
+      "name": "status-lives-in-niches",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/status-lives-in-niches.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/status-lives-in-niches.mp4",
+      "caption_path": "captions/status-lives-in-niches/caption.txt",
+      "yt_caption_path": "captions/status-lives-in-niches/caption-youtube.txt",
+      "yt_title_path": "captions/status-lives-in-niches/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "more-demand-than-you-can-handle",
+      "slot_time_ast": "12:00 PM",
+      "folder": "more-demand-than-you-can-handle",
+      "caption_path": "captions/carousel-more-demand-than-you-can-handle/caption.txt"
+    }
+  },
+  "2026-11-15": {
+    "reel": {
+      "name": "when-charging-more-backfires-clip",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/when-charging-more-backfires-clip.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/when-charging-more-backfires-clip.mp4",
+      "caption_path": "captions/when-charging-more-backfires-clip/caption.txt",
+      "yt_caption_path": "captions/when-charging-more-backfires-clip/caption-youtube.txt",
+      "yt_title_path": "captions/when-charging-more-backfires-clip/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "why-expensive-feels-high-status",
+      "slot_time_ast": "12:00 PM",
+      "folder": "why-expensive-feels-high-status",
+      "caption_path": "captions/carousel-why-expensive-feels-high-status/caption.txt"
+    }
+  },
+  "2026-11-16": {
+    "reel": {
+      "name": "value-above-price-people-buy-forever",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/value-above-price-people-buy-forever.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/value-above-price-people-buy-forever.mp4",
+      "caption_path": "captions/value-above-price-people-buy-forever/caption.txt",
+      "yt_caption_path": "captions/value-above-price-people-buy-forever/caption-youtube.txt",
+      "yt_title_path": "captions/value-above-price-people-buy-forever/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "demand-more-than-you-can-handle",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/demand-more-than-you-can-handle.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/demand-more-than-you-can-handle.mp4",
+      "caption_path": "captions/demand-more-than-you-can-handle/caption.txt",
+      "yt_caption_path": "captions/demand-more-than-you-can-handle/caption-youtube.txt",
+      "yt_title_path": "captions/demand-more-than-you-can-handle/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "price-is-a-quality-signal",
+      "slot_time_ast": "6:00 PM",
+      "folder": "price-is-a-quality-signal",
+      "caption_path": "captions/carousel-price-is-a-quality-signal/caption.txt"
+    }
   }
 }
