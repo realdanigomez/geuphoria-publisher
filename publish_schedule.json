@@ -3881,5 +3881,211 @@
       "folder": "tick-every-box-niche",
       "caption_path": "captions/carousel-tick-every-box-niche/caption.txt"
     }
+  },
+  "2026-11-24": {
+    "longform_clip": {
+      "name": "red-bull-pairs-with-what-you-love",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/red-bull-pairs-with-what-you-love.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/red-bull-pairs-with-what-you-love.mp4",
+      "caption_path": "captions/red-bull-pairs-with-what-you-love/caption.txt",
+      "yt_caption_path": "captions/red-bull-pairs-with-what-you-love/caption-youtube.txt",
+      "yt_title_path": "captions/red-bull-pairs-with-what-you-love/title-youtube.txt"
+    },
+    "doc_clip": {
+      "name": "bud-light-one-post",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/bud-light-one-post.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/bud-light-one-post.mp4",
+      "caption_path": "captions/bud-light-one-post/caption.txt",
+      "yt_caption_path": "captions/bud-light-one-post/caption-youtube.txt",
+      "yt_title_path": "captions/bud-light-one-post/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "best-form-of-advertising",
+      "slot_time_ast": "12:00 PM",
+      "folder": "best-form-of-advertising",
+      "caption_path": "captions/carousel-best-form-of-advertising/caption.txt"
+    },
+    "carousel_2": {
+      "name": "few-people-build-a-good-product",
+      "slot_time_ast": "6:00 PM",
+      "folder": "few-people-build-a-good-product",
+      "caption_path": "captions/carousel-few-people-build-a-good-product/caption.txt"
+    }
+  },
+  "2026-11-25": {
+    "reel": {
+      "name": "good-pairing-nets-money",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/good-pairing-nets-money.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/good-pairing-nets-money.mp4",
+      "caption_path": "captions/good-pairing-nets-money/caption.txt",
+      "yt_caption_path": "captions/good-pairing-nets-money/caption-youtube.txt",
+      "yt_title_path": "captions/good-pairing-nets-money/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "netted-us-money",
+      "slot_time_ast": "12:00 PM",
+      "folder": "netted-us-money",
+      "caption_path": "captions/carousel-netted-us-money/caption.txt"
+    },
+    "carousel_2": {
+      "name": "over-promise-over-deliver",
+      "slot_time_ast": "6:00 PM",
+      "folder": "over-promise-over-deliver",
+      "caption_path": "captions/carousel-over-promise-over-deliver/caption.txt"
+    }
+  },
+  "2026-11-26": {
+    "reel": {
+      "name": "build-a-reputation-two-moves",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/build-a-reputation-two-moves.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/build-a-reputation-two-moves.mp4",
+      "caption_path": "captions/build-a-reputation-two-moves/caption.txt",
+      "yt_caption_path": "captions/build-a-reputation-two-moves/caption-youtube.txt",
+      "yt_title_path": "captions/build-a-reputation-two-moves/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "good-product-they-buy-again-forever",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/good-product-they-buy-again-forever.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/good-product-they-buy-again-forever.mp4",
+      "caption_path": "captions/good-product-they-buy-again-forever/caption.txt",
+      "yt_caption_path": "captions/good-product-they-buy-again-forever/caption-youtube.txt",
+      "yt_title_path": "captions/good-product-they-buy-again-forever/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "bud-light-top-spot",
+      "slot_time_ast": "12:00 PM",
+      "folder": "bud-light-top-spot",
+      "caption_path": "captions/carousel-bud-light-top-spot/caption.txt"
+    },
+    "carousel_2": {
+      "name": "reputation-always-at-stake",
+      "slot_time_ast": "6:00 PM",
+      "folder": "reputation-always-at-stake",
+      "caption_path": "captions/carousel-reputation-always-at-stake/caption.txt"
+    }
+  },
+  "2026-11-27": {
+    "reel": {
+      "name": "word-of-mouth-compounds",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/word-of-mouth-compounds.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/word-of-mouth-compounds.mp4",
+      "caption_path": "captions/word-of-mouth-compounds/caption.txt",
+      "yt_caption_path": "captions/word-of-mouth-compounds/caption-youtube.txt",
+      "yt_title_path": "captions/word-of-mouth-compounds/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "the-best-ad-is-a-good-product",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-best-ad-is-a-good-product.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-best-ad-is-a-good-product.mp4",
+      "caption_path": "captions/the-best-ad-is-a-good-product/caption.txt",
+      "yt_caption_path": "captions/the-best-ad-is-a-good-product/caption-youtube.txt",
+      "yt_title_path": "captions/the-best-ad-is-a-good-product/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "pair-with-what-they-love",
+      "slot_time_ast": "12:00 PM",
+      "folder": "pair-with-what-they-love",
+      "caption_path": "captions/carousel-pair-with-what-they-love/caption.txt"
+    },
+    "carousel_2": {
+      "name": "quality-works-on-a-scale",
+      "slot_time_ast": "6:00 PM",
+      "folder": "quality-works-on-a-scale",
+      "caption_path": "captions/carousel-quality-works-on-a-scale/caption.txt"
+    }
+  },
+  "2026-11-28": {
+    "reel": {
+      "name": "your-reputation-is-always-at-stake",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/your-reputation-is-always-at-stake.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/your-reputation-is-always-at-stake.mp4",
+      "caption_path": "captions/your-reputation-is-always-at-stake/caption.txt",
+      "yt_caption_path": "captions/your-reputation-is-always-at-stake/caption-youtube.txt",
+      "yt_title_path": "captions/your-reputation-is-always-at-stake/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "apple-tesla-costco-pair-with-what-customers-like",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/apple-tesla-costco-pair-with-what-customers-like.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/apple-tesla-costco-pair-with-what-customers-like.mp4",
+      "caption_path": "captions/apple-tesla-costco-pair-with-what-customers-like/caption.txt",
+      "yt_caption_path": "captions/apple-tesla-costco-pair-with-what-customers-like/caption-youtube.txt",
+      "yt_title_path": "captions/apple-tesla-costco-pair-with-what-customers-like/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "reputation-is-two-things",
+      "slot_time_ast": "12:00 PM",
+      "folder": "reputation-is-two-things",
+      "caption_path": "captions/carousel-reputation-is-two-things/caption.txt"
+    },
+    "carousel_2": {
+      "name": "value-equation-for-your-product",
+      "slot_time_ast": "6:00 PM",
+      "folder": "value-equation-for-your-product",
+      "caption_path": "captions/carousel-value-equation-for-your-product/caption.txt"
+    }
+  },
+  "2026-11-29": {
+    "longform_clip": {
+      "name": "quality-works-on-a-scale-clip",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/quality-works-on-a-scale-clip.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/quality-works-on-a-scale-clip.mp4",
+      "caption_path": "captions/quality-works-on-a-scale-clip/caption.txt",
+      "yt_caption_path": "captions/quality-works-on-a-scale-clip/caption-youtube.txt",
+      "yt_title_path": "captions/quality-works-on-a-scale-clip/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "ten-times-the-time-then-iterate",
+      "slot_time_ast": "12:00 PM",
+      "folder": "ten-times-the-time-then-iterate",
+      "caption_path": "captions/carousel-ten-times-the-time-then-iterate/caption.txt"
+    },
+    "carousel_2": {
+      "name": "word-of-mouth-both-ways",
+      "slot_time_ast": "6:00 PM",
+      "folder": "word-of-mouth-both-ways",
+      "caption_path": "captions/carousel-word-of-mouth-both-ways/caption.txt"
+    }
+  },
+  "2026-11-30": {
+    "reel": {
+      "name": "the-value-equation-explained",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-value-equation-explained.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-value-equation-explained.mp4",
+      "caption_path": "captions/the-value-equation-explained/caption.txt",
+      "yt_caption_path": "captions/the-value-equation-explained/caption-youtube.txt",
+      "yt_title_path": "captions/the-value-equation-explained/title-youtube.txt"
+    },
+    "longform_clip": {
+      "name": "iterate-faster-than-your-competitors",
+      "slot_time_ast": "3:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/iterate-faster-than-your-competitors.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/iterate-faster-than-your-competitors.mp4",
+      "caption_path": "captions/iterate-faster-than-your-competitors/caption.txt",
+      "yt_caption_path": "captions/iterate-faster-than-your-competitors/caption-youtube.txt",
+      "yt_title_path": "captions/iterate-faster-than-your-competitors/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "apple-tesla-costco",
+      "slot_time_ast": "12:00 PM",
+      "folder": "apple-tesla-costco",
+      "caption_path": "captions/carousel-apple-tesla-costco/caption.txt"
+    },
+    "carousel_2": {
+      "name": "the-only-way-they-stop-buying",
+      "slot_time_ast": "6:00 PM",
+      "folder": "the-only-way-they-stop-buying",
+      "caption_path": "captions/carousel-the-only-way-they-stop-buying/caption.txt"
+    }
   }
 }
