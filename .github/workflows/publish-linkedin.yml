@@ -1,0 +1,54 @@
+name: Publish to LinkedIn (every 15 minutes)
+
+# Mirrors publish_schedule.json to Dani's LinkedIn profile as each piece comes due (his order 2026-11-03):
+# carousels as PDF document posts, clips as video posts, and a link post to each longform's YouTube video.
+# Reads linkedin_log.json so every piece posts once. Secrets: LINKEDIN_ACCESS_TOKEN (60 days: renew with
+# _system/tools/linkedin/linkedin_auth.py then `gh secret set`), LINKEDIN_PERSON_ID.
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run without posting (dry-run)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+concurrency:
+  group: publish-linkedin
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests pillow
+      - name: Post what is due
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_ID: ${{ secrets.LINKEDIN_PERSON_ID }}
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then python publish_linkedin_due.py --dry-run; else python publish_linkedin_due.py; fi
+      - name: Save the log
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          git config user.name "geuphoria-publisher"
+          git config user.email "publisher@users.noreply.github.com"
+          if git diff --quiet linkedin_log.json; then echo "no change"; exit 0; fi
+          git add linkedin_log.json
+          git commit -q -m "log: linkedin $(date -u +%F\ %H:%M)"
+          for i in 1 2 3 4 5; do git pull -q --rebase origin main && git push -q origin HEAD:main && break || sleep 5; done
