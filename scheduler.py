@@ -173,7 +173,9 @@ SLOTS = [
       # 2026-11-17: the Saturation batch (Dani OK'd the calendar 2026-11-03).
       "2026-11-17",
       # 2026-11-24: the Get ahead of 99% batch (Dani OK'd the calendar 2026-11-03).
-      "2026-11-24"]),
+      "2026-11-24",
+      # 2026-11-23: the Saturation batch (Dani OK'd the calendar 2026-11-03).
+      "2026-11-23"]),
     ("publish-longform-clip.yml", "longform_clip", "15:00",
      ["2026-09-02","2026-09-03","2026-09-04","2026-09-05","2026-09-06","2026-09-07",
       "2026-09-09","2026-09-10","2026-09-11","2026-09-12","2026-09-13","2026-09-14",

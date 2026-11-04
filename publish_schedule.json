@@ -3880,6 +3880,15 @@
       "slot_time_ast": "6:00 PM",
       "folder": "tick-every-box-niche",
       "caption_path": "captions/carousel-tick-every-box-niche/caption.txt"
+    },
+    "doc_clip": {
+      "name": "a-killer-offer-example",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/a-killer-offer-example.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/a-killer-offer-example.mp4",
+      "caption_path": "captions/a-killer-offer-example/caption.txt",
+      "yt_caption_path": "captions/a-killer-offer-example/caption-youtube.txt",
+      "yt_title_path": "captions/a-killer-offer-example/title-youtube.txt"
     }
   },
   "2026-11-24": {
