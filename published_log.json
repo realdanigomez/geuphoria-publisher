@@ -903,6 +903,10 @@
   },
   "2026-11-06": {
     "reel": "18108749483205262",
-    "yt_reel": "VY6eE6ExhyQ"
+    "yt_reel": "VY6eE6ExhyQ",
+    "carousel": {
+      "claimed_at": "2026-11-06T16:05:32.540846Z",
+      "claimed_by": "42249061456:1"
+    }
   }
 }
