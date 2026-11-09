@@ -1,0 +1,29 @@
+[
+ {
+  "key": "2026-11-13|real.danigomez_1|reel-c6",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-11-13 17:38",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-11-13-reel-c6.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-1-reel-c6.mp4"
+ },
+ {
+  "key": "2026-11-16|real.danigomez_1|reel-c9",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-11-16 16:14",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-11-16-reel-c9.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-1-reel-c9.mp4"
+ },
+ {
+  "key": "2026-11-25|real.danigomez_1|warm-up-blueprint",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-11-25 19:48",
+  "type": "carousel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-11-25-warm-up-blueprint.txt",
+  "folder": "mirror/carousels/real-danigomez-1/warm-up-blueprint"
+ }
+]
