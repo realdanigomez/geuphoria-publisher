@@ -891,6 +891,15 @@
   "folder": "mirror/carousels/danigomez-ge/let-the-content-compound"
  },
  {
+  "key": "2026-12-22|real.danigomez_1|reel-7bb-bb2",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-12-22 15:50",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-12-22-reel-7bb-bb2.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-1-reel-7bb-bb2.mp4"
+ },
+ {
   "key": "2026-12-22|real.danigomez_2|reel-7bb-bb18",
   "account": "real.danigomez_2",
   "ig_user_id": "17841453823826170",
@@ -907,6 +916,15 @@
   "type": "reel",
   "caption_path": "mirror/captions/danigomez-biz-2026-12-22-reel-7bb-bb9.txt",
   "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-biz-reel-7bb-bb9.mp4"
+ },
+ {
+  "key": "2026-12-23|real.danigomez_1|version-one-into-the-market",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-12-23 09:15",
+  "type": "carousel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-12-23-version-one-into-the-market.txt",
+  "folder": "mirror/carousels/real-danigomez-1/version-one-into-the-market"
  },
  {
   "key": "2026-12-23|real.danigomez_2|outreach-timing",
@@ -945,6 +963,15 @@
   "folder": "mirror/carousels/danigomez-biz/content-is-outreach-too"
  },
  {
+  "key": "2026-12-24|danigomez.ge|boring-stuff-gets-results",
+  "account": "danigomez.ge",
+  "ig_user_id": "17841414567754468",
+  "at_ast": "2026-12-24 18:26",
+  "type": "carousel",
+  "caption_path": "mirror/captions/danigomez-ge-2026-12-24-boring-stuff-gets-results.txt",
+  "folder": "mirror/carousels/danigomez-ge/boring-stuff-gets-results"
+ },
+ {
   "key": "2026-12-24|real.danigomez_2|reel-bil-b11",
   "account": "real.danigomez_2",
   "ig_user_id": "17841453823826170",
@@ -952,6 +979,33 @@
   "type": "reel",
   "caption_path": "mirror/captions/real-danigomez-2-2026-12-24-reel-bil-b11.txt",
   "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-2-reel-bil-b11.mp4"
+ },
+ {
+  "key": "2026-12-24|real.danigomez_1|give-over-take",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-12-24 22:34",
+  "type": "carousel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-12-24-give-over-take.txt",
+  "folder": "mirror/carousels/real-danigomez-1/give-over-take"
+ },
+ {
+  "key": "2026-12-25|danigomez.biz|reel-bil-b12",
+  "account": "danigomez.biz",
+  "ig_user_id": "17841442427574092",
+  "at_ast": "2026-12-25 19:30",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-biz-2026-12-25-reel-bil-b12.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-biz-reel-bil-b12.mp4"
+ },
+ {
+  "key": "2026-12-25|real.danigomez_1|reel-7bb-bb16",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-12-25 20:48",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-12-25-reel-7bb-bb16.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-1-reel-7bb-bb16.mp4"
  },
  {
   "key": "2026-12-25|real.danigomez_2|reel-7bb-bb12",
@@ -963,6 +1017,24 @@
   "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-2-reel-7bb-bb12.mp4"
  },
  {
+  "key": "2026-12-25|danigomez.ge|stop-reading-your-script",
+  "account": "danigomez.ge",
+  "ig_user_id": "17841414567754468",
+  "at_ast": "2026-12-25 21:55",
+  "type": "carousel",
+  "caption_path": "mirror/captions/danigomez-ge-2026-12-25-stop-reading-your-script.txt",
+  "folder": "mirror/carousels/danigomez-ge/stop-reading-your-script"
+ },
+ {
+  "key": "2026-12-26|danigomez.ge|reel-7bb-bb6",
+  "account": "danigomez.ge",
+  "ig_user_id": "17841414567754468",
+  "at_ast": "2026-12-26 15:22",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-ge-2026-12-26-reel-7bb-bb6.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-ge-reel-7bb-bb6.mp4"
+ },
+ {
   "key": "2026-12-26|real.danigomez_2|reel-bil-b10",
   "account": "real.danigomez_2",
   "ig_user_id": "17841453823826170",
@@ -970,5 +1042,185 @@
   "type": "reel",
   "caption_path": "mirror/captions/real-danigomez-2-2026-12-26-reel-bil-b10.txt",
   "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-2-reel-bil-b10.mp4"
+ },
+ {
+  "key": "2026-12-26|real.danigomez_1|subtraction-beats-addition",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-12-26 19:38",
+  "type": "carousel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-12-26-subtraction-beats-addition.txt",
+  "folder": "mirror/carousels/real-danigomez-1/subtraction-beats-addition"
+ },
+ {
+  "key": "2026-12-26|danigomez.biz|reel-7bb-bb11",
+  "account": "danigomez.biz",
+  "ig_user_id": "17841442427574092",
+  "at_ast": "2026-12-26 20:41",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-biz-2026-12-26-reel-7bb-bb11.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-biz-reel-7bb-bb11.mp4"
+ },
+ {
+  "key": "2026-12-27|danigomez.ge|nine-books-ranked",
+  "account": "danigomez.ge",
+  "ig_user_id": "17841414567754468",
+  "at_ast": "2026-12-27 10:15",
+  "type": "carousel",
+  "caption_path": "mirror/captions/danigomez-ge-2026-12-27-nine-books-ranked.txt",
+  "folder": "mirror/carousels/danigomez-ge/nine-books-ranked"
+ },
+ {
+  "key": "2026-12-27|real.danigomez_2|reel-bil-b9",
+  "account": "real.danigomez_2",
+  "ig_user_id": "17841453823826170",
+  "at_ast": "2026-12-27 14:42",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-2-2026-12-27-reel-bil-b9.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-2-reel-bil-b9.mp4"
+ },
+ {
+  "key": "2026-12-27|danigomez.biz|reel-bil-b2",
+  "account": "danigomez.biz",
+  "ig_user_id": "17841442427574092",
+  "at_ast": "2026-12-27 21:22",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-biz-2026-12-27-reel-bil-b2.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-biz-reel-bil-b2.mp4"
+ },
+ {
+  "key": "2026-12-27|real.danigomez_1|reel-7bb-bb1",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-12-27 21:57",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-12-27-reel-7bb-bb1.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-1-reel-7bb-bb1.mp4"
+ },
+ {
+  "key": "2026-12-28|danigomez.ge|four-hours-feels-like-play",
+  "account": "danigomez.ge",
+  "ig_user_id": "17841414567754468",
+  "at_ast": "2026-12-28 10:58",
+  "type": "carousel",
+  "caption_path": "mirror/captions/danigomez-ge-2026-12-28-four-hours-feels-like-play.txt",
+  "folder": "mirror/carousels/danigomez-ge/four-hours-feels-like-play"
+ },
+ {
+  "key": "2026-12-28|real.danigomez_1|how-musk-made-batteries-cheap",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-12-28 12:11",
+  "type": "carousel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-12-28-how-musk-made-batteries-cheap.txt",
+  "folder": "mirror/carousels/real-danigomez-1/how-musk-made-batteries-cheap"
+ },
+ {
+  "key": "2026-12-28|real.danigomez_2|fix-the-micro",
+  "account": "real.danigomez_2",
+  "ig_user_id": "17841453823826170",
+  "at_ast": "2026-12-28 17:15",
+  "type": "carousel",
+  "caption_path": "mirror/captions/real-danigomez-2-2026-12-28-fix-the-micro.txt",
+  "folder": "mirror/carousels/real-danigomez-2/fix-the-micro"
+ },
+ {
+  "key": "2026-12-28|danigomez.biz|judged-by-the-cover",
+  "account": "danigomez.biz",
+  "ig_user_id": "17841442427574092",
+  "at_ast": "2026-12-28 18:12",
+  "type": "carousel",
+  "caption_path": "mirror/captions/danigomez-biz-2026-12-28-judged-by-the-cover.txt",
+  "folder": "mirror/carousels/danigomez-biz/judged-by-the-cover"
+ },
+ {
+  "key": "2026-12-29|danigomez.biz|reel-bil-b3",
+  "account": "danigomez.biz",
+  "ig_user_id": "17841442427574092",
+  "at_ast": "2026-12-29 08:45",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-biz-2026-12-29-reel-bil-b3.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-biz-reel-bil-b3.mp4"
+ },
+ {
+  "key": "2026-12-29|danigomez.ge|cold-dm-benchmark",
+  "account": "danigomez.ge",
+  "ig_user_id": "17841414567754468",
+  "at_ast": "2026-12-29 13:07",
+  "type": "carousel",
+  "caption_path": "mirror/captions/danigomez-ge-2026-12-29-cold-dm-benchmark.txt",
+  "folder": "mirror/carousels/danigomez-ge/cold-dm-benchmark"
+ },
+ {
+  "key": "2026-12-29|real.danigomez_2|reel-7bb-bb4",
+  "account": "real.danigomez_2",
+  "ig_user_id": "17841453823826170",
+  "at_ast": "2026-12-29 18:59",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-2-2026-12-29-reel-7bb-bb4.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-2-reel-7bb-bb4.mp4"
+ },
+ {
+  "key": "2026-12-30|danigomez.ge|count-the-free-hours",
+  "account": "danigomez.ge",
+  "ig_user_id": "17841414567754468",
+  "at_ast": "2026-12-30 15:31",
+  "type": "carousel",
+  "caption_path": "mirror/captions/danigomez-ge-2026-12-30-count-the-free-hours.txt",
+  "folder": "mirror/carousels/danigomez-ge/count-the-free-hours"
+ },
+ {
+  "key": "2026-12-30|real.danigomez_2|reel-bil-b15",
+  "account": "real.danigomez_2",
+  "ig_user_id": "17841453823826170",
+  "at_ast": "2026-12-30 17:45",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-2-2026-12-30-reel-bil-b15.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-2-reel-bil-b15.mp4"
+ },
+ {
+  "key": "2026-12-30|danigomez.biz|reel-bil-b5",
+  "account": "danigomez.biz",
+  "ig_user_id": "17841442427574092",
+  "at_ast": "2026-12-30 22:34",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-biz-2026-12-30-reel-bil-b5.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-biz-reel-bil-b5.mp4"
+ },
+ {
+  "key": "2026-12-31|danigomez.biz|reel-7bb-bb5",
+  "account": "danigomez.biz",
+  "ig_user_id": "17841442427574092",
+  "at_ast": "2026-12-31 18:03",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-biz-2026-12-31-reel-7bb-bb5.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-biz-reel-7bb-bb5.mp4"
+ },
+ {
+  "key": "2026-12-31|real.danigomez_2|cut-everywhere-but-the-company",
+  "account": "real.danigomez_2",
+  "ig_user_id": "17841453823826170",
+  "at_ast": "2026-12-31 20:22",
+  "type": "carousel",
+  "caption_path": "mirror/captions/real-danigomez-2-2026-12-31-cut-everywhere-but-the-company.txt",
+  "folder": "mirror/carousels/real-danigomez-2/cut-everywhere-but-the-company"
+ },
+ {
+  "key": "2027-01-01|real.danigomez_2|reel-7bb-bb17",
+  "account": "real.danigomez_2",
+  "ig_user_id": "17841453823826170",
+  "at_ast": "2027-01-01 19:03",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-2-2027-01-01-reel-7bb-bb17.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-2-reel-7bb-bb17.mp4"
+ },
+ {
+  "key": "2027-01-02|real.danigomez_2|reel-bil-b8",
+  "account": "real.danigomez_2",
+  "ig_user_id": "17841453823826170",
+  "at_ast": "2027-01-02 13:52",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-2-2027-01-02-reel-bil-b8.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-2-reel-bil-b8.mp4"
  }
 ]
