@@ -9,6 +9,33 @@
   "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-1-reel-c6.mp4"
  },
  {
+  "key": "2026-11-15|danigomez.ge|reel-c12",
+  "account": "danigomez.ge",
+  "ig_user_id": "17841414567754468",
+  "at_ast": "2026-11-15 08:32",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-ge-2026-11-15-reel-c12.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-ge-reel-c12.mp4"
+ },
+ {
+  "key": "2026-11-15|danigomez.biz|reel-c5",
+  "account": "danigomez.biz",
+  "ig_user_id": "17841442427574092",
+  "at_ast": "2026-11-15 10:52",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-biz-2026-11-15-reel-c5.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-biz-reel-c5.mp4"
+ },
+ {
+  "key": "2026-11-16|real.danigomez_2|reel-c4",
+  "account": "real.danigomez_2",
+  "ig_user_id": "17841453823826170",
+  "at_ast": "2026-11-16 10:55",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-2-2026-11-16-reel-c4.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-2-reel-c4.mp4"
+ },
+ {
   "key": "2026-11-16|real.danigomez_1|reel-c9",
   "account": "real.danigomez_1",
   "ig_user_id": "17841440453270724",
@@ -16,6 +43,33 @@
   "type": "reel",
   "caption_path": "mirror/captions/real-danigomez-1-2026-11-16-reel-c9.txt",
   "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-1-reel-c9.mp4"
+ },
+ {
+  "key": "2026-11-17|danigomez.ge|reel-c14",
+  "account": "danigomez.ge",
+  "ig_user_id": "17841414567754468",
+  "at_ast": "2026-11-17 18:31",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-ge-2026-11-17-reel-c14.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-ge-reel-c14.mp4"
+ },
+ {
+  "key": "2026-11-19|danigomez.biz|you-hate-it-because-of-you",
+  "account": "danigomez.biz",
+  "ig_user_id": "17841442427574092",
+  "at_ast": "2026-11-19 20:43",
+  "type": "carousel",
+  "caption_path": "mirror/captions/danigomez-biz-2026-11-19-you-hate-it-because-of-you.txt",
+  "folder": "mirror/carousels/danigomez-biz/you-hate-it-because-of-you"
+ },
+ {
+  "key": "2026-11-19|real.danigomez_2|read-the-first-chapter",
+  "account": "real.danigomez_2",
+  "ig_user_id": "17841453823826170",
+  "at_ast": "2026-11-19 22:31",
+  "type": "carousel",
+  "caption_path": "mirror/captions/real-danigomez-2-2026-11-19-read-the-first-chapter.txt",
+  "folder": "mirror/carousels/real-danigomez-2/read-the-first-chapter"
  },
  {
   "key": "2026-11-25|real.danigomez_1|warm-up-blueprint",
