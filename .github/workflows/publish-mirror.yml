@@ -1,0 +1,55 @@
+name: Publish to mirror IG accounts (every 15 minutes)
+
+# Posts Dani's re-edited variants to his 4 extra Instagram accounts as each comes due (mirror_schedule.json,
+# written by _system/tools/mirror-kit). One post per account per run, each entry once (mirror_log.json).
+# Kill switch: disable this workflow, or empty mirror_schedule.json to [].
+
+on:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'post = normal, dry = list what is due, check = prove the token reaches every account'
+        required: false
+        default: 'post'
+        type: choice
+        options: ['post', 'dry', 'check']
+
+concurrency:
+  group: publish-mirror
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+      - name: Post what is due
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          case "${{ github.event.inputs.mode }}" in
+            dry)   python publish_mirror_due.py --dry-run ;;
+            check) python publish_mirror_due.py --check ;;
+            *)     python publish_mirror_due.py ;;
+          esac
+      - name: Save the log
+        if: ${{ github.event.inputs.mode != 'dry' && github.event.inputs.mode != 'check' }}
+        run: |
+          git config user.name "geuphoria-publisher"
+          git config user.email "publisher@users.noreply.github.com"
+          [ -f mirror_log.json ] || { echo "no log yet"; exit 0; }
+          git add mirror_log.json
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git commit -q -m "log: mirror $(date -u +%F\ %H:%M)"
+          for i in 1 2 3 4 5; do git pull -q --rebase origin main && git push -q origin HEAD:main && break || sleep 5; done
