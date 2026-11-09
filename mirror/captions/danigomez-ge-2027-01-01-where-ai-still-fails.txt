@@ -1,0 +1,5 @@
+AI finds my clips, adds the motion graphics and does the hooks.
+
+But cutting out the bad parts is where it still makes mistakes.
+
+So I do the rough cut myself, then AI handles the rest.
