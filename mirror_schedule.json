@@ -270,6 +270,15 @@
   "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-ge-reel-bil-b10.mp4"
  },
  {
+  "key": "2026-12-01|real.danigomez_1|reel-7bb-bb18",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-12-01 09:36",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-12-01-reel-7bb-bb18.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-1-reel-7bb-bb18.mp4"
+ },
+ {
   "key": "2026-12-01|danigomez.biz|reel-bil-b14",
   "account": "danigomez.biz",
   "ig_user_id": "17841442427574092",
@@ -297,6 +306,24 @@
   "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-biz-reel-7bb-bb8.mp4"
  },
  {
+  "key": "2026-12-02|real.danigomez_1|stop-listening-to-bob",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-12-02 21:15",
+  "type": "carousel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-12-02-stop-listening-to-bob.txt",
+  "folder": "mirror/carousels/real-danigomez-1/stop-listening-to-bob"
+ },
+ {
+  "key": "2026-12-03|real.danigomez_1|never-quit-never-fail",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-12-03 09:09",
+  "type": "carousel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-12-03-never-quit-never-fail.txt",
+  "folder": "mirror/carousels/real-danigomez-1/never-quit-never-fail"
+ },
+ {
   "key": "2026-12-03|real.danigomez_2|reel-7bb-bb3",
   "account": "real.danigomez_2",
   "ig_user_id": "17841453823826170",
@@ -315,6 +342,24 @@
   "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-biz-reel-bil-b6.mp4"
  },
  {
+  "key": "2026-12-03|danigomez.ge|reel-bil-b8",
+  "account": "danigomez.ge",
+  "ig_user_id": "17841414567754468",
+  "at_ast": "2026-12-03 20:46",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-ge-2026-12-03-reel-bil-b8.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-ge-reel-bil-b8.mp4"
+ },
+ {
+  "key": "2026-12-04|danigomez.biz|reel-bil-b4",
+  "account": "danigomez.biz",
+  "ig_user_id": "17841442427574092",
+  "at_ast": "2026-12-04 12:02",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-biz-2026-12-04-reel-bil-b4.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-biz-reel-bil-b4.mp4"
+ },
+ {
   "key": "2026-12-05|real.danigomez_2|spcl-goes-into-the-proof",
   "account": "real.danigomez_2",
   "ig_user_id": "17841453823826170",
@@ -322,5 +367,140 @@
   "type": "carousel",
   "caption_path": "mirror/captions/real-danigomez-2-2026-12-05-spcl-goes-into-the-proof.txt",
   "folder": "mirror/carousels/real-danigomez-2/spcl-goes-into-the-proof"
+ },
+ {
+  "key": "2026-12-05|danigomez.ge|eight-tactics-zero-action",
+  "account": "danigomez.ge",
+  "ig_user_id": "17841414567754468",
+  "at_ast": "2026-12-05 17:35",
+  "type": "carousel",
+  "caption_path": "mirror/captions/danigomez-ge-2026-12-05-eight-tactics-zero-action.txt",
+  "folder": "mirror/carousels/danigomez-ge/eight-tactics-zero-action"
+ },
+ {
+  "key": "2026-12-06|danigomez.biz|record-so-you-dont-skip",
+  "account": "danigomez.biz",
+  "ig_user_id": "17841442427574092",
+  "at_ast": "2026-12-06 14:01",
+  "type": "carousel",
+  "caption_path": "mirror/captions/danigomez-biz-2026-12-06-record-so-you-dont-skip.txt",
+  "folder": "mirror/carousels/danigomez-biz/record-so-you-dont-skip"
+ },
+ {
+  "key": "2026-12-06|danigomez.ge|reel-7bb-bb1",
+  "account": "danigomez.ge",
+  "ig_user_id": "17841414567754468",
+  "at_ast": "2026-12-06 14:39",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-ge-2026-12-06-reel-7bb-bb1.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-ge-reel-7bb-bb1.mp4"
+ },
+ {
+  "key": "2026-12-06|real.danigomez_1|hand-it-to-ai",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-12-06 16:51",
+  "type": "carousel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-12-06-hand-it-to-ai.txt",
+  "folder": "mirror/carousels/real-danigomez-1/hand-it-to-ai"
+ },
+ {
+  "key": "2026-12-06|real.danigomez_2|enough-information",
+  "account": "real.danigomez_2",
+  "ig_user_id": "17841453823826170",
+  "at_ast": "2026-12-06 18:08",
+  "type": "carousel",
+  "caption_path": "mirror/captions/real-danigomez-2-2026-12-06-enough-information.txt",
+  "folder": "mirror/carousels/real-danigomez-2/enough-information"
+ },
+ {
+  "key": "2026-12-07|danigomez.biz|the-belief-people-follow",
+  "account": "danigomez.biz",
+  "ig_user_id": "17841442427574092",
+  "at_ast": "2026-12-07 12:27",
+  "type": "carousel",
+  "caption_path": "mirror/captions/danigomez-biz-2026-12-07-the-belief-people-follow.txt",
+  "folder": "mirror/carousels/danigomez-biz/the-belief-people-follow"
+ },
+ {
+  "key": "2026-12-07|real.danigomez_2|the-financial-freedom-loop",
+  "account": "real.danigomez_2",
+  "ig_user_id": "17841453823826170",
+  "at_ast": "2026-12-07 12:38",
+  "type": "carousel",
+  "caption_path": "mirror/captions/real-danigomez-2-2026-12-07-the-financial-freedom-loop.txt",
+  "folder": "mirror/carousels/real-danigomez-2/the-financial-freedom-loop"
+ },
+ {
+  "key": "2026-12-07|real.danigomez_1|reel-bil-b5",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-12-07 16:54",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-12-07-reel-bil-b5.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-1-reel-bil-b5.mp4"
+ },
+ {
+  "key": "2026-12-08|danigomez.ge|reel-7bb-bb12",
+  "account": "danigomez.ge",
+  "ig_user_id": "17841414567754468",
+  "at_ast": "2026-12-08 18:01",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-ge-2026-12-08-reel-7bb-bb12.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-ge-reel-7bb-bb12.mp4"
+ },
+ {
+  "key": "2026-12-09|real.danigomez_2|the-question-that-changed-my-perspective",
+  "account": "real.danigomez_2",
+  "ig_user_id": "17841453823826170",
+  "at_ast": "2026-12-09 13:46",
+  "type": "carousel",
+  "caption_path": "mirror/captions/real-danigomez-2-2026-12-09-the-question-that-changed-my-perspective.txt",
+  "folder": "mirror/carousels/real-danigomez-2/the-question-that-changed-my-perspective"
+ },
+ {
+  "key": "2026-12-09|danigomez.biz|raise-your-price-not-lower",
+  "account": "danigomez.biz",
+  "ig_user_id": "17841442427574092",
+  "at_ast": "2026-12-09 14:52",
+  "type": "carousel",
+  "caption_path": "mirror/captions/danigomez-biz-2026-12-09-raise-your-price-not-lower.txt",
+  "folder": "mirror/carousels/danigomez-biz/raise-your-price-not-lower"
+ },
+ {
+  "key": "2026-12-09|danigomez.ge|reel-bil-b15",
+  "account": "danigomez.ge",
+  "ig_user_id": "17841414567754468",
+  "at_ast": "2026-12-09 14:55",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-ge-2026-12-09-reel-bil-b15.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-ge-reel-bil-b15.mp4"
+ },
+ {
+  "key": "2026-12-10|danigomez.biz|free-before-you-charge",
+  "account": "danigomez.biz",
+  "ig_user_id": "17841442427574092",
+  "at_ast": "2026-12-10 16:39",
+  "type": "carousel",
+  "caption_path": "mirror/captions/danigomez-biz-2026-12-10-free-before-you-charge.txt",
+  "folder": "mirror/carousels/danigomez-biz/free-before-you-charge"
+ },
+ {
+  "key": "2026-12-11|real.danigomez_2|thought-image-emotion",
+  "account": "real.danigomez_2",
+  "ig_user_id": "17841453823826170",
+  "at_ast": "2026-12-11 14:10",
+  "type": "carousel",
+  "caption_path": "mirror/captions/real-danigomez-2-2026-12-11-thought-image-emotion.txt",
+  "folder": "mirror/carousels/real-danigomez-2/thought-image-emotion"
+ },
+ {
+  "key": "2026-12-12|real.danigomez_2|reel-ep9-c2",
+  "account": "real.danigomez_2",
+  "ig_user_id": "17841453823826170",
+  "at_ast": "2026-12-12 20:23",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-2-2026-12-12-reel-ep9-c2.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-2-reel-ep9-c2.mp4"
  }
 ]
