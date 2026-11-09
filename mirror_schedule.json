@@ -54,6 +54,24 @@
   "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-ge-reel-c14.mp4"
  },
  {
+  "key": "2026-11-18|real.danigomez_1|reel-7bb-bb4",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-11-18 16:57",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-11-18-reel-7bb-bb4.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-1-reel-7bb-bb4.mp4"
+ },
+ {
+  "key": "2026-11-19|danigomez.ge|reel-ep9-c11",
+  "account": "danigomez.ge",
+  "ig_user_id": "17841414567754468",
+  "at_ast": "2026-11-19 19:37",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-ge-2026-11-19-reel-ep9-c11.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-ge-reel-ep9-c11.mp4"
+ },
+ {
   "key": "2026-11-19|danigomez.biz|you-hate-it-because-of-you",
   "account": "danigomez.biz",
   "ig_user_id": "17841442427574092",
@@ -72,6 +90,78 @@
   "folder": "mirror/carousels/real-danigomez-2/read-the-first-chapter"
  },
  {
+  "key": "2026-11-20|real.danigomez_1|reel-ep9-c1",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-11-20 17:20",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-11-20-reel-ep9-c1.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-1-reel-ep9-c1.mp4"
+ },
+ {
+  "key": "2026-11-21|danigomez.biz|reel-7bb-bb6",
+  "account": "danigomez.biz",
+  "ig_user_id": "17841442427574092",
+  "at_ast": "2026-11-21 11:46",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-biz-2026-11-21-reel-7bb-bb6.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-biz-reel-7bb-bb6.mp4"
+ },
+ {
+  "key": "2026-11-22|real.danigomez_2|reel-ep9-c8",
+  "account": "real.danigomez_2",
+  "ig_user_id": "17841453823826170",
+  "at_ast": "2026-11-22 17:03",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-2-2026-11-22-reel-ep9-c8.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-2-reel-ep9-c8.mp4"
+ },
+ {
+  "key": "2026-11-23|real.danigomez_1|reel-7bb-bb9",
+  "account": "real.danigomez_1",
+  "ig_user_id": "17841440453270724",
+  "at_ast": "2026-11-23 10:48",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-1-2026-11-23-reel-7bb-bb9.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-1-reel-7bb-bb9.mp4"
+ },
+ {
+  "key": "2026-11-23|danigomez.biz|ibuprofen-iphone-amazon-google",
+  "account": "danigomez.biz",
+  "ig_user_id": "17841442427574092",
+  "at_ast": "2026-11-23 17:08",
+  "type": "carousel",
+  "caption_path": "mirror/captions/danigomez-biz-2026-11-23-ibuprofen-iphone-amazon-google.txt",
+  "folder": "mirror/carousels/danigomez-biz/ibuprofen-iphone-amazon-google"
+ },
+ {
+  "key": "2026-11-23|danigomez.ge|done-by-end-of-day",
+  "account": "danigomez.ge",
+  "ig_user_id": "17841414567754468",
+  "at_ast": "2026-11-23 20:37",
+  "type": "carousel",
+  "caption_path": "mirror/captions/danigomez-ge-2026-11-23-done-by-end-of-day.txt",
+  "folder": "mirror/carousels/danigomez-ge/done-by-end-of-day"
+ },
+ {
+  "key": "2026-11-25|danigomez.biz|reel-ep9-c13",
+  "account": "danigomez.biz",
+  "ig_user_id": "17841442427574092",
+  "at_ast": "2026-11-25 10:48",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-biz-2026-11-25-reel-ep9-c13.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-biz-reel-ep9-c13.mp4"
+ },
+ {
+  "key": "2026-11-25|danigomez.ge|reel-7bb-bb2",
+  "account": "danigomez.ge",
+  "ig_user_id": "17841414567754468",
+  "at_ast": "2026-11-25 12:11",
+  "type": "reel",
+  "caption_path": "mirror/captions/danigomez-ge-2026-11-25-reel-7bb-bb2.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/danigomez-ge-reel-7bb-bb2.mp4"
+ },
+ {
   "key": "2026-11-25|real.danigomez_1|warm-up-blueprint",
   "account": "real.danigomez_1",
   "ig_user_id": "17841440453270724",
@@ -79,5 +169,23 @@
   "type": "carousel",
   "caption_path": "mirror/captions/real-danigomez-1-2026-11-25-warm-up-blueprint.txt",
   "folder": "mirror/carousels/real-danigomez-1/warm-up-blueprint"
+ },
+ {
+  "key": "2026-11-26|real.danigomez_2|reel-7bb-bb13",
+  "account": "real.danigomez_2",
+  "ig_user_id": "17841453823826170",
+  "at_ast": "2026-11-26 20:22",
+  "type": "reel",
+  "caption_path": "mirror/captions/real-danigomez-2-2026-11-26-reel-7bb-bb13.txt",
+  "video_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/mirror-2026-11/real-danigomez-2-reel-7bb-bb13.mp4"
+ },
+ {
+  "key": "2026-11-28|real.danigomez_2|one-company-compounding",
+  "account": "real.danigomez_2",
+  "ig_user_id": "17841453823826170",
+  "at_ast": "2026-11-28 22:24",
+  "type": "carousel",
+  "caption_path": "mirror/captions/real-danigomez-2-2026-11-28-one-company-compounding.txt",
+  "folder": "mirror/carousels/real-danigomez-2/one-company-compounding"
  }
 ]
