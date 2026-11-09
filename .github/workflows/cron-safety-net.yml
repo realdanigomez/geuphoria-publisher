@@ -93,6 +93,8 @@ jobs:
             scheduler.py
             published_log.json
             pending_longforms.json
+            mirror_schedule.json
+            mirror_log.json
           sparse-checkout-cone-mode: false
 
       - name: Sync latest published_log.json
@@ -117,3 +119,30 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scheduler.py
+
+      # Mirror accounts (2026-11-09): GitHub's own */15 cron on publish-mirror.yml fires only a few times a day
+      # (LinkedIn's identical cron: gaps of 8 to 11 h), so a post would land hours off its random time or go stale.
+      # This net runs every 5 min off the external heartbeat: start the mirror job whenever a mirror post is due.
+      - name: Start the mirror job when a mirror post is due
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git show FETCH_HEAD:mirror_log.json > mirror_log.json 2>/dev/null || echo '{}' > mirror_log.json
+          python - <<'EOF'
+          import datetime as dt, json, os, subprocess
+          tz = dt.timezone(dt.timedelta(hours=-4))
+          now = dt.datetime.now(tz)
+          sched = json.load(open("mirror_schedule.json")) if os.path.exists("mirror_schedule.json") else []
+          log = json.load(open("mirror_log.json"))
+          due = [e["key"] for e in sched
+                 if log.get(e["key"], {}).get("status") not in ("posted", "stale", "gave_up")
+                 and dt.timedelta(0) <= now - dt.datetime.strptime(e["at_ast"], "%Y-%m-%d %H:%M").replace(tzinfo=tz) <= dt.timedelta(hours=6)]
+          if not due:
+              print("no mirror post due"); raise SystemExit
+          busy = subprocess.run(["gh", "run", "list", "--workflow", "publish-mirror.yml", "--json", "status",
+                                 "--jq", '[.[] | select(.status != "completed")] | length'], capture_output=True, text=True).stdout.strip()
+          if busy not in ("", "0"):
+              print("mirror job already running/queued; due:", due); raise SystemExit
+          print("due:", due)
+          subprocess.run(["gh", "workflow", "run", "publish-mirror.yml"], check=True)
+          EOF
