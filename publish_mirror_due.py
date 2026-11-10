@@ -70,6 +70,54 @@ def post_carousel(uid, folder, caption):
     return api("post", f"{uid}/media_publish", creation_id=cid, access_token=TOKEN)["id"]
 
 
+# ── "top" entries (Dani 2026-11-10: one post a day max, his best recent post) ────────────────────────────────
+MAIN_IG = "17841448855952639"            # real.danigomez
+WINDOW = (dt.timedelta(days=1), dt.timedelta(days=14))   # posted 1 to 14 days ago on the main account
+GAP = dt.timedelta(days=10)              # the same post never on two mirror accounts within 10 days
+
+
+def score(m):
+    """Objective v2 order: saves + shares first, then likes + comments, then views."""
+    i = {d["name"]: d["values"][0]["value"] for d in api("get", f"{m['id']}/insights",
+         metric="views,saved,shares,likes,comments", access_token=TOKEN).get("data", [])}
+    return 100 * (i.get("saved", 0) + i.get("shares", 0)) + 10 * (i.get("likes", 0) + i.get("comments", 0)) + i.get("views", 0)
+
+
+def pick_top(account, now, log):
+    used = [(v.get("account"), v.get("source"), dt.datetime.fromisoformat(v["at"])) for v in log.values()
+            if v.get("status") == "posted" and v.get("source")]
+    media = api("get", f"{MAIN_IG}/media", fields="id,media_type,timestamp,caption,media_url,children{media_type,media_url}",
+                limit=60, access_token=TOKEN).get("data", [])
+    cands = []
+    for m in media:
+        age = now - dt.datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z")
+        if not WINDOW[0] <= age <= WINDOW[1] or m["media_type"] not in ("VIDEO", "CAROUSEL_ALBUM"):
+            continue
+        if any(s == m["id"] and (a == account or now - t < GAP) for a, s, t in used):
+            continue
+        cands.append(m)
+    if not cands:
+        raise RuntimeError("no eligible main-account post in the window")
+    return max(cands, key=score)
+
+
+def post_top(uid, m):
+    caption = (m.get("caption") or "").strip()
+    if m["media_type"] == "VIDEO":
+        return post_reel(uid, m["media_url"], caption)
+    kids = []
+    for c in m["children"]["data"][:10]:
+        kw = dict(video_url=c["media_url"], media_type="VIDEO") if c["media_type"] == "VIDEO" else dict(image_url=c["media_url"])
+        k = api("post", f"{uid}/media", is_carousel_item="true", access_token=TOKEN, **kw)["id"]
+        if c["media_type"] == "VIDEO":
+            wait_ready(k)
+        kids.append(k)
+    cid = api("post", f"{uid}/media", media_type="CAROUSEL", children=",".join(kids), caption=caption,
+              access_token=TOKEN)["id"]
+    wait_ready(cid)
+    return api("post", f"{uid}/media_publish", creation_id=cid, access_token=TOKEN)["id"]
+
+
 def main():
     accounts = jload("mirror_accounts.json", {})
     if check:
@@ -92,13 +140,24 @@ def main():
             log[key] = {"status": "stale", "at": now.isoformat()}
             print("stale, not posted:", key)
             continue
-        caption = open(os.path.join(HERE, e["caption_path"]), encoding="utf-8").read().strip()
-        print("posting", e["type"], key, flush=True)
         done_accounts.add(e["account"])
-        if dry:
-            posted += 1
-            continue
         try:
+            if e["type"] == "top":
+                m = pick_top(e["account"], now, log)
+                print("posting top", key, "<-", m["id"], m["media_type"], m["timestamp"], flush=True)
+                if dry:
+                    posted += 1
+                    continue
+                mid = post_top(e["ig_user_id"], m)
+                log[key] = {"status": "posted", "media_id": mid, "source": m["id"], "account": e["account"],
+                            "at": now.isoformat()}
+                posted += 1
+                continue
+            caption = open(os.path.join(HERE, e["caption_path"]), encoding="utf-8").read().strip()
+            print("posting", e["type"], key, flush=True)
+            if dry:
+                posted += 1
+                continue
             mid = (post_reel(e["ig_user_id"], e["video_url"], caption) if e["type"] == "reel"
                    else post_carousel(e["ig_user_id"], e["folder"], caption))
             log[key] = {"status": "posted", "media_id": mid, "at": now.isoformat()}
