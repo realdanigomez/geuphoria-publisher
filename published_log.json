@@ -934,6 +934,10 @@
   },
   "2026-11-11": {
     "longform_clip": "18021228365952454",
-    "yt_longform_clip": "3LZbqW1ltA4"
+    "yt_longform_clip": "3LZbqW1ltA4",
+    "carousel_2": {
+      "claimed_at": "2026-11-11T22:06:23.810141Z",
+      "claimed_by": "43108871537:1"
+    }
   }
 }
