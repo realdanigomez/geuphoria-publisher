@@ -944,6 +944,10 @@
   },
   "2026-11-13": {
     "reel": "18134630326772168",
-    "yt_reel": "RWAEPFFO1OM"
+    "yt_reel": "RWAEPFFO1OM",
+    "longform_clip": {
+      "claimed_at": "2026-11-13T19:05:33.073661Z",
+      "claimed_by": "43488831373:1"
+    }
   }
 }
