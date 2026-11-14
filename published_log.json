@@ -949,6 +949,10 @@
     "yt_longform_clip": "6ZkwMIBivzw"
   },
   "2026-11-14": {
-    "carousel": "18111742064221210"
+    "carousel": "18111742064221210",
+    "longform_clip": {
+      "claimed_at": "2026-11-14T19:05:44.141149Z",
+      "claimed_by": "43630169452:1"
+    }
   }
 }
