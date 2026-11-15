@@ -955,6 +955,10 @@
   },
   "2026-11-15": {
     "reel": "18161906761506214",
-    "yt_reel": "MQzgffzA_tk"
+    "yt_reel": "MQzgffzA_tk",
+    "carousel": {
+      "claimed_at": "2026-11-15T16:05:33.292825Z",
+      "claimed_by": "43733482392:1"
+    }
   }
 }
