@@ -960,6 +960,10 @@
   },
   "2026-11-16": {
     "reel": "18140200747649877",
-    "yt_reel": "T7tcub5QA_k"
+    "yt_reel": "T7tcub5QA_k",
+    "longform_clip": {
+      "claimed_at": "2026-11-16T19:05:57.660844Z",
+      "claimed_by": "43935678462:1"
+    }
   }
 }
