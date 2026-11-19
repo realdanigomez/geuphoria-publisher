@@ -979,6 +979,10 @@
     "carousel_2": "18013328357796733"
   },
   "2026-11-19": {
-    "yt_reel": "my6fgrjRqH4"
+    "yt_reel": "my6fgrjRqH4",
+    "reel": {
+      "claimed_at": "2026-11-19T12:10:40.588088Z",
+      "claimed_by": "44521424776:1"
+    }
   }
 }
