@@ -42,14 +42,14 @@ def api(method, path, **data):
 
 
 def wait_ready(cid):
-    for _ in range(36):
+    for _ in range(120):          # 2026-11-19: up to 20 min (the 7-minute IG VSL reel; the workflow allows 45 and runs one job at a time)
         time.sleep(10)
         code = api("get", cid, fields="status_code", access_token=TOKEN).get("status_code")
         if code == "FINISHED":
             return
         if code == "ERROR":
             raise RuntimeError(f"Instagram could not process container {cid}")
-    raise RuntimeError(f"container {cid} not ready after 6 minutes")
+    raise RuntimeError(f"container {cid} not ready after 20 minutes")
 
 
 def post_reel(uid, url, caption):
