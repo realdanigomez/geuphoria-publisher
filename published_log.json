@@ -987,6 +987,10 @@
   },
   "2026-11-20": {
     "reel": "18647332003035084",
-    "yt_reel": "ILCiv-J0OvA"
+    "yt_reel": "ILCiv-J0OvA",
+    "carousel": {
+      "claimed_at": "2026-11-20T16:05:41.308534Z",
+      "claimed_by": "44769832612:1"
+    }
   }
 }
