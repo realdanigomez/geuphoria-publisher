@@ -278,5 +278,25 @@
   "status": "posted",
   "urn": "urn:li:ugcPost:7530621721339445248",
   "at": "2026-11-23T09:21:54.701648-04:00"
+ },
+ "2026-11-23|carousel|one-avatar-many-people": {
+  "status": "posted",
+  "urn": "urn:li:ugcPost:7530798350154010625",
+  "at": "2026-11-23T21:04:01.274063-04:00"
+ },
+ "2026-11-23|longform_clip|inputs-processes-outputs-feedback": {
+  "status": "posted",
+  "urn": "urn:li:ugcPost:7530798451165401088",
+  "at": "2026-11-23T21:04:01.274063-04:00"
+ },
+ "2026-11-23|carousel_2|tick-every-box-niche": {
+  "status": "posted",
+  "urn": "urn:li:ugcPost:7530798457603805184",
+  "at": "2026-11-23T21:04:01.274063-04:00"
+ },
+ "2026-11-23|doc_clip|a-killer-offer-example": {
+  "status": "posted",
+  "urn": "urn:li:ugcPost:7530798611589169152",
+  "at": "2026-11-23T21:04:01.274063-04:00"
  }
 }
