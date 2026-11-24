@@ -4160,6 +4160,21 @@
       "slot_time_ast": "12:00 PM",
       "folder": "worrying-about-ai-is-coping",
       "caption_path": "captions/carousel-worrying-about-ai-is-coping/caption.txt"
+    },
+    "doc_clip": {
+      "name": "two-versions-of-yourself",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/two-versions-of-yourself.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/two-versions-of-yourself.mp4",
+      "caption_path": "captions/two-versions-of-yourself/caption.txt",
+      "yt_caption_path": "captions/two-versions-of-yourself/caption-youtube.txt",
+      "yt_title_path": "captions/two-versions-of-yourself/title-youtube.txt"
+    },
+    "carousel_2": {
+      "name": "it-comes-down-to-your-beliefs",
+      "slot_time_ast": "6:00 PM",
+      "folder": "it-comes-down-to-your-beliefs",
+      "caption_path": "captions/carousel-it-comes-down-to-your-beliefs/caption.txt"
     }
   },
   "2026-12-02": {
@@ -4183,6 +4198,15 @@
       "slot_time_ast": "6:00 PM",
       "folder": "how-i-use-ai",
       "caption_path": "captions/carousel-how-i-use-ai/caption.txt"
+    },
+    "reel": {
+      "name": "clinical-burnout-vs-exhaustion",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/clinical-burnout-vs-exhaustion.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/clinical-burnout-vs-exhaustion.mp4",
+      "caption_path": "captions/clinical-burnout-vs-exhaustion/caption.txt",
+      "yt_caption_path": "captions/clinical-burnout-vs-exhaustion/caption-youtube.txt",
+      "yt_title_path": "captions/clinical-burnout-vs-exhaustion/title-youtube.txt"
     }
   },
   "2026-12-03": {
@@ -4200,6 +4224,49 @@
       "slot_time_ast": "6:00 PM",
       "folder": "bad-vs-good-businesses",
       "caption_path": "captions/carousel-bad-vs-good-businesses/caption.txt"
+    },
+    "reel": {
+      "name": "burnout-is-a-belief",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/burnout-is-a-belief.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/burnout-is-a-belief.mp4",
+      "caption_path": "captions/burnout-is-a-belief/caption.txt",
+      "yt_caption_path": "captions/burnout-is-a-belief/caption-youtube.txt",
+      "yt_title_path": "captions/burnout-is-a-belief/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "current-self-vs-becoming-self",
+      "slot_time_ast": "12:00 PM",
+      "folder": "current-self-vs-becoming-self",
+      "caption_path": "captions/carousel-current-self-vs-becoming-self/caption.txt"
+    }
+  },
+  "2026-12-04": {
+    "reel": {
+      "name": "the-cure-to-burnout-is-rest",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-cure-to-burnout-is-rest.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/the-cure-to-burnout-is-rest.mp4",
+      "caption_path": "captions/the-cure-to-burnout-is-rest/caption.txt",
+      "yt_caption_path": "captions/the-cure-to-burnout-is-rest/caption-youtube.txt",
+      "yt_title_path": "captions/the-cure-to-burnout-is-rest/title-youtube.txt"
+    }
+  },
+  "2026-12-05": {
+    "reel": {
+      "name": "how-to-actually-rest",
+      "slot_time_ast": "8:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/how-to-actually-rest.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/how-to-actually-rest.mp4",
+      "caption_path": "captions/how-to-actually-rest/caption.txt",
+      "yt_caption_path": "captions/how-to-actually-rest/caption-youtube.txt",
+      "yt_title_path": "captions/how-to-actually-rest/title-youtube.txt"
+    },
+    "carousel": {
+      "name": "the-level-of-rest",
+      "slot_time_ast": "12:00 PM",
+      "folder": "the-level-of-rest",
+      "caption_path": "captions/carousel-the-level-of-rest/caption.txt"
     }
   }
 }

@@ -111,7 +111,9 @@ SLOTS = [
       # 2026-11-24 -> 11-30: the Get ahead of 99% batch (Dani OK'd the calendar 2026-11-03).
       "2026-11-24","2026-11-25","2026-11-26","2026-11-27","2026-11-28","2026-11-29","2026-11-30",
       # 2026-12-02 -> 12-03: the AI won't destroy fitness batch (Dani OK'd the calendar 2026-11-24).
-      "2026-12-02","2026-12-03"]),
+      "2026-12-02","2026-12-03",
+      # 2026-12-01: the Burnout batch (Dani OK'd the calendar 2026-11-03).
+      "2026-12-01"]),
     ("publish-story-2.yml",     "story_2",     "11:00", []),
 
     # ── 3rd daily carousel — 12AM AST, added 2026-09-16 for the Aruba documentary batch ──────
@@ -181,7 +183,9 @@ SLOTS = [
       # 2026-11-23: the Saturation batch (Dani OK'd the calendar 2026-11-03).
       "2026-11-23",
       # 2026-11-27 -> 11-30: the AI won't destroy fitness batch (Dani OK'd the calendar 2026-11-24).
-      "2026-11-27","2026-11-28","2026-11-30"]),
+      "2026-11-27","2026-11-28","2026-11-30",
+      # 2026-12-01: the Burnout batch (Dani OK'd the calendar 2026-11-03).
+      "2026-12-01"]),
     ("publish-longform-clip.yml", "longform_clip", "15:00",
      ["2026-09-02","2026-09-03","2026-09-04","2026-09-05","2026-09-06","2026-09-07",
       "2026-09-09","2026-09-10","2026-09-11","2026-09-12","2026-09-13","2026-09-14",
