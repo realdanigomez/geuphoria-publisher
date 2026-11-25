@@ -328,5 +328,15 @@
   "status": "posted",
   "urn": "urn:li:ugcPost:7531351909572726784",
   "at": "2026-11-25T09:43:28.145698-04:00"
+ },
+ "2026-11-25|carousel|netted-us-money": {
+  "status": "posted",
+  "urn": "urn:li:ugcPost:7531488824263376896",
+  "at": "2026-11-25T18:47:42.873041-04:00"
+ },
+ "2026-11-25|carousel_2|over-promise-over-deliver": {
+  "status": "posted",
+  "urn": "urn:li:ugcPost:7531488830013509632",
+  "at": "2026-11-25T18:47:42.873041-04:00"
  }
 }
