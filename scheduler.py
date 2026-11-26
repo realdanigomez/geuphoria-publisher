@@ -185,7 +185,9 @@ SLOTS = [
       # 2026-11-27 -> 11-30: the AI won't destroy fitness batch (Dani OK'd the calendar 2026-11-24).
       "2026-11-27","2026-11-28","2026-11-30",
       # 2026-12-01: the Burnout batch (Dani OK'd the calendar 2026-11-03).
-      "2026-12-01"]),
+      "2026-12-01",
+      # 2026-11-29: Documentary Ep 14 (Dani's OK).
+      "2026-11-29"]),
     ("publish-longform-clip.yml", "longform_clip", "15:00",
      ["2026-09-02","2026-09-03","2026-09-04","2026-09-05","2026-09-06","2026-09-07",
       "2026-09-09","2026-09-10","2026-09-11","2026-09-12","2026-09-13","2026-09-14",
@@ -235,7 +237,9 @@ SLOTS = [
       # 2026-10-24 -> 10-27 (3 dates): Documentary Ep 11 (Dani's blanket go-ahead 2026-10-23).
       "2026-10-24","2026-10-25","2026-10-27",
       # 2026-10-31: Documentary Ep 12 (Dani's OK of the proposal).
-      "2026-10-31"]),
+      "2026-10-31",
+      # 2026-11-30 -> 12-01 (2 dates): Documentary Ep 14 (Dani's OK).
+      "2026-11-30","2026-12-01"]),
 
     # ── Story — 7PM AST daily ──────────────────────────────────────────────
     # UPDATE THIS LIST each week before Monday 8AM.

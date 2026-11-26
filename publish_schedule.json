@@ -4096,6 +4096,15 @@
       "caption_path": "captions/ai-makes-content-complex-clip/caption.txt",
       "yt_caption_path": "captions/ai-makes-content-complex-clip/caption-youtube.txt",
       "yt_title_path": "captions/ai-makes-content-complex-clip/title-youtube.txt"
+    },
+    "doc_clip": {
+      "name": "my-goals-for-november",
+      "slot_time_ast": "9:00 PM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/my-goals-for-november.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/my-goals-for-november.mp4",
+      "caption_path": "captions/my-goals-for-november/caption.txt",
+      "yt_caption_path": "captions/my-goals-for-november/caption-youtube.txt",
+      "yt_title_path": "captions/my-goals-for-november/title-youtube.txt"
     }
   },
   "2026-11-30": {
@@ -4143,6 +4152,15 @@
       "slot_time_ast": "12:00 AM",
       "folder": "ai-agrees-with-everything",
       "caption_path": "captions/carousel-ai-agrees-with-everything/caption.txt"
+    },
+    "longform_clip_bonus": {
+      "name": "warm-up-7-days-before-outreach",
+      "slot_time_ast": "5:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/warm-up-7-days-before-outreach.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/warm-up-7-days-before-outreach.mp4",
+      "caption_path": "captions/warm-up-7-days-before-outreach/caption.txt",
+      "yt_caption_path": "captions/warm-up-7-days-before-outreach/caption-youtube.txt",
+      "yt_title_path": "captions/warm-up-7-days-before-outreach/title-youtube.txt"
     }
   },
   "2026-12-01": {
@@ -4175,6 +4193,15 @@
       "slot_time_ast": "6:00 PM",
       "folder": "it-comes-down-to-your-beliefs",
       "caption_path": "captions/carousel-it-comes-down-to-your-beliefs/caption.txt"
+    },
+    "longform_clip_bonus": {
+      "name": "roleplay-sales-calls",
+      "slot_time_ast": "5:00 AM",
+      "cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/roleplay-sales-calls.mp4",
+      "yt_cdn_url": "https://github.com/realdanigomez/geuphoria-publisher/releases/download/media-2026-09/roleplay-sales-calls.mp4",
+      "caption_path": "captions/roleplay-sales-calls/caption.txt",
+      "yt_caption_path": "captions/roleplay-sales-calls/caption-youtube.txt",
+      "yt_title_path": "captions/roleplay-sales-calls/title-youtube.txt"
     }
   },
   "2026-12-02": {
